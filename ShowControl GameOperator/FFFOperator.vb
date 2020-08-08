@@ -524,7 +524,7 @@ Public Class FFFOperator
         Next
     End Sub
 
-    Function ReturnThePositionOfFastest()
+    Sub ReturnThePositionOfFastest()
         If IndexPositionOfFastestContestantByTime = -10 Then
             For j As Int16 = 1 To 10
                 Double.TryParse(FastestFingerManaging.Devices.ElementAt(j - 1).ElapsedTime, ElapsedTimes(j - 1))
@@ -540,7 +540,7 @@ Public Class FFFOperator
 
             Next
         End If
-    End Function
+    End Sub
 
     Sub ResetWholeTable()
         For i As Int16 = 1 To 10
@@ -641,7 +641,7 @@ Public Class FFFOperator
         MusicFF = New FFFMusicLayer
     End Sub
 
-    Public Shared Function ParseContestantsToUI(FileName As String)
+    Public Shared Sub ParseContestantsToUI(FileName As String)
         Try
             Dim ContArray As String() = System.IO.File.ReadAllLines(FileName)
 
@@ -684,7 +684,7 @@ Public Class FFFOperator
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-    End Function
+    End Sub
 
     Private Sub FFFOperator_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Try

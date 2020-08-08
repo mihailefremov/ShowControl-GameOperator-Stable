@@ -226,13 +226,13 @@ Public Class Quiz_Operator
         End Set
     End Property
 
-    Dim ActiveLifelines1 As String = "4"
-    Public Property ActiveLifelines As String
+    Dim _NumberOfActiveLifelines As String = "4"
+    Public Property NumberOfActiveLifelines As String
         Get
-            Return ActiveLifelines1
+            Return _NumberOfActiveLifelines
         End Get
         Set(value As String)
-            ActiveLifelines1 = value
+            _NumberOfActiveLifelines = value
             HostContPresentationLayer.GamePlayStateSet("")
         End Set
     End Property
@@ -277,15 +277,15 @@ Public Class Quiz_Operator
 
     Public AnswerMarks As String = "ABCD"
 
-    Dim Lifelines_ As String
-    Public Property Lifelines As String
+    Dim ActiveLifelinesNames_ As String
+    Public Property ActiveLifelinesNames As String
         Get
-            Return Lifelines_
+            Return ActiveLifelinesNames_
         End Get
         Set(value As String)
-            Lifelines_ = value.ToUpper
+            ActiveLifelinesNames_ = value.ToUpper
             Try
-                Dim Lifelines() As String = Lifelines_.Split(";")
+                Dim Lifelines() As String = ActiveLifelinesNames_.Split(";")
                 FiftyFiftyPosition = Array.IndexOf(Lifelines, "5050") + 1
                 PhoneAFriendPosition = Array.IndexOf(Lifelines, "PAF") + 1
                 AskTheAudiencePosition = Array.IndexOf(Lifelines, "ATA") + 1
@@ -368,7 +368,7 @@ Public Class Quiz_Operator
                 FourLifelinesStatus_Label_Click(fourLifelinesStatus_Label, Nothing)
             End If
 
-            Lifelines = $"{WwtbamConfiguraiton.LIFELINES.LIFELINE1};{WwtbamConfiguraiton.LIFELINES.LIFELINE2};{WwtbamConfiguraiton.LIFELINES.LIFELINE3};{WwtbamConfiguraiton.LIFELINES.LIFELINE4};{WwtbamConfiguraiton.LIFELINES.LIFELINE5}"
+            ActiveLifelinesNames = $"{WwtbamConfiguraiton.LIFELINES.LIFELINE1};{WwtbamConfiguraiton.LIFELINES.LIFELINE2};{WwtbamConfiguraiton.LIFELINES.LIFELINE3};{WwtbamConfiguraiton.LIFELINES.LIFELINE4};{WwtbamConfiguraiton.LIFELINES.LIFELINE5}"
             HostContPresentationLayer.ConfigurationLifelines($"{WwtbamConfiguraiton.LIFELINES.LIFELINE1}", $"{WwtbamConfiguraiton.LIFELINES.LIFELINE2}", $"{WwtbamConfiguraiton.LIFELINES.LIFELINE3}", $"{WwtbamConfiguraiton.LIFELINES.LIFELINE4}", $"{WwtbamConfiguraiton.LIFELINES.LIFELINE5}")
 
             AnswerMarks = IIf(Localizer.GetValueByKey("ANSWERMARKS").Length >= 4, Localizer.GetValueByKey("ANSWERMARKS"), AnswerMarks)
@@ -453,7 +453,7 @@ Public Class Quiz_Operator
         MomentStatus = "QuestionAnswers_Load"
         '' ******* CASPARCG *******
         If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.CGQuestionSet(QuestionText, Answer1Text, Answer2Text, Answer3Text, Answer4Text, QuestionForSume)
+            GraphicsProcessingUnit.CGQuestionSet(QuestionText, Answer1Text, Answer2Text, Answer3Text, Answer4Text, QuestionForSume, ActiveLifelinesNames)
             GraphicsProcessingUnit.casparQA.Channels(0).CG.Add(1, My.Settings.questionFlashTempl, True, GraphicsProcessingUnit.cgDataQA)
 
         End If
@@ -512,7 +512,7 @@ Public Class Quiz_Operator
         TimerQuestionRemove.Interval = Val(SecondsToDissolveAfterCorrectAnswer_TextBox.Text) * 1000
 
         If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.CGQuestionSet(QuestionText, Answer1Text, Answer2Text, Answer3Text, Answer4Text, QuestionForSume)
+            GraphicsProcessingUnit.CGQuestionSet(QuestionText, Answer1Text, Answer2Text, Answer3Text, Answer4Text, QuestionForSume, ActiveLifelinesNames.Replace("DDIP", "DD"))
             GraphicsProcessingUnit.casparQA.Channels(0).CG.Update(1, GraphicsProcessingUnit.cgDataQA)
             'casparQA_.Channels(0).CG.Play(1)
             GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "QuestionFlyIN")
@@ -850,12 +850,12 @@ Public Class Quiz_Operator
 
     End Sub
 
-    Private Function LoadQuestion()
+    Private Sub LoadQuestion()
         If LevelQ <> "111" Then
             QuestionLoad_Label_Click(QuestionLoad_Label, Nothing)
 
         End If
-    End Function
+    End Sub
 
     Private Sub WonPrizeReveal_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WonPrizeReveal_Button.Click
         WonPrizeReveal_Button.BackColor = Color.Gainsboro
@@ -1052,7 +1052,7 @@ Public Class Quiz_Operator
     Private Sub FourLifelinesStatus_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fourLifelinesStatus_Label.Click
         fourLifelinesStatus_Label.BackColor = Color.Orange
         threeLifelinesStatus_Label.BackColor = Color.Silver
-        ActiveLifelines = "4"
+        NumberOfActiveLifelines = "4"
         GraphicsProcessingUnit.Activate4Lifelines()
 
     End Sub
@@ -1060,7 +1060,7 @@ Public Class Quiz_Operator
     Private Sub ThreeLifelinesStatus_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles threeLifelinesStatus_Label.Click
         threeLifelinesStatus_Label.BackColor = Color.Orange
         fourLifelinesStatus_Label.BackColor = Color.Silver
-        ActiveLifelines = "3"
+        NumberOfActiveLifelines = "3"
         GraphicsProcessingUnit.Activate3Lifelines()
 
     End Sub
@@ -1216,7 +1216,7 @@ Public Class Quiz_Operator
         Lifeline3Active = 1
         Lifeline4Active = 1
 
-        GraphicsProcessingUnit.CGMoneyTreeDataSet(QSum1_TextBox.Text, QSum2_TextBox.Text, QSum3_TextBox.Text, QSum4_TextBox.Text, QSum5_TextBox.Text, QSum6_TextBox.Text, QSum7_TextBox.Text, QSum8_TextBox.Text, QSum9_TextBox.Text, QSum10_TextBox.Text, QSum11_TextBox.Text, QSum12_TextBox.Text, QSum13_TextBox.Text, QSum14_TextBox.Text, QSum15_TextBox.Text)
+        GraphicsProcessingUnit.CGMoneyTreeDataSet(QSum1_TextBox.Text, QSum2_TextBox.Text, QSum3_TextBox.Text, QSum4_TextBox.Text, QSum5_TextBox.Text, QSum6_TextBox.Text, QSum7_TextBox.Text, QSum8_TextBox.Text, QSum9_TextBox.Text, QSum10_TextBox.Text, QSum11_TextBox.Text, QSum12_TextBox.Text, QSum13_TextBox.Text, QSum14_TextBox.Text, QSum15_TextBox.Text, ActiveLifelinesNames)
         GraphicsProcessingUnit.removeSecondMilestone()
         GraphicsProcessingUnit.MoneyTreeFlyOut()
 
@@ -1722,7 +1722,7 @@ Public Class Quiz_Operator
     Private Sub MoneyTreeSet_Label_Click(sender As Object, e As EventArgs) Handles MoneyTreeSet_Label.Click
         '' ******* CASPARCG *******
 
-        GraphicsProcessingUnit.CGMoneyTreeDataSet(QSum1_TextBox.Text, QSum2_TextBox.Text, QSum3_TextBox.Text, QSum4_TextBox.Text, QSum5_TextBox.Text, QSum6_TextBox.Text, QSum7_TextBox.Text, QSum8_TextBox.Text, QSum9_TextBox.Text, QSum10_TextBox.Text, QSum11_TextBox.Text, QSum12_TextBox.Text, QSum13_TextBox.Text, QSum14_TextBox.Text, QSum15_TextBox.Text)
+        GraphicsProcessingUnit.CGMoneyTreeDataSet(QSum1_TextBox.Text, QSum2_TextBox.Text, QSum3_TextBox.Text, QSum4_TextBox.Text, QSum5_TextBox.Text, QSum6_TextBox.Text, QSum7_TextBox.Text, QSum8_TextBox.Text, QSum9_TextBox.Text, QSum10_TextBox.Text, QSum11_TextBox.Text, QSum12_TextBox.Text, QSum13_TextBox.Text, QSum14_TextBox.Text, QSum15_TextBox.Text, ActiveLifelinesNames)
         GraphicsProcessingUnit.MoneyTreeSet()
         GraphicsProcessingUnit.MarkCGlifelines(lifeline1Active1, Lifeline2Active, Lifeline3Active, Lifeline4Active)
 
@@ -1849,11 +1849,9 @@ Public Class Quiz_Operator
     End Sub
 
     Private Sub CGConnection_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CGConnection_Button.Click
-        Task.Run(Function()
-                     GraphicsProcessingUnit.ConnectCG(CasparServerIP_TextBox.Text, CASPARCGLog_TextBox)
-                     System.Threading.Thread.Sleep(1000)
-                     MoneyTreeSet_Label_Click(MoneyTreeSet_Label, Nothing)
-                 End Function)
+        GraphicsProcessingUnit.ConnectCG(CasparServerIP_TextBox.Text, CASPARCGLog_TextBox)
+        System.Threading.Thread.Sleep(1000)
+        MoneyTreeSet_Label_Click(MoneyTreeSet_Label, Nothing)
     End Sub
 
     Private Sub ATAendVote_Label_Click(sender As Object, e As EventArgs) Handles ATAendVote_Label.Click

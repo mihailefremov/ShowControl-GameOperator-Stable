@@ -32,13 +32,13 @@ Public Class InteractiveWallScreen
             Dim versionNumber As Short
             If Level >= 6 And Level <= 10 Then
                 LevelX = "6to10"
-                versionNumber = randomGen.Next(1, 8)
+                versionNumber = randomGen.Next(1, 10)
             ElseIf Level <= 5 Then
                 LevelX = "1to5"
-                versionNumber = randomGen.Next(1, 4)
+                versionNumber = randomGen.Next(1, 5)
             ElseIf Level >= 10 Then
                 LevelX = "11to15"
-                versionNumber = randomGen.Next(1, 9)
+                versionNumber = randomGen.Next(1, 12)
             Else
                 Return
             End If
@@ -120,13 +120,13 @@ Public Class InteractiveWallScreen
 
             If Level >= 5 And Level <= 9 Then 'od 5-9
                 LevelX = "6to10"
-                versionNumber = randomGen.Next(1, 4)
+                versionNumber = randomGen.Next(1, 5)
             ElseIf Level < 5 Then 'od 1-5
                 LevelX = "1to5"
                 versionNumber = randomGen.Next(1, 3)
             ElseIf Level = 10 Then '10
                 LevelX = "10"
-                versionNumber = 1
+                versionNumber = randomGen.Next(1, 3)
             ElseIf Level >= 11 And Level <= 14 Then 'od 11-14
                 LevelX = "11to15"
                 versionNumber = 1

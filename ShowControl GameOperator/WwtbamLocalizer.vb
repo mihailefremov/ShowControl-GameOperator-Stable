@@ -23,12 +23,12 @@
         Return GetValueByKey(Key).ToCharArray()
     End Function
 
-    Public Function LocalizeControl(Form As Quiz_Operator)
+    Public Sub LocalizeControl(Form As Quiz_Operator)
         Form.AnswerAappear_Label.Text = GetValueByKey("ANSWERMARKS").ToCharArray.ElementAtOrDefault(0) + ":"
         Form.AnswerBappear_Label.Text = GetValueByKey("ANSWERMARKS").ToCharArray.ElementAtOrDefault(1) + ":"
         Form.AnswerCappear_Label.Text = GetValueByKey("ANSWERMARKS").ToCharArray.ElementAtOrDefault(2) + ":"
         Form.AnswerDappear_Label.Text = GetValueByKey("ANSWERMARKS").ToCharArray.ElementAtOrDefault(3) + ":"
         'Throw New NotImplementedException
-    End Function
+    End Sub
 
 End Class

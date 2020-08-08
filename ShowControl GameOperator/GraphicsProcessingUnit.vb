@@ -18,7 +18,7 @@ Public Class GraphicsProcessingUnit
 
     Public Shared InteractiveWallScreenObj As New InteractiveWallScreen
 
-    Public Shared Sub CGQuestionSet(Question As String, Answer1 As String, Answer2 As String, Answer3 As String, Answer4 As String, QuestionForSume As String)
+    Public Shared Sub CGQuestionSet(Question As String, Answer1 As String, Answer2 As String, Answer3 As String, Answer4 As String, QuestionForSume As String, LifelinesNames As String)
         '' ******* CASPARCG ******* CASPARCG ******* CASPARCG ******* ******* CASPARCG ******* CASPARCG ******* CASPARCG *******
 
         Dim Question_Text As String
@@ -47,6 +47,8 @@ Public Class GraphicsProcessingUnit
         cgDataQA.SetData("MarkD_TextField", "D:")
 
         cgDataQA.SetData("QuestionFor_TextField", QuestionForSume)
+
+        cgDataQA.SetData("Lifelines_TextField", LifelinesNames)
 
     End Sub
 
@@ -310,7 +312,7 @@ Public Class GraphicsProcessingUnit
 
     End Sub
 
-    Public Shared Sub CGMoneyTreeDataSet(QSum1 As String, QSum2 As String, QSum3 As String, QSum4 As String, QSum5 As String, QSum6 As String, QSum7 As String, QSum8 As String, QSum9 As String, QSum10 As String, QSum11 As String, QSum12 As String, QSum13 As String, QSum14 As String, QSum15 As String)
+    Public Shared Sub CGMoneyTreeDataSet(QSum1 As String, QSum2 As String, QSum3 As String, QSum4 As String, QSum5 As String, QSum6 As String, QSum7 As String, QSum8 As String, QSum9 As String, QSum10 As String, QSum11 As String, QSum12 As String, QSum13 As String, QSum14 As String, QSum15 As String, LifelinesNames As String)
 
         '' ******* CASPARCG ******* CASPARCG ******* CASPARCG ******* ******* CASPARCG ******* CASPARCG ******* CASPARCG *******
         If casparMT.IsConnected Then
@@ -329,6 +331,7 @@ Public Class GraphicsProcessingUnit
             cgDataMT.SetData("sumq13", QSum13)
             cgDataMT.SetData("sumq14", QSum14)
             cgDataMT.SetData("sumq15", QSum15)
+            cgDataMT.SetData("Lifelines_TextField", LifelinesNames)
         End If
 
     End Sub

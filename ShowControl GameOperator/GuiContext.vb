@@ -3,7 +3,7 @@
     Public Shared ReadOnly Property GuiLifelines As String()
         Get
             Dim lfl(5) As String
-            lfl = (Quiz_Operator.Lifelines + ";;;;").Split(";")
+            lfl = (Quiz_Operator.ActiveLifelinesNames + ";;;;").Split(";")
             Return lfl
         End Get
     End Property
