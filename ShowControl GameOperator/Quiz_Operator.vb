@@ -1071,7 +1071,7 @@ Public Class Quiz_Operator
 
     End Sub
 
-    Private Sub Label_SwitchQ_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label100.Click
+    Private Sub SwitchTheQuestion_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SwitchTheQuestion_Label.Click
 
         SwitchedQuestion = Val(LevelQ)
 
@@ -1088,12 +1088,10 @@ Public Class Quiz_Operator
         '' *** CASPARCG
 
         MomentStatus = "SwitchTheQuestion_Progess"
-
-        ''STQ_X_Label_Click(STQ_X_Label, Nothing)
-
-        'Contestant.PictureBox9.BackgroundImage = Image.FromFile("C:\WWTBAM Removable Disc\Graphics\SwitchQ_X.png")
-        'Contestant.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabControl2.SelectedTab = TabPage6
+
+        GraphicsProcessingUnit.InteractiveWallScreenObj.AnyBackgroundLoop("SwitchTheQuestionV1")
+
     End Sub
 
     Private Sub WalkAwayStart_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WalkAwayStart_Button.Click
@@ -1697,6 +1695,8 @@ Public Class Quiz_Operator
         PAF_1_Label_Click(PAF_1_Label, Nothing)
 
         MomentStatus = "PhoneFriend_Dialing" ''IZMENA!!!
+
+        GraphicsProcessingUnit.InteractiveWallScreenObj.AnyBackgroundLoop("WwtbamStudioV2", False)
 
     End Sub
 
@@ -2526,7 +2526,11 @@ Public Class Quiz_Operator
             Dim soundToPlay As Xml2CSharp.SOUND = MusicList_ComboBox.SelectedItem
             MainGameMusicLayerObj.PlayArbitrarySound(soundToPlay)
 
-            If soundToPlay.NUMBER = "2" Or soundToPlay.NUMBER = "3" Then
+            If soundToPlay.NUMBER = "1" Then
+                GraphicsProcessingUnit.InteractiveWallScreenObj.AnyBackgroundLoop("WwtbamIntroV1", False)
+            ElseIf soundToPlay.NUMBER = "4" Or soundToPlay.NUMBER = "5" Or soundToPlay.NUMBER = "112" Then
+                GraphicsProcessingUnit.InteractiveWallScreenObj.AnyBackgroundLoop("WwtbamStudioV1")
+            ElseIf soundToPlay.NUMBER = "2" Or soundToPlay.NUMBER = "3" Then
                 GraphicsProcessingUnit.InteractiveWallScreenObj.HostEntrance()
             End If
         Catch ex As Exception

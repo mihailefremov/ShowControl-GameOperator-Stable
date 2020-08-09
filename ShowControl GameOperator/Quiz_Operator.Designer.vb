@@ -199,10 +199,8 @@ Partial Class Quiz_Operator
         Me.TabPage11 = New System.Windows.Forms.TabPage()
         Me.STQ_0_Label = New System.Windows.Forms.Label()
         Me.STQ_1_Label = New System.Windows.Forms.Label()
-        Me.Label98 = New System.Windows.Forms.Label()
-        Me.Label99 = New System.Windows.Forms.Label()
         Me.STQ_X_Label = New System.Windows.Forms.Label()
-        Me.Label100 = New System.Windows.Forms.Label()
+        Me.SwitchTheQuestion_Label = New System.Windows.Forms.Label()
         Me.SwitchQ_PictureBox = New System.Windows.Forms.PictureBox()
         Me.TabPage13 = New System.Windows.Forms.TabPage()
         Me.DDIP_1_Label = New System.Windows.Forms.Label()
@@ -2288,10 +2286,8 @@ Partial Class Quiz_Operator
         '
         Me.TabPage11.Controls.Add(Me.STQ_0_Label)
         Me.TabPage11.Controls.Add(Me.STQ_1_Label)
-        Me.TabPage11.Controls.Add(Me.Label98)
-        Me.TabPage11.Controls.Add(Me.Label99)
         Me.TabPage11.Controls.Add(Me.STQ_X_Label)
-        Me.TabPage11.Controls.Add(Me.Label100)
+        Me.TabPage11.Controls.Add(Me.SwitchTheQuestion_Label)
         Me.TabPage11.Controls.Add(Me.SwitchQ_PictureBox)
         Me.TabPage11.Location = New System.Drawing.Point(4, 24)
         Me.TabPage11.Name = "TabPage11"
@@ -2325,30 +2321,6 @@ Partial Class Quiz_Operator
         Me.STQ_1_Label.TabIndex = 185
         Me.STQ_1_Label.Text = "STQ BLINK"
         '
-        'Label98
-        '
-        Me.Label98.AutoSize = True
-        Me.Label98.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Label98.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label98.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label98.Location = New System.Drawing.Point(254, 22)
-        Me.Label98.Name = "Label98"
-        Me.Label98.Size = New System.Drawing.Size(27, 18)
-        Me.Label98.TabIndex = 1246
-        Me.Label98.Text = "(2)"
-        '
-        'Label99
-        '
-        Me.Label99.AutoSize = True
-        Me.Label99.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Label99.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label99.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label99.Location = New System.Drawing.Point(221, 22)
-        Me.Label99.Name = "Label99"
-        Me.Label99.Size = New System.Drawing.Size(27, 18)
-        Me.Label99.TabIndex = 1245
-        Me.Label99.Text = "(1)"
-        '
         'STQ_X_Label
         '
         Me.STQ_X_Label.AutoSize = True
@@ -2361,17 +2333,17 @@ Partial Class Quiz_Operator
         Me.STQ_X_Label.TabIndex = 189
         Me.STQ_X_Label.Text = "STQ (Х)"
         '
-        'Label100
+        'SwitchTheQuestion_Label
         '
-        Me.Label100.AutoSize = True
-        Me.Label100.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Label100.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label100.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label100.Location = New System.Drawing.Point(96, 14)
-        Me.Label100.Name = "Label100"
-        Me.Label100.Size = New System.Drawing.Size(108, 36)
-        Me.Label100.TabIndex = 162
-        Me.Label100.Text = "SWITCH THE " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "QUESTION"
+        Me.SwitchTheQuestion_Label.AutoSize = True
+        Me.SwitchTheQuestion_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.SwitchTheQuestion_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.SwitchTheQuestion_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SwitchTheQuestion_Label.Location = New System.Drawing.Point(96, 14)
+        Me.SwitchTheQuestion_Label.Name = "SwitchTheQuestion_Label"
+        Me.SwitchTheQuestion_Label.Size = New System.Drawing.Size(108, 36)
+        Me.SwitchTheQuestion_Label.TabIndex = 162
+        Me.SwitchTheQuestion_Label.Text = "SWITCH THE " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "QUESTION"
         '
         'SwitchQ_PictureBox
         '
@@ -2883,10 +2855,8 @@ Partial Class Quiz_Operator
     Friend WithEvents ataVoteTime_TextBox As TextBox
     Friend WithEvents ATAready_Label As Label
     Friend WithEvents TabPage11 As TabPage
-    Friend WithEvents Label98 As Label
-    Friend WithEvents Label99 As Label
     Friend WithEvents SwitchQ_PictureBox As PictureBox
-    Friend WithEvents Label100 As Label
+    Friend WithEvents SwitchTheQuestion_Label As Label
     Friend WithEvents TabPage13 As TabPage
     Friend WithEvents TabPage14 As TabPage
     Friend WithEvents TabPage15 As TabPage
