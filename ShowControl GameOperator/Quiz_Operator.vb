@@ -31,57 +31,9 @@ Public Class Quiz_Operator
     Dim LifelinesState1 As String = ""
     Public ReadOnly Property LifelinesState As String
         Get
-            Dim AllLifelines As String = String.Format("{0};{1};{2};{3}", Helpers.ConvertLifelineStateToReadable(Lifeline1Active), Helpers.ConvertLifelineStateToReadable(Lifeline2Active), Helpers.ConvertLifelineStateToReadable(Lifeline3Active), Helpers.ConvertLifelineStateToReadable(Lifeline4Active))
+            Dim AllLifelines As String = String.Format("{0};{1};{2};{3}", Helpers.ConvertLifelineStateToReadable(GuiContext.Lifeline1Active), Helpers.ConvertLifelineStateToReadable(GuiContext.Lifeline2Active), Helpers.ConvertLifelineStateToReadable(GuiContext.Lifeline3Active), Helpers.ConvertLifelineStateToReadable(GuiContext.Lifeline4Active))
             Return AllLifelines
         End Get
-    End Property
-
-    Dim lifeline1Active1 As Short = 1
-    Public Property Lifeline1Active As Short
-        Get
-            Return lifeline1Active1
-        End Get
-        Set(value As Short)
-            lifeline1Active1 = value
-            GraphicsProcessingUnit.MarkCGlifelines(lifeline1Active1, Lifeline2Active, Lifeline3Active, Lifeline4Active)
-            HostContPresentationLayer.GamePlayStateSet("LIFELINE_UPDATE")
-        End Set
-    End Property
-
-    Dim lifeline2Active1 As Short = 1
-    Public Property Lifeline2Active As Short
-        Get
-            Return lifeline2Active1
-        End Get
-        Set(value As Short)
-            lifeline2Active1 = value
-            GraphicsProcessingUnit.MarkCGlifelines(lifeline1Active1, Lifeline2Active, Lifeline3Active, Lifeline4Active)
-            HostContPresentationLayer.GamePlayStateSet("LIFELINE_UPDATE")
-        End Set
-    End Property
-
-    Dim lifeline3Active1 As Short = 1
-    Public Property Lifeline3Active As Short
-        Get
-            Return lifeline3Active1
-        End Get
-        Set(value As Short)
-            lifeline3Active1 = value
-            GraphicsProcessingUnit.MarkCGlifelines(lifeline1Active1, Lifeline2Active, Lifeline3Active, Lifeline4Active)
-            HostContPresentationLayer.GamePlayStateSet("LIFELINE_UPDATE")
-        End Set
-    End Property
-
-    Dim lifeline4Active1 As Short = 1
-    Public Property Lifeline4Active As Short
-        Get
-            Return lifeline4Active1
-        End Get
-        Set(value As Short)
-            lifeline4Active1 = value
-            GraphicsProcessingUnit.MarkCGlifelines(lifeline1Active1, Lifeline2Active, Lifeline3Active, Lifeline4Active)
-            HostContPresentationLayer.GamePlayStateSet("LIFELINE_UPDATE")
-        End Set
     End Property
 
     Dim doubleDipState1 As String = ""
@@ -91,7 +43,7 @@ Public Class Quiz_Operator
         End Get
         Set(value As String)
             doubleDipState1 = value
-            GraphicsProcessingUnit.MarkCGlifelines(lifeline1Active1, Lifeline2Active, Lifeline3Active, Lifeline4Active)
+            GraphicsProcessingUnit.MarkCGlifelines(GuiContext.Lifeline1Active, GuiContext.Lifeline2Active, GuiContext.Lifeline3Active, GuiContext.Lifeline4Active)
         End Set
     End Property
 
@@ -843,6 +795,8 @@ Public Class Quiz_Operator
         FinalC_Button.Text = "Final C: " + Answer3Text.Substring(0, Math.Min(20, Answer3Text.Length))
         FinalD_Button.Text = "Final D: " + Answer4Text.Substring(0, Math.Min(20, Answer4Text.Length))
 
+        GuiContext.PositionLifelineTab(-1)
+
         '' ******* CASPARCG ******* CASPARCG *******
         GraphicsProcessingUnit.resetVariables()
         DataLayer.DisposeATAvoteData()
@@ -1066,7 +1020,7 @@ Public Class Quiz_Operator
     End Sub
 
     Private Sub LifelineRemind_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LifelineRemind_Button.Click
-        GraphicsProcessingUnit.MarkCGlifelines(lifeline1Active1, Lifeline2Active, Lifeline3Active, Lifeline4Active)
+        GraphicsProcessingUnit.MarkCGlifelines(GuiContext.Lifeline1Active, GuiContext.Lifeline2Active, GuiContext.Lifeline3Active, GuiContext.Lifeline4Active)
         GraphicsProcessingUnit.LifelineRemind()
 
     End Sub
@@ -1171,21 +1125,12 @@ Public Class Quiz_Operator
         SumeShow_CheckBox.Checked = True
         Empty_CheckBox.Checked = True
 
-        Me.Lifeline3_PictureBox.BackgroundImage = Image.FromFile("C:\WWTBAM Removable Disc\Graphics\ATA_0.png")
-        Me.Lifeline2_PictureBox.BackgroundImage = Image.FromFile("C:\WWTBAM Removable Disc\Graphics\DDIP_0.png")
-        Me.Lifeline1_PictureBox.BackgroundImage = Image.FromFile("C:\WWTBAM Removable Disc\Graphics\5050_0.png")
-
-        Me.Lifeline3_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Lifeline2_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Lifeline1_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-
         FinalAnswer = "T"
         DoubleDipFirstAnswer = ""
         VariableMilestone_TextBox.Text = ""
 
         If LevelQ = "111" Or LevelQ = "666" Then
             LevelQ = "1"
-
         End If
 
         ''SQL
@@ -1199,7 +1144,6 @@ Public Class Quiz_Operator
         ATA_0_Label_Click(ATA_0_Label, Nothing)
         STQ_0_Label_Click(STQ_0_Label, Nothing)
 
-
         For index As Integer = 6 To 15 - 1
             Dim TextBox As String = "QSum" + index.ToString + "_TextBox"
             For Each tb As TextBox In Me.Controls.OfType(Of TextBox)()
@@ -1208,11 +1152,6 @@ Public Class Quiz_Operator
                 End If
             Next
         Next
-
-        Lifeline1Active = 1
-        Lifeline2Active = 1
-        Lifeline3Active = 1
-        Lifeline4Active = 1
 
         GraphicsProcessingUnit.CGMoneyTreeDataSet(QSum1_TextBox.Text, QSum2_TextBox.Text, QSum3_TextBox.Text, QSum4_TextBox.Text, QSum5_TextBox.Text, QSum6_TextBox.Text, QSum7_TextBox.Text, QSum8_TextBox.Text, QSum9_TextBox.Text, QSum10_TextBox.Text, QSum11_TextBox.Text, QSum12_TextBox.Text, QSum13_TextBox.Text, QSum14_TextBox.Text, QSum15_TextBox.Text, ActiveLifelinesNames)
         GraphicsProcessingUnit.removeSecondMilestone()
@@ -1228,18 +1167,7 @@ Public Class Quiz_Operator
         CremoveFF_Label.BackColor = Color.Yellow
         DremoveFF_Label.BackColor = Color.Yellow
 
-        GuiContext.SomethingToDoWithLifeline(FiftyFiftyPosition, 0)
-
-        Select Case FiftyFiftyPosition
-            Case 1
-                Lifeline1Active = 0
-            Case 2
-                Lifeline2Active = 0
-            Case 3
-                Lifeline3Active = 0
-            Case 4
-                Lifeline4Active = 0
-        End Select
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 0)
 
     End Sub
 
@@ -1287,51 +1215,17 @@ Public Class Quiz_Operator
     End Sub
 
     Private Sub PAF_X_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PAF_X_Label.Click
-        GuiContext.SomethingToDoWithLifeline(PhoneAFriendPosition, 0)
-
-        Select Case PhoneAFriendPosition
-            Case 1
-                Lifeline1Active = 0
-            Case 2
-                Lifeline2Active = 0
-            Case 3
-                Lifeline3Active = 0
-            Case 4
-                Lifeline4Active = 0
-        End Select
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 0)
 
     End Sub
 
     Private Sub ATA_X_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ATA_X_Label.Click
-        GuiContext.SomethingToDoWithLifeline(AskTheAudiencePosition, 0)
-
-        Select Case AskTheAudiencePosition
-            Case 1
-                Lifeline1Active = 0
-            Case 2
-                Lifeline2Active = 0
-            Case 3
-                Lifeline3Active = 0
-            Case 4
-                Lifeline4Active = 0
-        End Select
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 0)
 
     End Sub
 
     Private Sub STQ_X_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles STQ_X_Label.Click
-        GuiContext.SomethingToDoWithLifeline(SwitchTheQuestionPosition, 0)
-
-        Select Case SwitchTheQuestionPosition
-            Case 1
-                Lifeline1Active = 0
-            Case 2
-                Lifeline2Active = 0
-            Case 3
-                Lifeline3Active = 0
-            Case 4
-                Lifeline4Active = 0
-        End Select
-
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 0)
 
     End Sub
 
@@ -1397,137 +1291,42 @@ Public Class Quiz_Operator
     End Sub
 
     Private Sub FiftyFifty_0_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FiftyFifty_0_Label.Click
-
-        GuiContext.SomethingToDoWithLifeline(FiftyFiftyPosition, 1)
-
-        Select Case FiftyFiftyPosition
-            Case 1
-                Lifeline1Active = 1
-            Case 2
-                Lifeline2Active = 1
-            Case 3
-                Lifeline3Active = 1
-            Case 4
-                Lifeline4Active = 1
-        End Select
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 1)
 
     End Sub
 
     Private Sub PAF_0_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PAF_0_Label.Click
-        GuiContext.SomethingToDoWithLifeline(PhoneAFriendPosition, 1)
-
-        Select Case PhoneAFriendPosition
-            Case 1
-                Lifeline1Active = 1
-            Case 2
-                Lifeline2Active = 1
-            Case 3
-                Lifeline3Active = 1
-            Case 4
-                Lifeline4Active = 1
-        End Select
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 1)
 
     End Sub
 
     Private Sub ATA_0_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ATA_0_Label.Click
-
-        GuiContext.SomethingToDoWithLifeline(AskTheAudiencePosition, 1)
-
-        Select Case AskTheAudiencePosition
-            Case 1
-                Lifeline1Active = 1
-            Case 2
-                Lifeline2Active = 1
-            Case 3
-                Lifeline3Active = 1
-            Case 4
-                Lifeline4Active = 1
-        End Select
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 1)
 
     End Sub
 
     Private Sub STQ_0_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles STQ_0_Label.Click
-
-        GuiContext.SomethingToDoWithLifeline(SwitchTheQuestionPosition, 1)
-
-        Select Case SwitchTheQuestionPosition
-            Case 1
-                Lifeline1Active = 1
-            Case 2
-                Lifeline2Active = 1
-            Case 3
-                Lifeline3Active = 1
-            Case 4
-                Lifeline4Active = 1
-        End Select
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 1)
 
     End Sub
 
     Private Sub FiftyFifty_1_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FiftyFifty_1_Label.Click
-
-        GuiContext.SomethingToDoWithLifeline(FiftyFiftyPosition, 2)
-
-        Select Case FiftyFiftyPosition
-            Case 1
-                Lifeline1Active = 2
-            Case 2
-                Lifeline2Active = 2
-            Case 3
-                Lifeline3Active = 2
-            Case 4
-                Lifeline4Active = 2
-        End Select
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 2)
 
     End Sub
 
     Private Sub PAF_1_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PAF_1_Label.Click
-
-        GuiContext.SomethingToDoWithLifeline(PhoneAFriendPosition, 2)
-
-        Select Case PhoneAFriendPosition
-            Case 1
-                Lifeline1Active = 2
-            Case 2
-                Lifeline2Active = 2
-            Case 3
-                Lifeline3Active = 2
-            Case 4
-                Lifeline4Active = 2
-        End Select
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 2)
 
     End Sub
 
     Private Sub ATA_1_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ATA_1_Label.Click
-
-        GuiContext.SomethingToDoWithLifeline(AskTheAudiencePosition, 2)
-
-        Select Case AskTheAudiencePosition
-            Case 1
-                Lifeline1Active = 2
-            Case 2
-                Lifeline2Active = 2
-            Case 3
-                Lifeline3Active = 2
-            Case 4
-                Lifeline4Active = 2
-        End Select
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 2)
 
     End Sub
 
     Private Sub STQ_1_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles STQ_1_Label.Click
-
-        GuiContext.SomethingToDoWithLifeline(SwitchTheQuestionPosition, 2)
-
-        Select Case SwitchTheQuestionPosition
-            Case 1
-                Lifeline1Active = 2
-            Case 2
-                Lifeline2Active = 2
-            Case 3
-                Lifeline3Active = 2
-            Case 4
-                Lifeline4Active = 2
-        End Select
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 2)
 
     End Sub
     Private Sub CorrectAnswerReveal_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CorrectAnswerReveal_Button.Click
@@ -1724,7 +1523,7 @@ Public Class Quiz_Operator
 
         GraphicsProcessingUnit.CGMoneyTreeDataSet(QSum1_TextBox.Text, QSum2_TextBox.Text, QSum3_TextBox.Text, QSum4_TextBox.Text, QSum5_TextBox.Text, QSum6_TextBox.Text, QSum7_TextBox.Text, QSum8_TextBox.Text, QSum9_TextBox.Text, QSum10_TextBox.Text, QSum11_TextBox.Text, QSum12_TextBox.Text, QSum13_TextBox.Text, QSum14_TextBox.Text, QSum15_TextBox.Text, ActiveLifelinesNames)
         GraphicsProcessingUnit.MoneyTreeSet()
-        GraphicsProcessingUnit.MarkCGlifelines(lifeline1Active1, Lifeline2Active, Lifeline3Active, Lifeline4Active)
+        GraphicsProcessingUnit.MarkCGlifelines(GuiContext.Lifeline1Active, GuiContext.Lifeline2Active, GuiContext.Lifeline3Active, GuiContext.Lifeline4Active)
 
         MoneyTreeSet_Label.ForeColor = Color.Blue
         '' ******* CASPARCG ******* 
@@ -2146,18 +1945,22 @@ Public Class Quiz_Operator
     End Sub
 
     Private Sub Lifeline1_PictureBox_Click(sender As Object, e As EventArgs) Handles Lifeline1_PictureBox.Click
+        GuiContext.CurrentlyActiveLifelinePosition = 1
         GuiContext.PositionLifelineTab(1)
     End Sub
 
     Private Sub Lifeline2_PictureBox_Click(sender As Object, e As EventArgs) Handles Lifeline2_PictureBox.Click
+        GuiContext.CurrentlyActiveLifelinePosition = 2
         GuiContext.PositionLifelineTab(2)
     End Sub
 
     Private Sub Lifeline3_PictureBox_Click(sender As Object, e As EventArgs) Handles Lifeline3_PictureBox.Click
+        GuiContext.CurrentlyActiveLifelinePosition = 3
         GuiContext.PositionLifelineTab(3)
     End Sub
 
     Private Sub Lifeline4_PictureBox_Click(sender As Object, e As EventArgs) Handles Lifeline4_PictureBox.Click
+        GuiContext.CurrentlyActiveLifelinePosition = 4
         GuiContext.PositionLifelineTab(4)
     End Sub
 
@@ -2271,18 +2074,15 @@ Public Class Quiz_Operator
     End Sub
 
     Private Sub DDIP_0_Label_Click(sender As Object, e As EventArgs) Handles DDIP_0_Label.Click
-        GuiContext.SomethingToDoWithLifeline(DoubleDipPosition, 1)
-        Lifeline2Active = 1
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 1)
     End Sub
 
     Private Sub DDIP_1_Label_Click(sender As Object, e As EventArgs) Handles DDIP_1_Label.Click
-        GuiContext.SomethingToDoWithLifeline(DoubleDipPosition, 2)
-        Lifeline2Active = 2
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 2)
     End Sub
 
     Private Sub DDIP_X_Label_Click(sender As Object, e As EventArgs) Handles DDIP_X_Label.Click
-        GuiContext.SomethingToDoWithLifeline(DoubleDipPosition, 0)
-        Lifeline2Active = 0
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 0)
     End Sub
 
     Public Sub GUIOperatorStateSet(MomentStatus As String)
@@ -2643,4 +2443,12 @@ Public Class Quiz_Operator
 
     End Sub
 
+    Private Sub ChangeTheStateOfLifelines_Label_Click(sender As Object, e As EventArgs) Handles ChangeTheStateOfLifelines_Label.Click
+        Lifeline1_PictureBox.Visible = True
+        Lifeline2_PictureBox.Visible = True
+        Lifeline3_PictureBox.Visible = True
+        Lifeline4_PictureBox.Visible = True
+
+        Me.TabControl2.SelectedTab = TabPage6
+    End Sub
 End Class

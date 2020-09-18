@@ -148,7 +148,7 @@ Partial Class Quiz_Operator
         Me.Lifeline1_PictureBox = New System.Windows.Forms.PictureBox()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage8 = New System.Windows.Forms.TabPage()
+        Me.FiftyFiftyLifeline_TabPage = New System.Windows.Forms.TabPage()
         Me.FiftyFifty_0_Label = New System.Windows.Forms.Label()
         Me.FiftyFifty_1_Label = New System.Windows.Forms.Label()
         Me.FiftyFifty_X_Label = New System.Windows.Forms.Label()
@@ -160,7 +160,7 @@ Partial Class Quiz_Operator
         Me.BremoveFF_Label = New System.Windows.Forms.Label()
         Me.CremoveFF_Label = New System.Windows.Forms.Label()
         Me.DremoveFF_Label = New System.Windows.Forms.Label()
-        Me.TabPage9 = New System.Windows.Forms.TabPage()
+        Me.PhoneAfriendLifeline_TabPage = New System.Windows.Forms.TabPage()
         Me.PAF_1_Label = New System.Windows.Forms.Label()
         Me.PAF_0_Label = New System.Windows.Forms.Label()
         Me.PAF_X_Label = New System.Windows.Forms.Label()
@@ -177,7 +177,7 @@ Partial Class Quiz_Operator
         Me.PAFabort_Label = New System.Windows.Forms.Label()
         Me.PAFready_Label = New System.Windows.Forms.Label()
         Me.PAF_PictureBox = New System.Windows.Forms.PictureBox()
-        Me.TabPage10 = New System.Windows.Forms.TabPage()
+        Me.AskTheAudienceLifeline_TabPage = New System.Windows.Forms.TabPage()
         Me.ATA_PictureBox = New System.Windows.Forms.PictureBox()
         Me.ATA_0_Label = New System.Windows.Forms.Label()
         Me.ATAstart_Label = New System.Windows.Forms.Label()
@@ -196,13 +196,13 @@ Partial Class Quiz_Operator
         Me.D_pub = New System.Windows.Forms.TextBox()
         Me.ataVoteTime_TextBox = New System.Windows.Forms.TextBox()
         Me.ATAready_Label = New System.Windows.Forms.Label()
-        Me.TabPage11 = New System.Windows.Forms.TabPage()
+        Me.SwitchTheQuestionLifeline_TabPage = New System.Windows.Forms.TabPage()
         Me.STQ_0_Label = New System.Windows.Forms.Label()
         Me.STQ_1_Label = New System.Windows.Forms.Label()
         Me.STQ_X_Label = New System.Windows.Forms.Label()
         Me.SwitchTheQuestion_Label = New System.Windows.Forms.Label()
         Me.SwitchQ_PictureBox = New System.Windows.Forms.PictureBox()
-        Me.TabPage13 = New System.Windows.Forms.TabPage()
+        Me.DoubleDipLifeline_TabPage = New System.Windows.Forms.TabPage()
         Me.DDIP_1_Label = New System.Windows.Forms.Label()
         Me.DDIP_0_Label = New System.Windows.Forms.Label()
         Me.DDIP_X_Label = New System.Windows.Forms.Label()
@@ -213,9 +213,9 @@ Partial Class Quiz_Operator
         Me.DoubleDipFinalD_Button = New System.Windows.Forms.Button()
         Me.DoubleDipCancel_Label = New System.Windows.Forms.Label()
         Me.DoubleDipReady_Label = New System.Windows.Forms.Label()
-        Me.TabPage14 = New System.Windows.Forms.TabPage()
-        Me.TabPage15 = New System.Windows.Forms.TabPage()
-        Me.TabPage16 = New System.Windows.Forms.TabPage()
+        Me.AskTheExpertLifeline_TabPage = New System.Windows.Forms.TabPage()
+        Me.ThreeAudienceMemberLifeline_TabPage = New System.Windows.Forms.TabPage()
+        Me.StateOfLifelines_TabPage = New System.Windows.Forms.TabPage()
         Me.TabPage12 = New System.Windows.Forms.TabPage()
         Me.FFFStart_Label = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -225,6 +225,7 @@ Partial Class Quiz_Operator
         Me.MusicList_ComboBox = New System.Windows.Forms.ComboBox()
         Me.SoundPlay_Button = New System.Windows.Forms.Button()
         Me.SoundMute_Button = New System.Windows.Forms.Button()
+        Me.ChangeTheStateOfLifelines_Label = New System.Windows.Forms.Label()
         Me.GameControl_TabControl.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage4.SuspendLayout()
@@ -240,15 +241,16 @@ Partial Class Quiz_Operator
         CType(Me.Lifeline1_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage7.SuspendLayout()
         Me.TabControl1.SuspendLayout()
-        Me.TabPage8.SuspendLayout()
+        Me.FiftyFiftyLifeline_TabPage.SuspendLayout()
         CType(Me.FiftyFifty_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage9.SuspendLayout()
+        Me.PhoneAfriendLifeline_TabPage.SuspendLayout()
         CType(Me.PAF_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage10.SuspendLayout()
+        Me.AskTheAudienceLifeline_TabPage.SuspendLayout()
         CType(Me.ATA_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage11.SuspendLayout()
+        Me.SwitchTheQuestionLifeline_TabPage.SuspendLayout()
         CType(Me.SwitchQ_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage13.SuspendLayout()
+        Me.DoubleDipLifeline_TabPage.SuspendLayout()
+        Me.StateOfLifelines_TabPage.SuspendLayout()
         Me.TabPage12.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -1670,14 +1672,14 @@ Partial Class Quiz_Operator
         '
         'TabControl1
         '
-        Me.TabControl1.Controls.Add(Me.TabPage8)
-        Me.TabControl1.Controls.Add(Me.TabPage9)
-        Me.TabControl1.Controls.Add(Me.TabPage10)
-        Me.TabControl1.Controls.Add(Me.TabPage11)
-        Me.TabControl1.Controls.Add(Me.TabPage13)
-        Me.TabControl1.Controls.Add(Me.TabPage14)
-        Me.TabControl1.Controls.Add(Me.TabPage15)
-        Me.TabControl1.Controls.Add(Me.TabPage16)
+        Me.TabControl1.Controls.Add(Me.FiftyFiftyLifeline_TabPage)
+        Me.TabControl1.Controls.Add(Me.PhoneAfriendLifeline_TabPage)
+        Me.TabControl1.Controls.Add(Me.AskTheAudienceLifeline_TabPage)
+        Me.TabControl1.Controls.Add(Me.SwitchTheQuestionLifeline_TabPage)
+        Me.TabControl1.Controls.Add(Me.DoubleDipLifeline_TabPage)
+        Me.TabControl1.Controls.Add(Me.AskTheExpertLifeline_TabPage)
+        Me.TabControl1.Controls.Add(Me.ThreeAudienceMemberLifeline_TabPage)
+        Me.TabControl1.Controls.Add(Me.StateOfLifelines_TabPage)
         Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(18, 15)
         Me.TabControl1.Name = "TabControl1"
@@ -1685,32 +1687,33 @@ Partial Class Quiz_Operator
         Me.TabControl1.Size = New System.Drawing.Size(743, 304)
         Me.TabControl1.TabIndex = 1253
         '
-        'TabPage8
+        'FiftyFiftyLifeline_TabPage
         '
-        Me.TabPage8.Controls.Add(Me.FiftyFifty_0_Label)
-        Me.TabPage8.Controls.Add(Me.FiftyFifty_1_Label)
-        Me.TabPage8.Controls.Add(Me.FiftyFifty_X_Label)
-        Me.TabPage8.Controls.Add(Me.RandomSelection_CheckBox)
-        Me.TabPage8.Controls.Add(Me.FiftyFiftyOptionsReset_Label)
-        Me.TabPage8.Controls.Add(Me.FiftyFifty_PictureBox)
-        Me.TabPage8.Controls.Add(Me.FiftyFiftyStart_Label)
-        Me.TabPage8.Controls.Add(Me.AremoveFF_Label)
-        Me.TabPage8.Controls.Add(Me.BremoveFF_Label)
-        Me.TabPage8.Controls.Add(Me.CremoveFF_Label)
-        Me.TabPage8.Controls.Add(Me.DremoveFF_Label)
-        Me.TabPage8.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage8.Name = "TabPage8"
-        Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(735, 276)
-        Me.TabPage8.TabIndex = 0
-        Me.TabPage8.Text = "  50-50  "
-        Me.TabPage8.UseVisualStyleBackColor = True
+        Me.FiftyFiftyLifeline_TabPage.Controls.Add(Me.FiftyFifty_0_Label)
+        Me.FiftyFiftyLifeline_TabPage.Controls.Add(Me.FiftyFifty_1_Label)
+        Me.FiftyFiftyLifeline_TabPage.Controls.Add(Me.FiftyFifty_X_Label)
+        Me.FiftyFiftyLifeline_TabPage.Controls.Add(Me.RandomSelection_CheckBox)
+        Me.FiftyFiftyLifeline_TabPage.Controls.Add(Me.FiftyFiftyOptionsReset_Label)
+        Me.FiftyFiftyLifeline_TabPage.Controls.Add(Me.FiftyFifty_PictureBox)
+        Me.FiftyFiftyLifeline_TabPage.Controls.Add(Me.FiftyFiftyStart_Label)
+        Me.FiftyFiftyLifeline_TabPage.Controls.Add(Me.AremoveFF_Label)
+        Me.FiftyFiftyLifeline_TabPage.Controls.Add(Me.BremoveFF_Label)
+        Me.FiftyFiftyLifeline_TabPage.Controls.Add(Me.CremoveFF_Label)
+        Me.FiftyFiftyLifeline_TabPage.Controls.Add(Me.DremoveFF_Label)
+        Me.FiftyFiftyLifeline_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.FiftyFiftyLifeline_TabPage.Name = "FiftyFiftyLifeline_TabPage"
+        Me.FiftyFiftyLifeline_TabPage.Padding = New System.Windows.Forms.Padding(3)
+        Me.FiftyFiftyLifeline_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.FiftyFiftyLifeline_TabPage.TabIndex = 0
+        Me.FiftyFiftyLifeline_TabPage.Text = "  50-50  "
+        Me.FiftyFiftyLifeline_TabPage.UseVisualStyleBackColor = True
         '
         'FiftyFifty_0_Label
         '
         Me.FiftyFifty_0_Label.AutoSize = True
         Me.FiftyFifty_0_Label.BackColor = System.Drawing.Color.White
         Me.FiftyFifty_0_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FiftyFifty_0_Label.Enabled = False
         Me.FiftyFifty_0_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FiftyFifty_0_Label.Location = New System.Drawing.Point(473, 16)
         Me.FiftyFifty_0_Label.Name = "FiftyFifty_0_Label"
@@ -1723,6 +1726,7 @@ Partial Class Quiz_Operator
         Me.FiftyFifty_1_Label.AutoSize = True
         Me.FiftyFifty_1_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.FiftyFifty_1_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FiftyFifty_1_Label.Enabled = False
         Me.FiftyFifty_1_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FiftyFifty_1_Label.Location = New System.Drawing.Point(536, 15)
         Me.FiftyFifty_1_Label.Name = "FiftyFifty_1_Label"
@@ -1735,6 +1739,7 @@ Partial Class Quiz_Operator
         Me.FiftyFifty_X_Label.AutoSize = True
         Me.FiftyFifty_X_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.FiftyFifty_X_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FiftyFifty_X_Label.Enabled = False
         Me.FiftyFifty_X_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FiftyFifty_X_Label.Location = New System.Drawing.Point(640, 15)
         Me.FiftyFifty_X_Label.Name = "FiftyFifty_X_Label"
@@ -1747,6 +1752,7 @@ Partial Class Quiz_Operator
         Me.RandomSelection_CheckBox.AutoSize = True
         Me.RandomSelection_CheckBox.Checked = True
         Me.RandomSelection_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.RandomSelection_CheckBox.Enabled = False
         Me.RandomSelection_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RandomSelection_CheckBox.Location = New System.Drawing.Point(246, 55)
         Me.RandomSelection_CheckBox.Name = "RandomSelection_CheckBox"
@@ -1760,6 +1766,7 @@ Partial Class Quiz_Operator
         Me.FiftyFiftyOptionsReset_Label.AutoSize = True
         Me.FiftyFiftyOptionsReset_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.FiftyFiftyOptionsReset_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FiftyFiftyOptionsReset_Label.Enabled = False
         Me.FiftyFiftyOptionsReset_Label.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FiftyFiftyOptionsReset_Label.Location = New System.Drawing.Point(243, 18)
         Me.FiftyFiftyOptionsReset_Label.Name = "FiftyFiftyOptionsReset_Label"
@@ -1782,6 +1789,7 @@ Partial Class Quiz_Operator
         '
         Me.FiftyFiftyStart_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.FiftyFiftyStart_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FiftyFiftyStart_Label.Enabled = False
         Me.FiftyFiftyStart_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FiftyFiftyStart_Label.Location = New System.Drawing.Point(111, 100)
         Me.FiftyFiftyStart_Label.Name = "FiftyFiftyStart_Label"
@@ -1794,6 +1802,7 @@ Partial Class Quiz_Operator
         '
         Me.AremoveFF_Label.BackColor = System.Drawing.Color.Yellow
         Me.AremoveFF_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.AremoveFF_Label.Enabled = False
         Me.AremoveFF_Label.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.AremoveFF_Label.Location = New System.Drawing.Point(105, 13)
         Me.AremoveFF_Label.Name = "AremoveFF_Label"
@@ -1806,6 +1815,7 @@ Partial Class Quiz_Operator
         '
         Me.BremoveFF_Label.BackColor = System.Drawing.Color.Yellow
         Me.BremoveFF_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BremoveFF_Label.Enabled = False
         Me.BremoveFF_Label.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.BremoveFF_Label.Location = New System.Drawing.Point(174, 13)
         Me.BremoveFF_Label.Name = "BremoveFF_Label"
@@ -1818,6 +1828,7 @@ Partial Class Quiz_Operator
         '
         Me.CremoveFF_Label.BackColor = System.Drawing.Color.Yellow
         Me.CremoveFF_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CremoveFF_Label.Enabled = False
         Me.CremoveFF_Label.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.CremoveFF_Label.Location = New System.Drawing.Point(105, 53)
         Me.CremoveFF_Label.Name = "CremoveFF_Label"
@@ -1830,6 +1841,7 @@ Partial Class Quiz_Operator
         '
         Me.DremoveFF_Label.BackColor = System.Drawing.Color.Yellow
         Me.DremoveFF_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DremoveFF_Label.Enabled = False
         Me.DremoveFF_Label.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.DremoveFF_Label.Location = New System.Drawing.Point(173, 53)
         Me.DremoveFF_Label.Name = "DremoveFF_Label"
@@ -1838,37 +1850,38 @@ Partial Class Quiz_Operator
         Me.DremoveFF_Label.Text = "  D  "
         Me.DremoveFF_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TabPage9
+        'PhoneAfriendLifeline_TabPage
         '
-        Me.TabPage9.Controls.Add(Me.PAF_1_Label)
-        Me.TabPage9.Controls.Add(Me.PAF_0_Label)
-        Me.TabPage9.Controls.Add(Me.PAF_X_Label)
-        Me.TabPage9.Controls.Add(Me.Label53)
-        Me.TabPage9.Controls.Add(Me.Label54)
-        Me.TabPage9.Controls.Add(Me.Label55)
-        Me.TabPage9.Controls.Add(Me.Label88)
-        Me.TabPage9.Controls.Add(Me.Label89)
-        Me.TabPage9.Controls.Add(Me.Label90)
-        Me.TabPage9.Controls.Add(Me.Label92)
-        Me.TabPage9.Controls.Add(Me.Label93)
-        Me.TabPage9.Controls.Add(Me.PAFstart_Label)
-        Me.TabPage9.Controls.Add(Me.PAFsec_TextBox)
-        Me.TabPage9.Controls.Add(Me.PAFabort_Label)
-        Me.TabPage9.Controls.Add(Me.PAFready_Label)
-        Me.TabPage9.Controls.Add(Me.PAF_PictureBox)
-        Me.TabPage9.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage9.Name = "TabPage9"
-        Me.TabPage9.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage9.Size = New System.Drawing.Size(735, 276)
-        Me.TabPage9.TabIndex = 1
-        Me.TabPage9.Text = "Phone A Friend"
-        Me.TabPage9.UseVisualStyleBackColor = True
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.PAF_1_Label)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.PAF_0_Label)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.PAF_X_Label)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.Label53)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.Label54)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.Label55)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.Label88)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.Label89)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.Label90)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.Label92)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.Label93)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.PAFstart_Label)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.PAFsec_TextBox)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.PAFabort_Label)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.PAFready_Label)
+        Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.PAF_PictureBox)
+        Me.PhoneAfriendLifeline_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.PhoneAfriendLifeline_TabPage.Name = "PhoneAfriendLifeline_TabPage"
+        Me.PhoneAfriendLifeline_TabPage.Padding = New System.Windows.Forms.Padding(3)
+        Me.PhoneAfriendLifeline_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.PhoneAfriendLifeline_TabPage.TabIndex = 1
+        Me.PhoneAfriendLifeline_TabPage.Text = "Phone A Friend"
+        Me.PhoneAfriendLifeline_TabPage.UseVisualStyleBackColor = True
         '
         'PAF_1_Label
         '
         Me.PAF_1_Label.AutoSize = True
         Me.PAF_1_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.PAF_1_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PAF_1_Label.Enabled = False
         Me.PAF_1_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PAF_1_Label.Location = New System.Drawing.Point(542, 13)
         Me.PAF_1_Label.Name = "PAF_1_Label"
@@ -1881,6 +1894,7 @@ Partial Class Quiz_Operator
         Me.PAF_0_Label.AutoSize = True
         Me.PAF_0_Label.BackColor = System.Drawing.Color.White
         Me.PAF_0_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PAF_0_Label.Enabled = False
         Me.PAF_0_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PAF_0_Label.Location = New System.Drawing.Point(479, 14)
         Me.PAF_0_Label.Name = "PAF_0_Label"
@@ -1893,6 +1907,7 @@ Partial Class Quiz_Operator
         Me.PAF_X_Label.AutoSize = True
         Me.PAF_X_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.PAF_X_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PAF_X_Label.Enabled = False
         Me.PAF_X_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PAF_X_Label.Location = New System.Drawing.Point(639, 13)
         Me.PAF_X_Label.Name = "PAF_X_Label"
@@ -1904,6 +1919,7 @@ Partial Class Quiz_Operator
         '
         Me.Label53.BackColor = System.Drawing.Color.Silver
         Me.Label53.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label53.Enabled = False
         Me.Label53.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label53.Location = New System.Drawing.Point(505, 57)
         Me.Label53.Name = "Label53"
@@ -1916,6 +1932,7 @@ Partial Class Quiz_Operator
         '
         Me.Label54.BackColor = System.Drawing.Color.Silver
         Me.Label54.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label54.Enabled = False
         Me.Label54.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label54.Location = New System.Drawing.Point(478, 57)
         Me.Label54.Name = "Label54"
@@ -1928,6 +1945,7 @@ Partial Class Quiz_Operator
         '
         Me.Label55.BackColor = System.Drawing.Color.Silver
         Me.Label55.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label55.Enabled = False
         Me.Label55.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label55.Location = New System.Drawing.Point(505, 79)
         Me.Label55.Name = "Label55"
@@ -1940,6 +1958,7 @@ Partial Class Quiz_Operator
         '
         Me.Label88.BackColor = System.Drawing.Color.Silver
         Me.Label88.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label88.Enabled = False
         Me.Label88.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label88.Location = New System.Drawing.Point(478, 79)
         Me.Label88.Name = "Label88"
@@ -1952,6 +1971,7 @@ Partial Class Quiz_Operator
         '
         Me.Label89.BackColor = System.Drawing.Color.Silver
         Me.Label89.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label89.Enabled = False
         Me.Label89.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label89.Location = New System.Drawing.Point(505, 101)
         Me.Label89.Name = "Label89"
@@ -1964,6 +1984,7 @@ Partial Class Quiz_Operator
         '
         Me.Label90.BackColor = System.Drawing.Color.Silver
         Me.Label90.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label90.Enabled = False
         Me.Label90.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label90.Location = New System.Drawing.Point(478, 101)
         Me.Label90.Name = "Label90"
@@ -1976,6 +1997,7 @@ Partial Class Quiz_Operator
         '
         Me.Label92.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Label92.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label92.Enabled = False
         Me.Label92.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label92.Location = New System.Drawing.Point(230, 13)
         Me.Label92.Name = "Label92"
@@ -1988,6 +2010,7 @@ Partial Class Quiz_Operator
         '
         Me.Label93.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Label93.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label93.Enabled = False
         Me.Label93.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label93.Location = New System.Drawing.Point(91, 13)
         Me.Label93.Name = "Label93"
@@ -2000,6 +2023,7 @@ Partial Class Quiz_Operator
         '
         Me.PAFstart_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.PAFstart_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PAFstart_Label.Enabled = False
         Me.PAFstart_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PAFstart_Label.Location = New System.Drawing.Point(91, 126)
         Me.PAFstart_Label.Name = "PAFstart_Label"
@@ -2010,6 +2034,7 @@ Partial Class Quiz_Operator
         '
         'PAFsec_TextBox
         '
+        Me.PAFsec_TextBox.Enabled = False
         Me.PAFsec_TextBox.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PAFsec_TextBox.Location = New System.Drawing.Point(94, 176)
         Me.PAFsec_TextBox.Name = "PAFsec_TextBox"
@@ -2022,6 +2047,7 @@ Partial Class Quiz_Operator
         '
         Me.PAFabort_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.PAFabort_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PAFabort_Label.Enabled = False
         Me.PAFabort_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PAFabort_Label.Location = New System.Drawing.Point(91, 231)
         Me.PAFabort_Label.Name = "PAFabort_Label"
@@ -2034,6 +2060,7 @@ Partial Class Quiz_Operator
         '
         Me.PAFready_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.PAFready_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PAFready_Label.Enabled = False
         Me.PAFready_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PAFready_Label.Location = New System.Drawing.Point(91, 67)
         Me.PAFready_Label.Name = "PAFready_Label"
@@ -2053,33 +2080,33 @@ Partial Class Quiz_Operator
         Me.PAF_PictureBox.TabIndex = 1222
         Me.PAF_PictureBox.TabStop = False
         '
-        'TabPage10
+        'AskTheAudienceLifeline_TabPage
         '
-        Me.TabPage10.Controls.Add(Me.ATA_PictureBox)
-        Me.TabPage10.Controls.Add(Me.ATA_0_Label)
-        Me.TabPage10.Controls.Add(Me.ATAstart_Label)
-        Me.TabPage10.Controls.Add(Me.ATA_1_Label)
-        Me.TabPage10.Controls.Add(Me.ATAendVote_Label)
-        Me.TabPage10.Controls.Add(Me.Label94)
-        Me.TabPage10.Controls.Add(Me.AutoEndATA_CheckBox)
-        Me.TabPage10.Controls.Add(Me.ATA_X_Label)
-        Me.TabPage10.Controls.Add(Me.Label95)
-        Me.TabPage10.Controls.Add(Me.Label96)
-        Me.TabPage10.Controls.Add(Me.Label97)
-        Me.TabPage10.Controls.Add(Me.A_pub)
-        Me.TabPage10.Controls.Add(Me.B_pub)
-        Me.TabPage10.Controls.Add(Me.C_pub)
-        Me.TabPage10.Controls.Add(Me.ShowHideAudienceGraph_Label)
-        Me.TabPage10.Controls.Add(Me.D_pub)
-        Me.TabPage10.Controls.Add(Me.ataVoteTime_TextBox)
-        Me.TabPage10.Controls.Add(Me.ATAready_Label)
-        Me.TabPage10.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage10.Name = "TabPage10"
-        Me.TabPage10.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage10.Size = New System.Drawing.Size(735, 276)
-        Me.TabPage10.TabIndex = 2
-        Me.TabPage10.Text = "Ask The Audience"
-        Me.TabPage10.UseVisualStyleBackColor = True
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.ATA_PictureBox)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.ATA_0_Label)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.ATAstart_Label)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.ATA_1_Label)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.ATAendVote_Label)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.Label94)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.AutoEndATA_CheckBox)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.ATA_X_Label)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.Label95)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.Label96)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.Label97)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.A_pub)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.B_pub)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.C_pub)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.ShowHideAudienceGraph_Label)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.D_pub)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.ataVoteTime_TextBox)
+        Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.ATAready_Label)
+        Me.AskTheAudienceLifeline_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.AskTheAudienceLifeline_TabPage.Name = "AskTheAudienceLifeline_TabPage"
+        Me.AskTheAudienceLifeline_TabPage.Padding = New System.Windows.Forms.Padding(3)
+        Me.AskTheAudienceLifeline_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.AskTheAudienceLifeline_TabPage.TabIndex = 2
+        Me.AskTheAudienceLifeline_TabPage.Text = "Ask The Audience"
+        Me.AskTheAudienceLifeline_TabPage.UseVisualStyleBackColor = True
         '
         'ATA_PictureBox
         '
@@ -2097,6 +2124,7 @@ Partial Class Quiz_Operator
         Me.ATA_0_Label.AutoSize = True
         Me.ATA_0_Label.BackColor = System.Drawing.Color.White
         Me.ATA_0_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ATA_0_Label.Enabled = False
         Me.ATA_0_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ATA_0_Label.Location = New System.Drawing.Point(494, 17)
         Me.ATA_0_Label.Name = "ATA_0_Label"
@@ -2108,6 +2136,7 @@ Partial Class Quiz_Operator
         '
         Me.ATAstart_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ATAstart_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ATAstart_Label.Enabled = False
         Me.ATAstart_Label.Font = New System.Drawing.Font("Arial", 11.5!)
         Me.ATAstart_Label.Location = New System.Drawing.Point(94, 51)
         Me.ATAstart_Label.Name = "ATAstart_Label"
@@ -2121,6 +2150,7 @@ Partial Class Quiz_Operator
         Me.ATA_1_Label.AutoSize = True
         Me.ATA_1_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ATA_1_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ATA_1_Label.Enabled = False
         Me.ATA_1_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ATA_1_Label.Location = New System.Drawing.Point(557, 16)
         Me.ATA_1_Label.Name = "ATA_1_Label"
@@ -2132,6 +2162,7 @@ Partial Class Quiz_Operator
         '
         Me.ATAendVote_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(202, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ATAendVote_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ATAendVote_Label.Enabled = False
         Me.ATAendVote_Label.Font = New System.Drawing.Font("Arial", 11.5!)
         Me.ATAendVote_Label.Location = New System.Drawing.Point(94, 93)
         Me.ATAendVote_Label.Name = "ATAendVote_Label"
@@ -2145,6 +2176,7 @@ Partial Class Quiz_Operator
         Me.Label94.AutoSize = True
         Me.Label94.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Label94.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label94.Enabled = False
         Me.Label94.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label94.Location = New System.Drawing.Point(88, 139)
         Me.Label94.Name = "Label94"
@@ -2157,6 +2189,7 @@ Partial Class Quiz_Operator
         Me.AutoEndATA_CheckBox.AutoSize = True
         Me.AutoEndATA_CheckBox.Checked = True
         Me.AutoEndATA_CheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate
+        Me.AutoEndATA_CheckBox.Enabled = False
         Me.AutoEndATA_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AutoEndATA_CheckBox.Location = New System.Drawing.Point(255, 14)
         Me.AutoEndATA_CheckBox.Name = "AutoEndATA_CheckBox"
@@ -2170,6 +2203,7 @@ Partial Class Quiz_Operator
         Me.ATA_X_Label.AutoSize = True
         Me.ATA_X_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ATA_X_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ATA_X_Label.Enabled = False
         Me.ATA_X_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ATA_X_Label.Location = New System.Drawing.Point(648, 16)
         Me.ATA_X_Label.Name = "ATA_X_Label"
@@ -2182,6 +2216,7 @@ Partial Class Quiz_Operator
         Me.Label95.AutoSize = True
         Me.Label95.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Label95.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label95.Enabled = False
         Me.Label95.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label95.Location = New System.Drawing.Point(88, 169)
         Me.Label95.Name = "Label95"
@@ -2194,6 +2229,7 @@ Partial Class Quiz_Operator
         Me.Label96.AutoSize = True
         Me.Label96.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Label96.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label96.Enabled = False
         Me.Label96.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label96.Location = New System.Drawing.Point(88, 198)
         Me.Label96.Name = "Label96"
@@ -2215,6 +2251,7 @@ Partial Class Quiz_Operator
         '
         'A_pub
         '
+        Me.A_pub.Enabled = False
         Me.A_pub.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.A_pub.Location = New System.Drawing.Point(116, 136)
         Me.A_pub.Name = "A_pub"
@@ -2224,6 +2261,7 @@ Partial Class Quiz_Operator
         '
         'B_pub
         '
+        Me.B_pub.Enabled = False
         Me.B_pub.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.B_pub.Location = New System.Drawing.Point(116, 166)
         Me.B_pub.Name = "B_pub"
@@ -2233,6 +2271,7 @@ Partial Class Quiz_Operator
         '
         'C_pub
         '
+        Me.C_pub.Enabled = False
         Me.C_pub.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.C_pub.Location = New System.Drawing.Point(116, 196)
         Me.C_pub.Name = "C_pub"
@@ -2244,6 +2283,7 @@ Partial Class Quiz_Operator
         '
         Me.ShowHideAudienceGraph_Label.BackColor = System.Drawing.Color.Khaki
         Me.ShowHideAudienceGraph_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ShowHideAudienceGraph_Label.Enabled = False
         Me.ShowHideAudienceGraph_Label.Font = New System.Drawing.Font("Arial", 11.5!)
         Me.ShowHideAudienceGraph_Label.Location = New System.Drawing.Point(207, 168)
         Me.ShowHideAudienceGraph_Label.Name = "ShowHideAudienceGraph_Label"
@@ -2254,6 +2294,7 @@ Partial Class Quiz_Operator
         '
         'D_pub
         '
+        Me.D_pub.Enabled = False
         Me.D_pub.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.D_pub.Location = New System.Drawing.Point(116, 226)
         Me.D_pub.Name = "D_pub"
@@ -2263,6 +2304,7 @@ Partial Class Quiz_Operator
         '
         'ataVoteTime_TextBox
         '
+        Me.ataVoteTime_TextBox.Enabled = False
         Me.ataVoteTime_TextBox.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ataVoteTime_TextBox.Location = New System.Drawing.Point(210, 16)
         Me.ataVoteTime_TextBox.Name = "ataVoteTime_TextBox"
@@ -2274,6 +2316,7 @@ Partial Class Quiz_Operator
         '
         Me.ATAready_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ATAready_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ATAready_Label.Enabled = False
         Me.ATAready_Label.Font = New System.Drawing.Font("Arial", 11.5!)
         Me.ATAready_Label.Location = New System.Drawing.Point(94, 13)
         Me.ATAready_Label.Name = "ATAready_Label"
@@ -2282,26 +2325,27 @@ Partial Class Quiz_Operator
         Me.ATAready_Label.Text = "ATA  Ready"
         Me.ATAready_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TabPage11
+        'SwitchTheQuestionLifeline_TabPage
         '
-        Me.TabPage11.Controls.Add(Me.STQ_0_Label)
-        Me.TabPage11.Controls.Add(Me.STQ_1_Label)
-        Me.TabPage11.Controls.Add(Me.STQ_X_Label)
-        Me.TabPage11.Controls.Add(Me.SwitchTheQuestion_Label)
-        Me.TabPage11.Controls.Add(Me.SwitchQ_PictureBox)
-        Me.TabPage11.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage11.Name = "TabPage11"
-        Me.TabPage11.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage11.Size = New System.Drawing.Size(735, 276)
-        Me.TabPage11.TabIndex = 3
-        Me.TabPage11.Text = "Switch The Question"
-        Me.TabPage11.UseVisualStyleBackColor = True
+        Me.SwitchTheQuestionLifeline_TabPage.Controls.Add(Me.STQ_0_Label)
+        Me.SwitchTheQuestionLifeline_TabPage.Controls.Add(Me.STQ_1_Label)
+        Me.SwitchTheQuestionLifeline_TabPage.Controls.Add(Me.STQ_X_Label)
+        Me.SwitchTheQuestionLifeline_TabPage.Controls.Add(Me.SwitchTheQuestion_Label)
+        Me.SwitchTheQuestionLifeline_TabPage.Controls.Add(Me.SwitchQ_PictureBox)
+        Me.SwitchTheQuestionLifeline_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.SwitchTheQuestionLifeline_TabPage.Name = "SwitchTheQuestionLifeline_TabPage"
+        Me.SwitchTheQuestionLifeline_TabPage.Padding = New System.Windows.Forms.Padding(3)
+        Me.SwitchTheQuestionLifeline_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.SwitchTheQuestionLifeline_TabPage.TabIndex = 3
+        Me.SwitchTheQuestionLifeline_TabPage.Text = "Switch The Question"
+        Me.SwitchTheQuestionLifeline_TabPage.UseVisualStyleBackColor = True
         '
         'STQ_0_Label
         '
         Me.STQ_0_Label.AutoSize = True
         Me.STQ_0_Label.BackColor = System.Drawing.Color.White
         Me.STQ_0_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.STQ_0_Label.Enabled = False
         Me.STQ_0_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.STQ_0_Label.Location = New System.Drawing.Point(482, 18)
         Me.STQ_0_Label.Name = "STQ_0_Label"
@@ -2314,6 +2358,7 @@ Partial Class Quiz_Operator
         Me.STQ_1_Label.AutoSize = True
         Me.STQ_1_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.STQ_1_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.STQ_1_Label.Enabled = False
         Me.STQ_1_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.STQ_1_Label.Location = New System.Drawing.Point(554, 18)
         Me.STQ_1_Label.Name = "STQ_1_Label"
@@ -2326,6 +2371,7 @@ Partial Class Quiz_Operator
         Me.STQ_X_Label.AutoSize = True
         Me.STQ_X_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.STQ_X_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.STQ_X_Label.Enabled = False
         Me.STQ_X_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.STQ_X_Label.Location = New System.Drawing.Point(649, 18)
         Me.STQ_X_Label.Name = "STQ_X_Label"
@@ -2338,6 +2384,7 @@ Partial Class Quiz_Operator
         Me.SwitchTheQuestion_Label.AutoSize = True
         Me.SwitchTheQuestion_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.SwitchTheQuestion_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.SwitchTheQuestion_Label.Enabled = False
         Me.SwitchTheQuestion_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SwitchTheQuestion_Label.Location = New System.Drawing.Point(96, 14)
         Me.SwitchTheQuestion_Label.Name = "SwitchTheQuestion_Label"
@@ -2356,30 +2403,31 @@ Partial Class Quiz_Operator
         Me.SwitchQ_PictureBox.TabIndex = 1244
         Me.SwitchQ_PictureBox.TabStop = False
         '
-        'TabPage13
+        'DoubleDipLifeline_TabPage
         '
-        Me.TabPage13.Controls.Add(Me.DDIP_1_Label)
-        Me.TabPage13.Controls.Add(Me.DDIP_0_Label)
-        Me.TabPage13.Controls.Add(Me.DDIP_X_Label)
-        Me.TabPage13.Controls.Add(Me.DoubleDipRevealCorrect_Button)
-        Me.TabPage13.Controls.Add(Me.DoubleDipFinalA_Button)
-        Me.TabPage13.Controls.Add(Me.DoubleDipFinalB_Button)
-        Me.TabPage13.Controls.Add(Me.DoubleDipFinalC_Button)
-        Me.TabPage13.Controls.Add(Me.DoubleDipFinalD_Button)
-        Me.TabPage13.Controls.Add(Me.DoubleDipCancel_Label)
-        Me.TabPage13.Controls.Add(Me.DoubleDipReady_Label)
-        Me.TabPage13.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage13.Name = "TabPage13"
-        Me.TabPage13.Size = New System.Drawing.Size(735, 276)
-        Me.TabPage13.TabIndex = 5
-        Me.TabPage13.Text = "DoubleDip"
-        Me.TabPage13.UseVisualStyleBackColor = True
+        Me.DoubleDipLifeline_TabPage.Controls.Add(Me.DDIP_1_Label)
+        Me.DoubleDipLifeline_TabPage.Controls.Add(Me.DDIP_0_Label)
+        Me.DoubleDipLifeline_TabPage.Controls.Add(Me.DDIP_X_Label)
+        Me.DoubleDipLifeline_TabPage.Controls.Add(Me.DoubleDipRevealCorrect_Button)
+        Me.DoubleDipLifeline_TabPage.Controls.Add(Me.DoubleDipFinalA_Button)
+        Me.DoubleDipLifeline_TabPage.Controls.Add(Me.DoubleDipFinalB_Button)
+        Me.DoubleDipLifeline_TabPage.Controls.Add(Me.DoubleDipFinalC_Button)
+        Me.DoubleDipLifeline_TabPage.Controls.Add(Me.DoubleDipFinalD_Button)
+        Me.DoubleDipLifeline_TabPage.Controls.Add(Me.DoubleDipCancel_Label)
+        Me.DoubleDipLifeline_TabPage.Controls.Add(Me.DoubleDipReady_Label)
+        Me.DoubleDipLifeline_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.DoubleDipLifeline_TabPage.Name = "DoubleDipLifeline_TabPage"
+        Me.DoubleDipLifeline_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.DoubleDipLifeline_TabPage.TabIndex = 5
+        Me.DoubleDipLifeline_TabPage.Text = "DoubleDip"
+        Me.DoubleDipLifeline_TabPage.UseVisualStyleBackColor = True
         '
         'DDIP_1_Label
         '
         Me.DDIP_1_Label.AutoSize = True
         Me.DDIP_1_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.DDIP_1_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DDIP_1_Label.Enabled = False
         Me.DDIP_1_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DDIP_1_Label.Location = New System.Drawing.Point(620, 50)
         Me.DDIP_1_Label.Name = "DDIP_1_Label"
@@ -2392,6 +2440,7 @@ Partial Class Quiz_Operator
         Me.DDIP_0_Label.AutoSize = True
         Me.DDIP_0_Label.BackColor = System.Drawing.Color.WhiteSmoke
         Me.DDIP_0_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DDIP_0_Label.Enabled = False
         Me.DDIP_0_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DDIP_0_Label.Location = New System.Drawing.Point(620, 22)
         Me.DDIP_0_Label.Name = "DDIP_0_Label"
@@ -2404,6 +2453,7 @@ Partial Class Quiz_Operator
         Me.DDIP_X_Label.AutoSize = True
         Me.DDIP_X_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.DDIP_X_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DDIP_X_Label.Enabled = False
         Me.DDIP_X_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DDIP_X_Label.Location = New System.Drawing.Point(620, 80)
         Me.DDIP_X_Label.Name = "DDIP_X_Label"
@@ -2415,6 +2465,7 @@ Partial Class Quiz_Operator
         '
         Me.DoubleDipRevealCorrect_Button.BackColor = System.Drawing.Color.LimeGreen
         Me.DoubleDipRevealCorrect_Button.Cursor = System.Windows.Forms.Cursors.Default
+        Me.DoubleDipRevealCorrect_Button.Enabled = False
         Me.DoubleDipRevealCorrect_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.DoubleDipRevealCorrect_Button.Font = New System.Drawing.Font("Arial Narrow", 12.0!)
         Me.DoubleDipRevealCorrect_Button.ForeColor = System.Drawing.Color.White
@@ -2429,6 +2480,7 @@ Partial Class Quiz_Operator
         '
         Me.DoubleDipFinalA_Button.BackColor = System.Drawing.Color.Orange
         Me.DoubleDipFinalA_Button.Cursor = System.Windows.Forms.Cursors.Default
+        Me.DoubleDipFinalA_Button.Enabled = False
         Me.DoubleDipFinalA_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.DoubleDipFinalA_Button.Font = New System.Drawing.Font("Arial", 11.75!)
         Me.DoubleDipFinalA_Button.ForeColor = System.Drawing.Color.Black
@@ -2443,6 +2495,7 @@ Partial Class Quiz_Operator
         '
         Me.DoubleDipFinalB_Button.BackColor = System.Drawing.Color.Orange
         Me.DoubleDipFinalB_Button.Cursor = System.Windows.Forms.Cursors.Default
+        Me.DoubleDipFinalB_Button.Enabled = False
         Me.DoubleDipFinalB_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.DoubleDipFinalB_Button.Font = New System.Drawing.Font("Arial", 11.75!)
         Me.DoubleDipFinalB_Button.ForeColor = System.Drawing.Color.Black
@@ -2457,6 +2510,7 @@ Partial Class Quiz_Operator
         '
         Me.DoubleDipFinalC_Button.BackColor = System.Drawing.Color.Orange
         Me.DoubleDipFinalC_Button.Cursor = System.Windows.Forms.Cursors.Default
+        Me.DoubleDipFinalC_Button.Enabled = False
         Me.DoubleDipFinalC_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.DoubleDipFinalC_Button.Font = New System.Drawing.Font("Arial", 11.75!)
         Me.DoubleDipFinalC_Button.ForeColor = System.Drawing.Color.Black
@@ -2471,6 +2525,7 @@ Partial Class Quiz_Operator
         '
         Me.DoubleDipFinalD_Button.BackColor = System.Drawing.Color.Orange
         Me.DoubleDipFinalD_Button.Cursor = System.Windows.Forms.Cursors.Default
+        Me.DoubleDipFinalD_Button.Enabled = False
         Me.DoubleDipFinalD_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.DoubleDipFinalD_Button.Font = New System.Drawing.Font("Arial", 11.75!)
         Me.DoubleDipFinalD_Button.ForeColor = System.Drawing.Color.Black
@@ -2485,6 +2540,7 @@ Partial Class Quiz_Operator
         '
         Me.DoubleDipCancel_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DoubleDipCancel_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DoubleDipCancel_Label.Enabled = False
         Me.DoubleDipCancel_Label.Font = New System.Drawing.Font("Arial", 11.5!)
         Me.DoubleDipCancel_Label.Location = New System.Drawing.Point(24, 110)
         Me.DoubleDipCancel_Label.Name = "DoubleDipCancel_Label"
@@ -2497,6 +2553,7 @@ Partial Class Quiz_Operator
         '
         Me.DoubleDipReady_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.DoubleDipReady_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DoubleDipReady_Label.Enabled = False
         Me.DoubleDipReady_Label.Font = New System.Drawing.Font("Arial", 11.5!)
         Me.DoubleDipReady_Label.Location = New System.Drawing.Point(24, 25)
         Me.DoubleDipReady_Label.Name = "DoubleDipReady_Label"
@@ -2505,33 +2562,34 @@ Partial Class Quiz_Operator
         Me.DoubleDipReady_Label.Text = "Double Dip  Ready"
         Me.DoubleDipReady_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TabPage14
+        'AskTheExpertLifeline_TabPage
         '
-        Me.TabPage14.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage14.Name = "TabPage14"
-        Me.TabPage14.Size = New System.Drawing.Size(735, 276)
-        Me.TabPage14.TabIndex = 6
-        Me.TabPage14.Text = "Ask Expert"
-        Me.TabPage14.UseVisualStyleBackColor = True
+        Me.AskTheExpertLifeline_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.AskTheExpertLifeline_TabPage.Name = "AskTheExpertLifeline_TabPage"
+        Me.AskTheExpertLifeline_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.AskTheExpertLifeline_TabPage.TabIndex = 6
+        Me.AskTheExpertLifeline_TabPage.Text = "Ask Expert"
+        Me.AskTheExpertLifeline_TabPage.UseVisualStyleBackColor = True
         '
-        'TabPage15
+        'ThreeAudienceMemberLifeline_TabPage
         '
-        Me.TabPage15.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage15.Name = "TabPage15"
-        Me.TabPage15.Size = New System.Drawing.Size(735, 276)
-        Me.TabPage15.TabIndex = 7
-        Me.TabPage15.Text = "3 Aud Members"
-        Me.TabPage15.UseVisualStyleBackColor = True
+        Me.ThreeAudienceMemberLifeline_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.ThreeAudienceMemberLifeline_TabPage.Name = "ThreeAudienceMemberLifeline_TabPage"
+        Me.ThreeAudienceMemberLifeline_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.ThreeAudienceMemberLifeline_TabPage.TabIndex = 7
+        Me.ThreeAudienceMemberLifeline_TabPage.Text = "3 Aud Members"
+        Me.ThreeAudienceMemberLifeline_TabPage.UseVisualStyleBackColor = True
         '
-        'TabPage16
+        'StateOfLifelines_TabPage
         '
-        Me.TabPage16.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage16.Name = "TabPage16"
-        Me.TabPage16.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage16.Size = New System.Drawing.Size(735, 276)
-        Me.TabPage16.TabIndex = 4
-        Me.TabPage16.Text = "State of Lifelines"
-        Me.TabPage16.UseVisualStyleBackColor = True
+        Me.StateOfLifelines_TabPage.Controls.Add(Me.ChangeTheStateOfLifelines_Label)
+        Me.StateOfLifelines_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.StateOfLifelines_TabPage.Name = "StateOfLifelines_TabPage"
+        Me.StateOfLifelines_TabPage.Padding = New System.Windows.Forms.Padding(3)
+        Me.StateOfLifelines_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.StateOfLifelines_TabPage.TabIndex = 4
+        Me.StateOfLifelines_TabPage.Text = "State of Lifelines"
+        Me.StateOfLifelines_TabPage.UseVisualStyleBackColor = True
         '
         'TabPage12
         '
@@ -2644,6 +2702,18 @@ Partial Class Quiz_Operator
         Me.SoundMute_Button.Text = "MUTE"
         Me.SoundMute_Button.UseVisualStyleBackColor = False
         '
+        'ChangeTheStateOfLifelines_Label
+        '
+        Me.ChangeTheStateOfLifelines_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.ChangeTheStateOfLifelines_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ChangeTheStateOfLifelines_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChangeTheStateOfLifelines_Label.Location = New System.Drawing.Point(33, 24)
+        Me.ChangeTheStateOfLifelines_Label.Name = "ChangeTheStateOfLifelines_Label"
+        Me.ChangeTheStateOfLifelines_Label.Size = New System.Drawing.Size(124, 36)
+        Me.ChangeTheStateOfLifelines_Label.TabIndex = 160
+        Me.ChangeTheStateOfLifelines_Label.Text = "CHANGE THE STATES"
+        Me.ChangeTheStateOfLifelines_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Quiz_Operator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2700,20 +2770,21 @@ Partial Class Quiz_Operator
         CType(Me.Lifeline1_PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage7.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
-        Me.TabPage8.ResumeLayout(False)
-        Me.TabPage8.PerformLayout()
+        Me.FiftyFiftyLifeline_TabPage.ResumeLayout(False)
+        Me.FiftyFiftyLifeline_TabPage.PerformLayout()
         CType(Me.FiftyFifty_PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage9.ResumeLayout(False)
-        Me.TabPage9.PerformLayout()
+        Me.PhoneAfriendLifeline_TabPage.ResumeLayout(False)
+        Me.PhoneAfriendLifeline_TabPage.PerformLayout()
         CType(Me.PAF_PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage10.ResumeLayout(False)
-        Me.TabPage10.PerformLayout()
+        Me.AskTheAudienceLifeline_TabPage.ResumeLayout(False)
+        Me.AskTheAudienceLifeline_TabPage.PerformLayout()
         CType(Me.ATA_PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage11.ResumeLayout(False)
-        Me.TabPage11.PerformLayout()
+        Me.SwitchTheQuestionLifeline_TabPage.ResumeLayout(False)
+        Me.SwitchTheQuestionLifeline_TabPage.PerformLayout()
         CType(Me.SwitchQ_PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage13.ResumeLayout(False)
-        Me.TabPage13.PerformLayout()
+        Me.DoubleDipLifeline_TabPage.ResumeLayout(False)
+        Me.DoubleDipLifeline_TabPage.PerformLayout()
+        Me.StateOfLifelines_TabPage.ResumeLayout(False)
         Me.TabPage12.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -2815,7 +2886,7 @@ Partial Class Quiz_Operator
     Friend WithEvents MoneyTreeShow_Label As Label
     Friend WithEvents TabPage7 As TabPage
     Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage8 As TabPage
+    Friend WithEvents FiftyFiftyLifeline_TabPage As TabPage
     Friend WithEvents RandomSelection_CheckBox As CheckBox
     Friend WithEvents FiftyFiftyOptionsReset_Label As Label
     Friend WithEvents FiftyFifty_PictureBox As PictureBox
@@ -2824,7 +2895,7 @@ Partial Class Quiz_Operator
     Friend WithEvents BremoveFF_Label As Label
     Friend WithEvents CremoveFF_Label As Label
     Friend WithEvents DremoveFF_Label As Label
-    Friend WithEvents TabPage9 As TabPage
+    Friend WithEvents PhoneAfriendLifeline_TabPage As TabPage
     Friend WithEvents Label53 As Label
     Friend WithEvents Label54 As Label
     Friend WithEvents Label55 As Label
@@ -2838,7 +2909,7 @@ Partial Class Quiz_Operator
     Friend WithEvents PAFsec_TextBox As TextBox
     Friend WithEvents PAFabort_Label As Label
     Friend WithEvents PAFready_Label As Label
-    Friend WithEvents TabPage10 As TabPage
+    Friend WithEvents AskTheAudienceLifeline_TabPage As TabPage
     Friend WithEvents ATA_PictureBox As PictureBox
     Friend WithEvents ATAstart_Label As Label
     Friend WithEvents ATAendVote_Label As Label
@@ -2854,13 +2925,13 @@ Partial Class Quiz_Operator
     Friend WithEvents D_pub As TextBox
     Friend WithEvents ataVoteTime_TextBox As TextBox
     Friend WithEvents ATAready_Label As Label
-    Friend WithEvents TabPage11 As TabPage
+    Friend WithEvents SwitchTheQuestionLifeline_TabPage As TabPage
     Friend WithEvents SwitchQ_PictureBox As PictureBox
     Friend WithEvents SwitchTheQuestion_Label As Label
-    Friend WithEvents TabPage13 As TabPage
-    Friend WithEvents TabPage14 As TabPage
-    Friend WithEvents TabPage15 As TabPage
-    Friend WithEvents TabPage16 As TabPage
+    Friend WithEvents DoubleDipLifeline_TabPage As TabPage
+    Friend WithEvents AskTheExpertLifeline_TabPage As TabPage
+    Friend WithEvents ThreeAudienceMemberLifeline_TabPage As TabPage
+    Friend WithEvents StateOfLifelines_TabPage As TabPage
     Friend WithEvents STQ_0_Label As Label
     Friend WithEvents ATA_0_Label As Label
     Friend WithEvents ATA_1_Label As Label
@@ -2920,4 +2991,5 @@ Partial Class Quiz_Operator
     Friend WithEvents StarApacheServer_Button As Button
     Friend WithEvents GetContestantClicks_CheckBox As CheckBox
     Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents ChangeTheStateOfLifelines_Label As Label
 End Class
