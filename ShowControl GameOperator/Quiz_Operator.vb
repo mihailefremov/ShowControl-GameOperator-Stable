@@ -164,6 +164,7 @@ Public Class Quiz_Operator
         Set(value As String)
             LevelQ1 = value
             LevelQ_TextBox.Text = value
+            LevelQset_ComboBox.SelectedItem = value
         End Set
     End Property
 
@@ -1138,11 +1139,11 @@ Public Class Quiz_Operator
         ''SQL
 
         MomentStatus = "NewGame_Fired" ''IZMENA!!!
-        FiftyFifty_0_Label_Click(FiftyFifty_0_Label, Nothing)
-        PAF_0_Label_Click(PAF_0_Label, Nothing)
-        DDIP_0_Label_Click(DDIP_0_Label, Nothing)
-        ATA_0_Label_Click(ATA_0_Label, Nothing)
-        STQ_0_Label_Click(STQ_0_Label, Nothing)
+
+        GuiContext.SomethingToDoWithLifeline(1, GuiContext.LifelineAction.NotUsed)
+        GuiContext.SomethingToDoWithLifeline(2, GuiContext.LifelineAction.NotUsed)
+        GuiContext.SomethingToDoWithLifeline(3, GuiContext.LifelineAction.NotUsed)
+        GuiContext.SomethingToDoWithLifeline(4, GuiContext.LifelineAction.NotUsed)
 
         For index As Integer = 6 To 15 - 1
             Dim TextBox As String = "QSum" + index.ToString + "_TextBox"
@@ -1167,7 +1168,7 @@ Public Class Quiz_Operator
         CremoveFF_Label.BackColor = Color.Yellow
         DremoveFF_Label.BackColor = Color.Yellow
 
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 0)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.Used)
 
     End Sub
 
@@ -1215,17 +1216,17 @@ Public Class Quiz_Operator
     End Sub
 
     Private Sub PAF_X_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PAF_X_Label.Click
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 0)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.Used)
 
     End Sub
 
     Private Sub ATA_X_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ATA_X_Label.Click
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 0)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.Used)
 
     End Sub
 
     Private Sub STQ_X_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles STQ_X_Label.Click
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 0)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.Used)
 
     End Sub
 
@@ -1291,42 +1292,42 @@ Public Class Quiz_Operator
     End Sub
 
     Private Sub FiftyFifty_0_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FiftyFifty_0_Label.Click
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 1)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.NotUsed)
 
     End Sub
 
     Private Sub PAF_0_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PAF_0_Label.Click
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 1)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.NotUsed)
 
     End Sub
 
     Private Sub ATA_0_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ATA_0_Label.Click
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 1)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.NotUsed)
 
     End Sub
 
     Private Sub STQ_0_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles STQ_0_Label.Click
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 1)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.NotUsed)
 
     End Sub
 
     Private Sub FiftyFifty_1_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FiftyFifty_1_Label.Click
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 2)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.InUse)
 
     End Sub
 
     Private Sub PAF_1_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PAF_1_Label.Click
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 2)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.InUse)
 
     End Sub
 
     Private Sub ATA_1_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ATA_1_Label.Click
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 2)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.InUse)
 
     End Sub
 
     Private Sub STQ_1_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles STQ_1_Label.Click
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 2)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.InUse)
 
     End Sub
     Private Sub CorrectAnswerReveal_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CorrectAnswerReveal_Button.Click
@@ -2074,15 +2075,15 @@ Public Class Quiz_Operator
     End Sub
 
     Private Sub DDIP_0_Label_Click(sender As Object, e As EventArgs) Handles DDIP_0_Label.Click
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 1)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.NotUsed)
     End Sub
 
     Private Sub DDIP_1_Label_Click(sender As Object, e As EventArgs) Handles DDIP_1_Label.Click
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 2)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.InUse)
     End Sub
 
     Private Sub DDIP_X_Label_Click(sender As Object, e As EventArgs) Handles DDIP_X_Label.Click
-        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, 0)
+        GuiContext.SomethingToDoWithLifeline(GuiContext.CurrentlyActiveLifelinePosition, GuiContext.LifelineAction.Used)
     End Sub
 
     Public Sub GUIOperatorStateSet(MomentStatus As String)

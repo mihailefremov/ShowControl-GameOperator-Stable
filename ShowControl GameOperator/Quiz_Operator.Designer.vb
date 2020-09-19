@@ -216,6 +216,7 @@ Partial Class Quiz_Operator
         Me.AskTheExpertLifeline_TabPage = New System.Windows.Forms.TabPage()
         Me.ThreeAudienceMemberLifeline_TabPage = New System.Windows.Forms.TabPage()
         Me.StateOfLifelines_TabPage = New System.Windows.Forms.TabPage()
+        Me.ChangeTheStateOfLifelines_Label = New System.Windows.Forms.Label()
         Me.TabPage12 = New System.Windows.Forms.TabPage()
         Me.FFFStart_Label = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -225,7 +226,6 @@ Partial Class Quiz_Operator
         Me.MusicList_ComboBox = New System.Windows.Forms.ComboBox()
         Me.SoundPlay_Button = New System.Windows.Forms.Button()
         Me.SoundMute_Button = New System.Windows.Forms.Button()
-        Me.ChangeTheStateOfLifelines_Label = New System.Windows.Forms.Label()
         Me.GameControl_TabControl.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage4.SuspendLayout()
@@ -1605,6 +1605,7 @@ Partial Class Quiz_Operator
         'Lifeline4_PictureBox
         '
         Me.Lifeline4_PictureBox.BackColor = System.Drawing.Color.Transparent
+        Me.Lifeline4_PictureBox.BackgroundImage = Global.ShowControl_GameOperator.My.Resources.Resources.STQ_0
         Me.Lifeline4_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Lifeline4_PictureBox.Location = New System.Drawing.Point(321, 276)
         Me.Lifeline4_PictureBox.Name = "Lifeline4_PictureBox"
@@ -1616,6 +1617,7 @@ Partial Class Quiz_Operator
         'Lifeline3_PictureBox
         '
         Me.Lifeline3_PictureBox.BackColor = System.Drawing.Color.Transparent
+        Me.Lifeline3_PictureBox.BackgroundImage = Global.ShowControl_GameOperator.My.Resources.Resources.ATA_0
         Me.Lifeline3_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Lifeline3_PictureBox.Location = New System.Drawing.Point(237, 276)
         Me.Lifeline3_PictureBox.Name = "Lifeline3_PictureBox"
@@ -1639,6 +1641,7 @@ Partial Class Quiz_Operator
         'Lifeline2_PictureBox
         '
         Me.Lifeline2_PictureBox.BackColor = System.Drawing.Color.Transparent
+        Me.Lifeline2_PictureBox.BackgroundImage = Global.ShowControl_GameOperator.My.Resources.Resources.PAF_0
         Me.Lifeline2_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Lifeline2_PictureBox.Location = New System.Drawing.Point(153, 276)
         Me.Lifeline2_PictureBox.Name = "Lifeline2_PictureBox"
@@ -2591,6 +2594,18 @@ Partial Class Quiz_Operator
         Me.StateOfLifelines_TabPage.Text = "State of Lifelines"
         Me.StateOfLifelines_TabPage.UseVisualStyleBackColor = True
         '
+        'ChangeTheStateOfLifelines_Label
+        '
+        Me.ChangeTheStateOfLifelines_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.ChangeTheStateOfLifelines_Label.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ChangeTheStateOfLifelines_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChangeTheStateOfLifelines_Label.Location = New System.Drawing.Point(33, 24)
+        Me.ChangeTheStateOfLifelines_Label.Name = "ChangeTheStateOfLifelines_Label"
+        Me.ChangeTheStateOfLifelines_Label.Size = New System.Drawing.Size(124, 36)
+        Me.ChangeTheStateOfLifelines_Label.TabIndex = 160
+        Me.ChangeTheStateOfLifelines_Label.Text = "CHANGE THE STATES"
+        Me.ChangeTheStateOfLifelines_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'TabPage12
         '
         Me.TabPage12.Controls.Add(Me.FFFStart_Label)
@@ -2701,18 +2716,6 @@ Partial Class Quiz_Operator
         Me.SoundMute_Button.TabIndex = 1302
         Me.SoundMute_Button.Text = "MUTE"
         Me.SoundMute_Button.UseVisualStyleBackColor = False
-        '
-        'ChangeTheStateOfLifelines_Label
-        '
-        Me.ChangeTheStateOfLifelines_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.ChangeTheStateOfLifelines_Label.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ChangeTheStateOfLifelines_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChangeTheStateOfLifelines_Label.Location = New System.Drawing.Point(33, 24)
-        Me.ChangeTheStateOfLifelines_Label.Name = "ChangeTheStateOfLifelines_Label"
-        Me.ChangeTheStateOfLifelines_Label.Size = New System.Drawing.Size(124, 36)
-        Me.ChangeTheStateOfLifelines_Label.TabIndex = 160
-        Me.ChangeTheStateOfLifelines_Label.Text = "CHANGE THE STATES"
-        Me.ChangeTheStateOfLifelines_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Quiz_Operator
         '

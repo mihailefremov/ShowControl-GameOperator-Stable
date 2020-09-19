@@ -66,13 +66,19 @@
         End Set
     End Property
 
-    Friend Shared Sub SomethingToDoWithLifeline(lifelinePosition As Short, action As Short)
+    Public Enum LifelineAction
+        Used = 0
+        NotUsed = 1
+        InUse = 2
+    End Enum
+
+    Friend Shared Sub SomethingToDoWithLifeline(lifelinePosition As Short, action As LifelineAction)
         Select Case action
-            Case 0
+            Case LifelineAction.Used
                 XmarkLifeline(lifelinePosition)
-            Case 1
+            Case LifelineAction.NotUsed
                 UnusedLifeline(lifelinePosition)
-            Case 2
+            Case LifelineAction.InUse
                 InUsemarkLifeline(lifelinePosition)
         End Select
         Select Case lifelinePosition
