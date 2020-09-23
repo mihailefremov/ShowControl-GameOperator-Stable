@@ -180,7 +180,7 @@
         Quiz_Operator.CremoveFF_Label.Visible = True
         Quiz_Operator.DremoveFF_Label.Visible = True
 
-        Select Case Helpers.ConvertABCDTo1234(CorrectAnswer)
+        Select Case CorrectAnswer
             Case 1
                 Quiz_Operator.AremoveFF_Label.Visible = False
             Case 2

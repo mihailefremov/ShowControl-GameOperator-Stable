@@ -24,16 +24,13 @@ Public Class GraphicsProcessingUnit
         Dim Question_Text As String
         Question_Text = Question
 
-        ''Or Question_Text.Length > 23
+        cgDataQA.SetData("QuestionSL_TextField", "")
+        cgDataQA.SetData("QuestionML_TextField", "")
+
         If Question_Text.Contains(vbLf) Or Question_Text.Contains(vbCr) Or Question_Text.Contains("\n") Or Question_Text.Contains("\r\n") Then
             cgDataQA.SetData("QuestionML_TextField", Question)
-            cgDataQA.SetData("QuestionSL_TextField", "")
-
-            'Question_Text.Replace("\n", vbLf)
-            'Question_TextBox.Text = Question_Text
         Else
             cgDataQA.SetData("QuestionSL_TextField", Question)
-            cgDataQA.SetData("QuestionML_TextField", "")
         End If
 
         cgDataQA.SetData("AnswerA_TextField", Answer1)
@@ -41,10 +38,12 @@ Public Class GraphicsProcessingUnit
         cgDataQA.SetData("AnswerC_TextField", Answer3)
         cgDataQA.SetData("AnswerD_TextField", Answer4)
 
-        cgDataQA.SetData("MarkA_TextField", "A:")
-        cgDataQA.SetData("MarkB_TextField", "B:")
-        cgDataQA.SetData("MarkC_TextField", "C:")
-        cgDataQA.SetData("MarkD_TextField", "D:")
+        Dim AnswerMarks As Char() = Quiz_Operator.AnswerMarks.ToCharArray()
+
+        cgDataQA.SetData("MarkA_TextField", IIf(AnswerMarks(0) = Nothing, "A", AnswerMarks(0)) + ":")
+        cgDataQA.SetData("MarkB_TextField", IIf(AnswerMarks(1) = Nothing, "B", AnswerMarks(1)) + ":")
+        cgDataQA.SetData("MarkC_TextField", IIf(AnswerMarks(2) = Nothing, "C", AnswerMarks(2)) + ":")
+        cgDataQA.SetData("MarkD_TextField", IIf(AnswerMarks(3) = Nothing, "D", AnswerMarks(3)) + ":")
 
         cgDataQA.SetData("QuestionFor_TextField", QuestionForSume)
 
@@ -240,13 +239,19 @@ Public Class GraphicsProcessingUnit
         End If
     End Sub
 
-    Friend Shared Sub Activate4Lifelines()
-        numberoflifelines = 4
+    Friend Shared Sub ActivateLifelines(numberoflifelines As Integer)
+        Dim translatedLifelines As String = "three"
+        If numberoflifelines = 3 Then
+            translatedLifelines = "three"
+        ElseIf numberoflifelines = 4 Then
+            translatedLifelines = "four"
+        End If
+
         If casparQA.IsConnected Then
-            casparQA.Channels(0).CG.Invoke(1, "fourLifelines")
+            casparQA.Channels(0).CG.Invoke(1, $"{translatedLifelines}Lifelines")
         End If
         If casparMT.IsConnected Then
-            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(2, "fourLifelines")
+            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(2, $"{translatedLifelines}Lifelines")
         End If
     End Sub
 

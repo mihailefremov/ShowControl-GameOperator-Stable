@@ -119,7 +119,7 @@ Public Class Quiz_Operator
         End Get
         Set(value As String)
             FinalAnswer1 = value
-            FinalAnswer_TextBox.Text = Helpers.Convert1234ToABCD(value)
+            FinalAnswer_TextBox.Text = value
         End Set
     End Property
 
@@ -393,7 +393,7 @@ Public Class Quiz_Operator
                 Answer2Text = QuestionAnswersRandom.ElementAt(1)
                 Answer3Text = QuestionAnswersRandom.ElementAt(2)
                 Answer4Text = QuestionAnswersRandom.ElementAt(3)
-                CorrectAnswer = Helpers.Convert1234ToABCD(CorrectAnswerAfterRandom + 1)
+                CorrectAnswer = CorrectAnswerAfterRandom + 1
 
             End If
         Catch ex As Exception
@@ -558,7 +558,7 @@ Public Class Quiz_Operator
 
 #Region "FINALANSWERS"
 
-    Public Sub HostFinalAnswerData()
+    Public Sub FinalAnswerProcedure()
 
         LimitedGameClockStop_Label_Click(LimitedGameClockStop_Label, Nothing)
 
@@ -575,6 +575,12 @@ Public Class Quiz_Operator
 
         End If
 
+        '' ******* CASPARCG ******* CASPARCG *******
+        If GraphicsProcessingUnit.casparQA.IsConnected Then
+            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, $"finalAnswer{FinalAnswer}") 'ex. finalAnswer1 sets Answer A: final
+        End If
+        '' ******* CASPARCG ******* CASPARCG *******
+
         If GraphicsProcessingUnit.flagATAgraph = True Then
             GraphicsProcessingUnit.ShowHideATAGraph()
         End If
@@ -589,16 +595,8 @@ Public Class Quiz_Operator
 
         AnswerA_TextBox.BackColor = Color.Yellow
 
-        FinalAnswer = Helpers.Convert1234ToABCD(1)
-
-
-        '' ******* CASPARCG ******* CASPARCG *******
-        If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "finalAnswerA")
-        End If
-        '' ******* CASPARCG ******* CASPARCG *******
-
-        HostFinalAnswerData()
+        FinalAnswer = 1
+        FinalAnswerProcedure()
 
         MomentStatus = "AnswerA_Final_Fired" ''IZMENA!!
 
@@ -608,15 +606,8 @@ Public Class Quiz_Operator
 
         AnswerB_TextBox.BackColor = Color.Yellow
 
-        FinalAnswer = Helpers.Convert1234ToABCD(2)
-
-        '' ******* CASPARCG ******* CASPARCG *******
-        If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "finalAnswerB")
-        End If
-        '' ******* CASPARCG ******* CASPARCG *******
-
-        HostFinalAnswerData()
+        FinalAnswer = 2
+        FinalAnswerProcedure()
 
         MomentStatus = "AnswerB_Final_Fired" ''IZMENA!!
 
@@ -626,20 +617,8 @@ Public Class Quiz_Operator
 
         AnswerC_TextBox.BackColor = Color.Yellow
 
-        FinalAnswer = Helpers.Convert1234ToABCD(3)
-
-        If LevelQ = "6" Or LevelQ = "7" Or LevelQ = "8" Or LevelQ = "9" Or LevelQ = "10" Or LevelQ = "11" Or LevelQ = "12" Or LevelQ = "13" Or LevelQ = "14" Or LevelQ = "15" Then
-            Timer_STOP.Interval = 500
-            Timer_STOP.Start()
-        End If
-
-        '' ******* CASPARCG ******* CASPARCG *******
-        If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "finalAnswerC")
-        End If
-        '' ******* CASPARCG ******* CASPARCG *******
-
-        HostFinalAnswerData()
+        FinalAnswer = 3
+        FinalAnswerProcedure()
 
         MomentStatus = "AnswerC_Final_Fired" ''IZMENA!!
 
@@ -649,15 +628,8 @@ Public Class Quiz_Operator
 
         AnswerD_TextBox.BackColor = Color.Yellow
 
-        FinalAnswer = Helpers.Convert1234ToABCD(4)
-
-        '' ******* CASPARCG ******* CASPARCG *******
-        If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "finalAnswerD")
-        End If
-        '' ******* CASPARCG ******* CASPARCG *******
-
-        HostFinalAnswerData()
+        FinalAnswer = 4
+        FinalAnswerProcedure()
 
         MomentStatus = "AnswerD_Final_Fired" ''IZMENA!!
 
@@ -865,7 +837,7 @@ Public Class Quiz_Operator
             DremoveFF_Label.BackColor = Color.Yellow
 
             ListRemoved = New List(Of Short) From {1, 2, 3, 4}
-            ListRemoved.Remove(Helpers.ConvertABCDTo1234(CorrectAnswer))
+            ListRemoved.Remove(CorrectAnswer)
             Dim randomNumber As Short = New Random().Next(0, ListRemoved.Count)
             ListRemoved.RemoveAt(randomNumber)
         End If
@@ -1007,16 +979,14 @@ Public Class Quiz_Operator
     Private Sub FourLifelinesStatus_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fourLifelinesStatus_Label.Click
         fourLifelinesStatus_Label.BackColor = Color.Orange
         threeLifelinesStatus_Label.BackColor = Color.Silver
-        NumberOfActiveLifelines = "4"
-        GraphicsProcessingUnit.Activate4Lifelines()
+        GraphicsProcessingUnit.ActivateLifelines(numberoflifelines:=4)
 
     End Sub
 
     Private Sub ThreeLifelinesStatus_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles threeLifelinesStatus_Label.Click
         threeLifelinesStatus_Label.BackColor = Color.Orange
         fourLifelinesStatus_Label.BackColor = Color.Silver
-        NumberOfActiveLifelines = "3"
-        GraphicsProcessingUnit.Activate3Lifelines()
+        GraphicsProcessingUnit.ActivateLifelines(numberoflifelines:=3)
 
     End Sub
 
@@ -1367,7 +1337,7 @@ Public Class Quiz_Operator
             IncorrectAnswerProcedure()
         End If
 
-        Select Case Helpers.ConvertABCDTo1234(CorrectAnswer)
+        Select Case CorrectAnswer
             Case 1
                 AnswerA_TextBox.BackColor = Color.Lime
             Case 2
@@ -1666,11 +1636,6 @@ Public Class Quiz_Operator
     End Sub
 
     Private Sub AudienceFriendAnswer_Label_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub CorrectAnswer_TextBox_TextChanged(sender As Object, e As EventArgs) Handles CorrectAnswer_TextBox.TextChanged
-        CorrectAnswer = Helpers.Convert1234ToABCD(CorrectAnswer)
 
     End Sub
 
@@ -2022,7 +1987,7 @@ Public Class Quiz_Operator
         DDIP_X_Label_Click(DDIP_X_Label, Nothing)
 
         If (CorrectAnswer <> FinalAnswer) And String.Equals(DoubleDipState, "DoubleDipFirstFinal", StringComparison.OrdinalIgnoreCase) Then
-            Select Case Helpers.ConvertABCDTo1234(FinalAnswer)
+            Select Case FinalAnswer
                 Case 1
                     AnswerA_TextBox.BackColor = Color.Gray
                 Case 2
