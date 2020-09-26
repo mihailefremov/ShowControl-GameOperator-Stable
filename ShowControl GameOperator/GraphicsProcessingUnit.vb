@@ -11,7 +11,7 @@ Public Class GraphicsProcessingUnit
     Public Shared flagATAgraph As Boolean = False
     Public Shared flagLifeLineRemindGraph As Boolean = False
 
-    Public Shared numberoflifelines = 3
+    Public Shared numberoflifelines = 4
 
     Public Shared questionCGchannel As Int16 = 0
     Public Shared moneyTreeCGchannel As Int16 = 0
@@ -172,16 +172,12 @@ Public Class GraphicsProcessingUnit
     End Sub
 
     Public Shared Function LifelineRemind() As Boolean
+        ActivateLifelines()
         If casparQA.IsConnected Then
             If flagLifeLineRemindGraph = False Then
                 casparQA.Channels(0).CG.Invoke(1, "lifelineRemindFlyIn")
                 flagLifeLineRemindGraph = True
 
-                If numberoflifelines = 3 Then
-                    casparQA.Channels(0).CG.Invoke(1, "threeLifelines")
-                Else
-                    casparQA.Channels(0).CG.Invoke(1, "fourLifelines")
-                End If
                 'showLLRforGraph
             Else
                 casparQA.Channels(0).CG.Invoke(1, "lifelineRemindFlyOut")
@@ -239,7 +235,7 @@ Public Class GraphicsProcessingUnit
         End If
     End Sub
 
-    Friend Shared Sub ActivateLifelines(numberoflifelines As Integer)
+    Friend Shared Sub ActivateLifelines()
         Dim translatedLifelines As String = "three"
         If numberoflifelines = 3 Then
             translatedLifelines = "three"

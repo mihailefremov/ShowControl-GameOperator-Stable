@@ -247,27 +247,7 @@ Public Class DataLayer
             Throw ex
         End Try
 
-        Return ConvertToABCD(retrieve)
-    End Function
-    Private Shared Function ConvertToABCD(ByVal P As String) As String
-
-        If P = "1" Then
-            Return "A"
-
-        ElseIf P = "2" Then
-            Return "B"
-
-        ElseIf P = "3" Then
-            Return "C"
-
-        ElseIf P = "4" Then
-            Return "D"
-
-        Else
-            Return ""
-
-        End If
-
+        Return retrieve
     End Function
 
 #End Region

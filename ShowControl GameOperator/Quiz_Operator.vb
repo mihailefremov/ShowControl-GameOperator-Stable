@@ -983,21 +983,22 @@ Public Class Quiz_Operator
     Private Sub FourLifelinesStatus_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fourLifelinesStatus_Label.Click
         fourLifelinesStatus_Label.BackColor = Color.Orange
         threeLifelinesStatus_Label.BackColor = Color.Silver
-        GraphicsProcessingUnit.ActivateLifelines(numberoflifelines:=4)
+        GraphicsProcessingUnit.numberoflifelines = 4
+        GraphicsProcessingUnit.ActivateLifelines()
 
     End Sub
 
     Private Sub ThreeLifelinesStatus_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles threeLifelinesStatus_Label.Click
         threeLifelinesStatus_Label.BackColor = Color.Orange
         fourLifelinesStatus_Label.BackColor = Color.Silver
-        GraphicsProcessingUnit.ActivateLifelines(numberoflifelines:=3)
+        GraphicsProcessingUnit.numberoflifelines = 3
+        GraphicsProcessingUnit.ActivateLifelines()
 
     End Sub
 
     Private Sub LifelineRemind_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LifelineRemind_Button.Click
         GraphicsProcessingUnit.MarkCGlifelines(GuiContext.Lifeline1Active, GuiContext.Lifeline2Active, GuiContext.Lifeline3Active, GuiContext.Lifeline4Active)
         GraphicsProcessingUnit.LifelineRemind()
-
     End Sub
 
     Private Sub SwitchTheQuestion_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SwitchTheQuestion_Label.Click
