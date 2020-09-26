@@ -2,10 +2,13 @@
 
 Public Class InteractiveWallScreen
 
-    Public casparWallScreen As New CasparDevice
-    Public cgDataWallScreen As New CasparCGDataCollection
+    Private casparWallScreen As New CasparDevice
+    Private cgDataWallScreen As New CasparCGDataCollection
 
     Public IsOnWallScreen As Boolean = My.Settings.IsInteractiveScreenOn
+
+    Private WallScreenConfigurationTxt As String
+    Private WallScreenConfiguration As Xml2CSharp.INTERACTIVEWALLSCREEN
 
     Public Sub Connect()
         If Not IsOnWallScreen Then
@@ -22,131 +25,27 @@ Public Class InteractiveWallScreen
     End Sub
 
     Sub LightDownEffect(Level As String)
-        If Not IsOnWallScreen Then
-            Return
-        End If
-        Try
-            Level = CType(Level, Short)
-            Dim LevelX As String = ""
-            Dim randomGen As New Random
-            Dim versionNumber As Short
-            If Level >= 6 And Level <= 10 Then
-                LevelX = "6to10"
-                versionNumber = randomGen.Next(1, 11)
-            ElseIf Level <= 5 Then
-                LevelX = "1to5"
-                versionNumber = randomGen.Next(1, 6)
-            ElseIf Level >= 10 Then
-                LevelX = "11to15"
-                versionNumber = randomGen.Next(1, 12)
-            Else
-                Return
-            End If
-
-            If casparWallScreen.IsConnected Then
-                casparWallScreen.Channels(0).Clear(0)
-                casparWallScreen.Channels(0).LoadBG(20, $"LightDown{LevelX}v{versionNumber.ToString}", False)
-                casparWallScreen.Channels(0).Play(20)
-            End If
-        Catch ex As Exception
-        End Try
+        WallScreenBackgroundPlay("LightsDown", Level)
 
     End Sub
 
     Public Sub MotionBackgroundDuringQuestion(Level As String)
-        If Not IsOnWallScreen Then
-            Return
+        If Level = 2001 Then
+            Level = "FastestFingerFirst"
+        ElseIf Level = 2002 Then
+            Level = "Other"
+        ElseIf Level = 666 Then
+            Level = "WalkAway"
         End If
-        Try
-            Level = CType(Level, Short)
-            Dim LevelX As String = ""
-
-            Dim isRepeatMotion As Boolean = True
-
-            Dim randomGen As New Random
-            Dim versionNumber As Short
-            If Level >= 1 And Level <= 5 Then
-                LevelX = "1to5"
-                versionNumber = randomGen.Next(1, 3)
-                isRepeatMotion = False
-            ElseIf Level >= 6 And Level <= 10 Then
-                LevelX = "6to10"
-                versionNumber = randomGen.Next(1, 6)
-            ElseIf Level >= 11 And Level <= 14 Then 'od 11-14
-                LevelX = "11to15"
-                versionNumber = randomGen.Next(1, 8)
-            ElseIf Level = 15 Then '15
-                LevelX = "15"
-
-            ElseIf Level = 2001 Then
-                LevelX = "FastetFingerFirst"
-                versionNumber = 1
-            ElseIf Level = 2002 Then
-                LevelX = "Other"
-                versionNumber = 1
-            ElseIf Level = 666 Then
-                LevelX = "WalkAway"
-                versionNumber = 1
-            Else
-                Return
-            End If
-
-            If casparWallScreen.IsConnected Then
-                casparWallScreen.Channels(0).Clear(0)
-                casparWallScreen.Channels(0).LoadBG(20, $"MotionBackgroundQuestion{LevelX}", isRepeatMotion)
-                casparWallScreen.Channels(0).Play(20)
-            End If
-
-        Catch ex As Exception
-        End Try
-
+        WallScreenBackgroundPlay("QuestionBed", Level)
     End Sub
 
     Public Sub CorrectAnswer(Level As String)
-        If Not IsOnWallScreen Then
-            Return
+        Dim discarValue As Integer = 0
+        If Integer.TryParse(Level, discarValue) Then
+            discarValue -= 1
         End If
-        Try
-            Level = CType(Level, Short)
-            Level -= 1
-            If Level < 5 Or Level > 15 Then
-                Return
-            End If
-
-            Dim LevelX As String = ""
-            Dim randomGen As New Random
-            Dim versionNumber As Short
-            Dim isLoop As Boolean = False
-
-            If Level >= 5 And Level <= 9 Then 'od 5-9
-                LevelX = "6to10"
-                versionNumber = randomGen.Next(1, 6)
-            ElseIf Level < 5 Then 'od 1-5
-                LevelX = "1to5"
-                versionNumber = randomGen.Next(1, 3)
-            ElseIf Level = 10 Then '10
-                LevelX = "10"
-                versionNumber = randomGen.Next(1, 3)
-            ElseIf Level >= 11 And Level <= 14 Then 'od 11-14
-                LevelX = "11to15"
-                versionNumber = 1
-            ElseIf Level = 15 Then 'od 15
-                LevelX = "15"
-                versionNumber = 1
-                isLoop = True
-            Else
-                Return
-            End If
-
-            If casparWallScreen.IsConnected Then
-                casparWallScreen.Channels(0).Clear(0)
-                casparWallScreen.Channels(0).LoadBG(20, $"Correct{LevelX}v{versionNumber.ToString}", isLoop)
-                casparWallScreen.Channels(0).SetVolume(20, 0, 8, Easing.EaseInBack)
-                casparWallScreen.Channels(0).Play(20)
-            End If
-        Catch ex As Exception
-        End Try
-
+        WallScreenBackgroundPlay("CorrectAnswer", discarValue)
     End Sub
 
     Public Sub AudienceAsking()
@@ -182,26 +81,10 @@ Public Class InteractiveWallScreen
     End Sub
 
     Public Sub HostEntrance()
-        If Not IsOnWallScreen Then
-            Return
-        End If
-        Try
-            Dim randomGen As New Random
-            Dim versionNumber As Short
-            Dim isLoop As Boolean = False
-
-            versionNumber = randomGen.Next(1, 3)
-
-            If casparWallScreen.IsConnected Then
-                casparWallScreen.Channels(0).Clear(0)
-                casparWallScreen.Channels(0).LoadBG(20, $"HostEntranceV{versionNumber.ToString}", isLoop)
-                casparWallScreen.Channels(0).SetVolume(20, 0, 8, Easing.EaseInBack)
-                casparWallScreen.Channels(0).Play(20)
-            End If
-        Catch ex As Exception
-        End Try
+        WallScreenBackgroundPlay("HostEntrance")
 
     End Sub
+
 
     Public Sub AnyBackgroundLoop(bed As String, Optional isLoop As Boolean = True)
         If Not IsOnWallScreen Then
@@ -219,5 +102,70 @@ Public Class InteractiveWallScreen
 
     End Sub
 
+    Public Function LoadWallScreenConfiguration(path As String) As Boolean
+        Try
+            WallScreenConfigurationTxt = System.IO.File.ReadAllText(path)
+
+            Dim WallScreenConfigurationReader As System.IO.TextReader = New System.IO.StringReader(WallScreenConfigurationTxt)
+
+            Dim serializer As Xml.Serialization.XmlSerializer = New Xml.Serialization.XmlSerializer(GetType(Xml2CSharp.INTERACTIVEWALLSCREEN))
+            WallScreenConfiguration = serializer.Deserialize(WallScreenConfigurationReader)
+
+            Return True
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+        Return False
+
+    End Function
+
+    Public Function WallScreenBackgroundPlay(State As String, Optional Level As String = "") As Boolean
+        If Not IsOnWallScreen Then
+            Return False
+        End If
+
+        Try
+            For Each configuredGamePart As Xml2CSharp.GAMEPART In WallScreenConfiguration.GAMEPART
+                If String.Equals(configuredGamePart.STATE, State) Then
+                    configuredGamePart.AFFECTEDLEVELS = configuredGamePart.AFFECTEDLEVELS.Trim.Replace(" ", "").Replace(",", ";")
+                    Dim configuredGamePartAffectedLevels As String() = configuredGamePart.AFFECTEDLEVELS.Split(";")
+                    If configuredGamePartAffectedLevels.Count = 0 Then configuredGamePartAffectedLevels = {""}
+
+                    For Each configuredGamePartLevel As String In configuredGamePartAffectedLevels
+                        If String.Equals(configuredGamePartLevel, Level, StringComparison.OrdinalIgnoreCase) Then
+
+                            Dim index As Integer = New Random().Next(configuredGamePart.BACKGROUNDS.VIDEO.Count) 'get random video
+                            Dim selectedVideo As Xml2CSharp.VIDEO = configuredGamePart.BACKGROUNDS.VIDEO.ElementAt(index)
+
+                            Dim isLoop As Boolean = False
+                            selectedVideo.LOOP = selectedVideo.LOOP.Trim
+                            If String.Equals(selectedVideo.LOOP, "True", StringComparison.OrdinalIgnoreCase) _
+                                OrElse String.Equals(selectedVideo.LOOP, "Yes", StringComparison.OrdinalIgnoreCase) _
+                                    OrElse String.Equals(selectedVideo.LOOP, "1", StringComparison.OrdinalIgnoreCase) Then
+                                isLoop = True
+                            End If
+
+                            If casparWallScreen.IsConnected Then
+                                casparWallScreen.Channels(0).Clear(0)
+                                casparWallScreen.Channels(0).LoadBG(20, selectedVideo.URL, isLoop)
+                                casparWallScreen.Channels(0).SetVolume(20, 0, 8, Easing.EaseInBack)
+                                casparWallScreen.Channels(0).Play(20)
+                            End If
+
+                            Exit For
+                        Else
+                            Continue For
+                        End If
+                    Next
+
+                End If
+            Next
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+    End Function
 
 End Class

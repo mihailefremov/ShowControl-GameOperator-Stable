@@ -136,6 +136,7 @@
     <Compile Include="Deserializers\GRAPHICSGAMECONFIGURATION.vb" />
     <Compile Include="Deserializers\LOCALIZATIONCONFIGURATION.vb" />
     <Compile Include="Deserializers\MUSICPLAYLISTCONFIGURATION.vb" />
+    <Compile Include="Deserializers\WALLSCREENCONFIGURATION.vb" />
     <Compile Include="Deserializers\WWTBAMCONTESTANTCLICKSDATA.vb" />
     <Compile Include="FFFConfigurationFrm.Designer.vb">
       <DependentUpon>FFFConfigurationFrm.vb</DependentUpon>

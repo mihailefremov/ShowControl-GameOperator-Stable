@@ -332,6 +332,10 @@ Public Class Quiz_Operator
             MusicList_ComboBox.DataSource = MainGameMusicLayerObj.WwtbamMusicPlaylistConfig.SOUND
             MusicList_ComboBox.DisplayMember = "TITLE"
 
+#Region "WALLSCREEN"
+            GraphicsProcessingUnit.InteractiveWallScreenObj.LoadWallScreenConfiguration(String.Format("{0}\{1}", GameConfiguration.Default.DefaultGameConfigurationPath, "WallScreenConfiguration.xml"))
+#End Region
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
 

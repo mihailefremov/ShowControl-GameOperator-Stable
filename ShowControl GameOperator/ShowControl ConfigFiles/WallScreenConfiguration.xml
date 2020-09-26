@@ -1,0 +1,34 @@
+<INTERACTIVEWALLSCREEN>
+    <GAMEPART>
+        <STATE></STATE>
+        <AFFECTEDLEVELS></AFFECTEDLEVELS>
+        <DESCRIPTION></DESCRIPTION>
+        <BACKGROUNDS>
+            <VIDEO>
+                <URL></URL>
+                <LOOP></LOOP>
+            </VIDEO>
+            <VIDEO>
+                <URL></URL>
+                <LOOP></LOOP>
+            </VIDEO>
+        </BACKGROUNDS>
+        <RANDOMIZE></RANDOMIZE>
+    </GAMEPART>
+    <GAMEPART>
+        <STATE></STATE>
+        <AFFECTEDLEVELS></AFFECTEDLEVELS>
+        <DESCRIPTION></DESCRIPTION>
+        <BACKGROUNDS>
+            <VIDEO>
+                <URL></URL>
+                <LOOP></LOOP>
+            </VIDEO>
+            <VIDEO>
+                <URL></URL>
+                <LOOP></LOOP>
+            </VIDEO>
+        </BACKGROUNDS>
+        <RANDOMIZE></RANDOMIZE>
+    </GAMEPART>
+</INTERACTIVEWALLSCREEN>
