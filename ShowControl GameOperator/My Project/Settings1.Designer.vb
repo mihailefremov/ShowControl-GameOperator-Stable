@@ -15,7 +15,7 @@ Option Explicit On
 Namespace My
     
     <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.5.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
     Partial Friend NotInheritable Class MySettings
         Inherits Global.System.Configuration.ApplicationSettingsBase
@@ -332,7 +332,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("IDEA-PC\SQLEXPRESS02")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("IDEA-PC\SQLEXPRESS01")>  _
         Public Property gameQuestionsServer() As String
             Get
                 Return CType(Me("gameQuestionsServer"),String)
@@ -344,13 +344,25 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
         Public Property UseMySqlForAta() As Boolean
             Get
                 Return CType(Me("UseMySqlForAta"),Boolean)
             End Get
             Set
                 Me("UseMySqlForAta") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("wwtbam/currentWorking/PhoneAFriendClockUKp1v1")>  _
+        Public Property phoneAfriendFlashTempl() As String
+            Get
+                Return CType(Me("phoneAfriendFlashTempl"),String)
+            End Get
+            Set
+                Me("phoneAfriendFlashTempl") = value
             End Set
         End Property
     End Class

@@ -411,7 +411,7 @@ Public Class Quiz_Operator
         '' ******* CASPARCG *******
         If GraphicsProcessingUnit.casparQA.IsConnected Then
             GraphicsProcessingUnit.CGQuestionSet(QuestionText, Answer1Text, Answer2Text, Answer3Text, Answer4Text, QuestionForSume, ActiveLifelinesNames)
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Add(1, My.Settings.questionFlashTempl, True, GraphicsProcessingUnit.cgDataQA)
+            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Add(GraphicsProcessingUnit.questionCGlayer, My.Settings.questionFlashTempl, True, GraphicsProcessingUnit.cgDataQA)
 
         End If
         '' ******* CASPARCG ******* 
@@ -470,9 +470,9 @@ Public Class Quiz_Operator
 
         If GraphicsProcessingUnit.casparQA.IsConnected Then
             GraphicsProcessingUnit.CGQuestionSet(QuestionText, Answer1Text, Answer2Text, Answer3Text, Answer4Text, QuestionForSume, ActiveLifelinesNames.Replace("DDIP", "DD"))
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Update(1, GraphicsProcessingUnit.cgDataQA)
+            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Update(GraphicsProcessingUnit.questionCGlayer, GraphicsProcessingUnit.cgDataQA)
             'casparQA_.Channels(0).CG.Play(1)
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "QuestionFlyIN")
+            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "QuestionFlyIN")
         End If
 
         DataLayer.DisposeATAvoteData()
@@ -490,8 +490,8 @@ Public Class Quiz_Operator
 
         '' ******* CASPARCG ******* CASPARCG *******
         If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "QuestionAnswersFlyIN")
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "showAnswerA")
+            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "QuestionAnswersFlyIN")
+            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "showAnswerA")
         End If
         '' ******* CASPARCG ******* CASPARCG *******
 
@@ -515,7 +515,7 @@ Public Class Quiz_Operator
 
         '' ******* CASPARCG ******* CASPARCG *******
         If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "showAnswerB")
+            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "showAnswerB")
         End If
         '' ******* CASPARCG ******* CASPARCG *******
 
@@ -532,7 +532,7 @@ Public Class Quiz_Operator
 
         '' ******* CASPARCG ******* CASPARCG *******
         If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "showAnswerC")
+            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "showAnswerC")
         End If
         '' ******* CASPARCG ******* CASPARCG *******
 
@@ -551,7 +551,7 @@ Public Class Quiz_Operator
 
         '' ******* CASPARCG ******* CASPARCG *******
         If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "showAnswerD")
+            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "showAnswerD")
         End If
         '' ******* CASPARCG ******* CASPARCG *******
 
@@ -581,7 +581,7 @@ Public Class Quiz_Operator
 
         '' ******* CASPARCG ******* CASPARCG *******
         If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, $"finalAnswer{FinalAnswer}") 'ex. finalAnswer1 sets Answer A: final
+            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, $"finalAnswer{FinalAnswer}") 'ex. finalAnswer1 sets Answer A: final
         End If
         '' ******* CASPARCG ******* CASPARCG *******
 
@@ -748,15 +748,19 @@ Public Class Quiz_Operator
         MomentStatus = "EmptyQuestion_Fired" ''IZMENA!!
 
         '' ******* CASPARCG ******* CASPARCG *******
-        '' ******* CASPARCG ******* CASPARCG *******
         If GraphicsProcessingUnit.casparQA.IsConnected Then
             If LevelQ <> "888" Then
-                GraphicsProcessingUnit.casparQA.Channels(0).CG.Remove(1)
+                GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Remove(GraphicsProcessingUnit.questionCGlayer)
                 GraphicsProcessingUnit.cgDataQA.Clear()
             Else
-                GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "QuestionHide_Label")
-                GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "hideSwitchQmark")
+                GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "QuestionHide_Label")
+                GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "hideSwitchQmark")
             End If
+        End If
+        '' ******* CASPARCG ******* CASPARCG *******
+        If GraphicsProcessingUnit.casparPhoneAFriend.IsConnected Then
+            GraphicsProcessingUnit.casparPhoneAFriend.Channels(GraphicsProcessingUnit.phoneAfriendCGchannel).CG.Remove(GraphicsProcessingUnit.phoneAfriendCGlayer)
+            GraphicsProcessingUnit.cgDataPhoneAFriend.Clear()
         End If
 
         If LevelQ = "888" Then
@@ -917,7 +921,7 @@ Public Class Quiz_Operator
         '**** CASPARCG*****
 
         If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "ATAendVote")
+            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "ATAendVote")
         End If
 
         '**** CASPARCG*****
@@ -1013,7 +1017,7 @@ Public Class Quiz_Operator
 
         '' *** CASPARCG
         If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "showSwitchQmark")
+            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "showSwitchQmark")
         End If
         '' *** CASPARCG
 
@@ -1047,7 +1051,7 @@ Public Class Quiz_Operator
         LevelQ = "666"
 
         If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "QuestionAnswersFlyOUT")
+            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "QuestionAnswersFlyOUT")
         End If
 
         PlayLXsound()
@@ -1460,12 +1464,17 @@ Public Class Quiz_Operator
     Private Sub PAFCall_lbl_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PAFready_Label.Click
         Timer_PAUSE.Start()
 
-        'LightDown.URL = "C:\WWTBAM Removable Disc\UK 2007\44.Phone a Friend.wav"
         MainGameMusicLayerObj.PlayLifelineSound("PAF", "CALL")
 
-        If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "QuestionAnswersFadeOUT")
+        'If GraphicsProcessingUnit.casparQA.IsConnected Then
+        '    GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "QuestionAnswersFadeOUT")
+        'End If
+
+        '' ******* CASPARCG *******
+        If GraphicsProcessingUnit.casparPhoneAFriend.IsConnected Then
+            GraphicsProcessingUnit.casparPhoneAFriend.Channels(GraphicsProcessingUnit.phoneAfriendCGchannel).CG.Add(GraphicsProcessingUnit.phoneAfriendCGlayer, My.Settings.phoneAfriendFlashTempl, True, GraphicsProcessingUnit.cgDataPhoneAFriend)
         End If
+        '' ******* CASPARCG ******* 
 
         PAF_1_Label_Click(PAF_1_Label, Nothing)
 
@@ -1528,7 +1537,7 @@ Public Class Quiz_Operator
     Private Sub AbcdHex_Show()
         MomentStatus = "ABCDHex_Show"
         If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "QuestionAnswersFlyIN")
+            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "QuestionAnswersFlyIN")
         End If
     End Sub
 
@@ -1700,7 +1709,7 @@ Public Class Quiz_Operator
 
             If GraphicsProcessingUnit.casparQA.IsConnected Then
                 ''caspar_.Channels(0).CG.Invoke(1, "show1outOf15sClock")
-                GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "show" + remainingClock.ToString + "outOf" + "15" + "sClock")
+                GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "show" + remainingClock.ToString + "outOf" + "15" + "sClock")
             End If
             '' ******* CASPARCG ******* CASPARCG *******
 
@@ -1715,7 +1724,7 @@ Public Class Quiz_Operator
 
             If GraphicsProcessingUnit.casparQA.IsConnected Then
                 ''caspar_.Channels(0).CG.Invoke(1, "show1outOf30sClock")
-                GraphicsProcessingUnit.casparQA.Channels(0).CG.Invoke(1, "show" + remainingClock.ToString + "outOf" + "30" + "sClock")
+                GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "show" + remainingClock.ToString + "outOf" + "30" + "sClock")
             End If
             '' ******* CASPARCG ******* CASPARCG *******
 

@@ -59,7 +59,7 @@ Public Class FFFOperator
             Try
                 CGQuestionSet()
                 If cgDataQA.DataPairs.Count > 0 Then
-                    casparQA.Channels(0).CG.Add(1, My.Settings.questionFlashTempl, True, cgDataQA)
+                    casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Add(GraphicsProcessingUnit.questionCGlayer, My.Settings.questionFlashTempl, True, cgDataQA)
                 End If
             Catch ex As Exception
                 MessageBox.Show("LoadedQuestion_Fired|" + ex.Message)
@@ -72,7 +72,7 @@ Public Class FFFOperator
         ResetContestantScores()
         If casparQA.IsConnected Then
             CGQuestionSet()
-            casparQA.Channels(0).CG.Invoke(1, "QuestionFlyIN") 'casparQA_.Channels(0).CG.Play(1)
+            casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "QuestionFlyIN") 'casparQA_.Channels(0).CG.Play(1)
         End If
         FastestFingerManaging.QuestionLoad(QuestionFFF_TextBox.Text, AnswerAFFF_TextBox.Text, AnswerBFFF_TextBox.Text, AnswerCFFF_TextBox.Text, AnswerDFFF_TextBox.Text)
         FastestFingerManaging.QuestionFire()
@@ -85,8 +85,8 @@ Public Class FFFOperator
         ''CASPARCG:    ''QuestionAnswersFlyIN   ''showAnswersABCD
         MomentStatus = "AnswersABCDFFF_Fired"
         If casparQA.IsConnected Then
-            casparQA.Channels(0).CG.Invoke(1, "QuestionAnswersFlyIN")
-            casparQA.Channels(0).CG.Invoke(1, "showAnswersABCD")
+            casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "QuestionAnswersFlyIN")
+            casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "showAnswersABCD")
         End If
         Dim tFFUnits As Task = Task.Run(Sub()
                                             FastestFingerManaging.FastestFingerFirstFire()
@@ -167,7 +167,7 @@ Public Class FFFOperator
             SetWhoAnsweredCorrectly()
             If casparWAC.IsConnected Then
                 CGWhoAnsweredCorrectlySet()
-                casparWAC.Channels(0).CG.Add(3, My.Settings.whoIsCorrectFlashTempl, True, cgDataWAC)
+                casparWAC.Channels(GraphicsProcessingUnit.whoAnsweredCorrectlyCGhannel).CG.Add(GraphicsProcessingUnit.whoAnsweredCorrectlyCGLayer, My.Settings.whoIsCorrectFlashTempl, True, cgDataWAC)
             End If
         Catch ex As Exception
             MessageBox.Show("WhoAnsweredCorrectlyReady|" + ex.Message)
@@ -178,7 +178,7 @@ Public Class FFFOperator
         MomentStatus = "WhoAnsweredCorrectlyGreen"
         If casparWAC.IsConnected Then
             Try
-                casparWAC.Channels(0).CG.Invoke(3, "FFTheFastest_Correct")
+                casparWAC.Channels(GraphicsProcessingUnit.whoAnsweredCorrectlyCGhannel).CG.Invoke(GraphicsProcessingUnit.whoAnsweredCorrectlyCGLayer, "FFTheFastest_Correct")
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
@@ -192,7 +192,7 @@ Public Class FFFOperator
         MomentStatus = "WhoAnsweredCorrectlyBlink"
         If casparWAC.IsConnected Then
             Try
-                casparWAC.Channels(0).CG.Invoke(3, "FFTheFastest_Blink")
+                casparWAC.Channels(GraphicsProcessingUnit.whoAnsweredCorrectlyCGhannel).CG.Invoke(GraphicsProcessingUnit.whoAnsweredCorrectlyCGLayer, "FFTheFastest_Blink")
             Catch ex As Exception
                 MessageBox.Show("WhoAnsweredCorrectlyBlink|" + ex.Message)
             End Try
@@ -592,7 +592,7 @@ Public Class FFFOperator
         MomentStatus = "QuestionAnswers_Dissolved"
         Try
             If casparQA.IsConnected Then
-                casparQA.Channels(0).CG.Remove(1)
+                casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Remove(GraphicsProcessingUnit.questionCGlayer)
             End If
         Catch ex As Exception
             MessageBox.Show("QuestionAnswers_Dissolved|" + ex.Message)
@@ -603,9 +603,9 @@ Public Class FFFOperator
             If casparRO.IsConnected Then
                 CGRightOrderSet()
                 If cgDataRO.DataPairs.Count > 0 Then
-                    casparRO.Channels(0).CG.Add(3, My.Settings.rightOrderFlashTempl, True, cgDataRO)
+                    casparRO.Channels(GraphicsProcessingUnit.rightOrderCGhannel).CG.Add(GraphicsProcessingUnit.rightOrderCGLayer, My.Settings.rightOrderFlashTempl, True, cgDataRO)
                 Else
-                    casparRO.Channels(0).CG.Add(3, My.Settings.rightOrderFlashTempl, True)
+                    casparRO.Channels(GraphicsProcessingUnit.rightOrderCGhannel).CG.Add(GraphicsProcessingUnit.rightOrderCGLayer, My.Settings.rightOrderFlashTempl, True)
                 End If
             End If
         Catch ex As Exception
@@ -696,7 +696,7 @@ Public Class FFFOperator
     Sub CGNextOrder(Row As String)
         If casparRO.IsConnected Then
             Try
-                casparRO.Channels(0).CG.Invoke(3, "FFFNum" + Row + "FlyIN")
+                casparRO.Channels(GraphicsProcessingUnit.rightOrderCGhannel).CG.Invoke(GraphicsProcessingUnit.rightOrderCGLayer, "FFFNum" + Row + "FlyIN")
             Catch ex As Exception
                 MessageBox.Show("CGNextOrder|" + ex.Message)
             End Try
@@ -706,7 +706,7 @@ Public Class FFFOperator
     Private Sub ClearGUI_Button_Click(sender As Object, e As EventArgs) Handles ClearGUI_Button.Click
         If casparQA.IsConnected Then
             Try
-                casparQA.Channels(0).CG.Remove(4)
+                casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Remove(GraphicsProcessingUnit.whoAnsweredCorrectlyCGLayer)
             Catch ex As Exception
                 MessageBox.Show("ClearGUI_Label_Click|" + ex.Message)
             End Try
@@ -749,7 +749,7 @@ Public Class FFFOperator
         MomentStatus = "WinnerClockName"
         Try
             If casparQA.IsConnected Then
-                casparQA.Channels(0).CG.Remove(3)
+                casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Remove(GraphicsProcessingUnit.rightOrderCGLayer)
             End If
 
             If IndexPositionOfFastestContestantByTime <= -1 Then Return
@@ -757,7 +757,7 @@ Public Class FFFOperator
             If casparFNS.IsConnected Then
                 cgDataFNS.SetData("FFName_TextField", ListOfAllContestants.Item(IndexPositionOfFastestContestantByTime))
                 cgDataFNS.SetData("FFClock_TextField", ListOfAllContestantsTime.Item(IndexPositionOfFastestContestantByTime))
-                casparFNS.Channels(0).CG.Add(4, My.Settings.fastestNameClokStrapFlashTempl, True, cgDataFNS)
+                casparFNS.Channels(GraphicsProcessingUnit.fastestNameStrapCGhannel).CG.Add(GraphicsProcessingUnit.fastestNameStrapCGLayer, My.Settings.fastestNameClokStrapFlashTempl, True, cgDataFNS)
             End If
         Catch ex As Exception
             MessageBox.Show("CGWinnerClock|" + ex.Message)
@@ -779,7 +779,7 @@ Public Class FFFOperator
         MomentStatus = "RightOrderFlyIN"
         If casparRO.IsConnected Then
             Try
-                casparRO.Channels(0).CG.Invoke(3, "FFFOrderFlyIN")
+                casparRO.Channels(GraphicsProcessingUnit.rightOrderCGhannel).CG.Invoke(3, "FFFOrderFlyIN")
             Catch ex As Exception
                 MessageBox.Show("RightOrderFlyIN|" + ex.Message)
             End Try
