@@ -2,18 +2,19 @@
 Imports MySql.Data.MySqlClient
 
 Public Class DataLayer
+    Implements IQuizShowDataLayer
 
-    Private Shared audienceVotesConnString As String = $"server={My.Settings.gameQuestionsServer};database={My.Settings.audienceVotesDatabase};integrated security=true;"
+    Private audienceVotesConnString As String = $"server={My.Settings.gameQuestionsServer};database={My.Settings.audienceVotesDatabase};integrated security=true;"
 
-    Private Shared ReadOnly ConnectionStringQuestionDB As String = audienceVotesConnString
-    Private Shared ReadOnly ConnectionStringQuestionDBMSSQL As String = $"server={My.Settings.gameQuestionsServer};database={My.Settings.audienceVotesDatabase};integrated security=true;"
+    Private ReadOnly ConnectionStringQuestionDB As String = audienceVotesConnString
+    Private ReadOnly ConnectionStringQuestionDBMSSQL As String = $"server={My.Settings.gameQuestionsServer};database={My.Settings.audienceVotesDatabase};integrated security=true;"
 
-    Private Shared _QASqlConnVar As New SqlConnection With {
+    Private _QASqlConnVar As New SqlConnection With {
                 .ConnectionString = ConnectionStringQuestionDB
             }
 
 #Region "QUESTION DATA"
-    Friend Shared Function SelectSuitableQuestion(questionLevel As String, Optional typeQ As String = "1", Optional isReplacement As Boolean = False) As DataTable
+    Public Function SelectSuitableQuestion(questionLevel As String, Optional typeQ As String = "1", Optional isReplacement As Boolean = False) As DataTable Implements IQuizShowDataLayer.SelectSuitableQuestion
         Dim dbDataSet As New DataTable
         Try
             Using con As New SqlConnection(ConnectionStringQuestionDBMSSQL)
@@ -36,11 +37,11 @@ Public Class DataLayer
 
     End Function
 
-    Friend Shared Sub MarkQuestionAnsweredDB(questionID As String, IsGameGoingLive As Boolean)
+    Public Sub MarkQuestionAnswered(questionID As String, IsGameGoingLive As Boolean) Implements IQuizShowDataLayer.MarkQuestionAnswered
         Return
     End Sub
 
-    Friend Shared Sub MarkQuestionFiredDB(questionID As String, IsGameGoingLive As Boolean, Optional qtype As String = "1")
+    Public Sub MarkQuestionFired(questionID As String, IsGameGoingLive As Boolean, Optional qtype As String = "1") Implements IQuizShowDataLayer.MarkQuestionFired
         If Not IsGameGoingLive Then Return
 
         'Paralelno mssql
@@ -59,15 +60,14 @@ Public Class DataLayer
 
     End Sub
 
-    Shared Sub DisposeAnsweredGameQuestionsDB(QuestionType As String)
+    Public Sub DisposeAnsweredGameQuestions(QuestionType As String) Implements IQuizShowDataLayer.DisposeAnsweredGameQuestions
         Return
     End Sub
 
 #End Region
 
 #Region "AUDIENCE DATA"
-    Friend Shared Function GetATAvoteData() As String()
-
+    Public Function GetATAvoteData() As String() Implements IQuizShowDataLayer.GetATAvoteData
         If My.Settings.UseMySqlForAta Then
             Return GetATAvoteDataMySql()
             'not ready yet because of voting application
@@ -119,8 +119,7 @@ Public Class DataLayer
 
     End Function
 
-    Shared Sub DisposeATAvoteData()
-
+    Public Sub DisposeATAvoteData() Implements IQuizShowDataLayer.DisposeATAvoteData
         If My.Settings.UseMySqlForAta Then
             DisposeATAvoteDataMySql()
             Return
@@ -141,7 +140,7 @@ Public Class DataLayer
     End Sub
 
 #Region "MYSQL-ATA"
-    Private Shared ReadOnly Property audienceVotesConnectionMySql As String
+    Private ReadOnly Property audienceVotesConnectionMySql As String
         Get
             Return "server=" + My.Settings.audienceVotesServer + ";" _
                    & "uid=" + My.Settings.mySqlUser + ";" _
@@ -149,7 +148,7 @@ Public Class DataLayer
                    & "database=" + My.Settings.audienceVotesDatabase + ";"
         End Get
     End Property
-    Private Shared Function GetATAvoteDataMySql() As String()
+    Private Function GetATAvoteDataMySql() As String()
         Dim conn As New MySql.Data.MySqlClient.MySqlConnection
         Dim myConnectionString As String = audienceVotesConnectionMySql
         Dim cmda, cmdb, cmdc, cmdd As New MySqlCommand
@@ -194,7 +193,7 @@ Public Class DataLayer
         Return {percentA, percentB, percentC, percentD}
 
     End Function
-    Private Shared Sub DisposeATAvoteDataMySql()
+    Private Sub DisposeATAvoteDataMySql()
         Dim conn As New MySql.Data.MySqlClient.MySqlConnection
         Dim myConnectionString As String = audienceVotesConnectionMySql
         Dim cmd As New MySqlCommand
@@ -217,7 +216,7 @@ Public Class DataLayer
     End Sub
 #End Region
 
-    Shared Function getContGuestVoteData() As String
+    Private Function getContGuestVoteData() As String
         'todo da se preraboti
         Dim conn As New SqlConnection
         Dim myConnectionString As String = audienceVotesConnString

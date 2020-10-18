@@ -14,6 +14,8 @@ Public Class Quiz_Operator
 
     Public Localizer As WwtbamLocalizer
 
+    Private QuizShowDataLayer As IQuizShowDataLayer
+
 #Region "PROPERTIЕS"
     Dim _MomentStatus As String = ""
     Public Property MomentStatus() As String
@@ -268,6 +270,8 @@ Public Class Quiz_Operator
 
             WwtbamConfiguraiton = serializer.Deserialize(BasicConfigurationReader)
 
+            QuizShowDataLayer = New DataLayer
+
 #Region "MONEYTREE PREVIEW VALUE"
             QSum1_TextBox.Text = WwtbamConfiguraiton.MONEYTREE.Q1.PREVIEWVALUE
             QSum2_TextBox.Text = WwtbamConfiguraiton.MONEYTREE.Q2.PREVIEWVALUE
@@ -329,6 +333,7 @@ Public Class Quiz_Operator
 
             GuiContext.ResetAll()
 
+            MainGameMusicLayerObj = New MainGameMusicLayer
             MusicList_ComboBox.DataSource = MainGameMusicLayerObj.WwtbamMusicPlaylistConfig.SOUND
             MusicList_ComboBox.DisplayMember = "TITLE"
 
@@ -362,8 +367,9 @@ Public Class Quiz_Operator
 
         Dim CorrectAnswerInt As Integer
 
+        'normal scenario
         If LevelQ <> "111" Or LevelQ <> "666" Then
-            Using selectedQuestionTable As DataTable = DataLayer.SelectSuitableQuestion(LevelQ)
+            Using selectedQuestionTable As DataTable = QuizShowDataLayer.SelectSuitableQuestion(LevelQ)
                 With selectedQuestionTable
                     If selectedQuestionTable.Rows.Count > 0 Then
                         QuestionText = .Rows(0)("Question").ToString().Replace("|", vbCrLf)
@@ -475,8 +481,6 @@ Public Class Quiz_Operator
             GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "QuestionFlyIN")
         End If
 
-        DataLayer.DisposeATAvoteData()
-
         GraphicsProcessingUnit.InteractiveWallScreenObj.MotionBackgroundDuringQuestion(LevelQ)
 
     End Sub
@@ -500,8 +504,8 @@ Public Class Quiz_Operator
         MainGameMusicLayerObj.StopLetsPlay()
 
         ''SQL
-        DataLayer.MarkQuestionFiredDB(questionID, Me.IsGameGoingLive)
-        DataLayer.MarkQuestionAnsweredDB(questionID, Me.IsGameGoingLive)
+        QuizShowDataLayer.MarkQuestionFired(questionID, Me.IsGameGoingLive)
+        QuizShowDataLayer.MarkQuestionAnswered(questionID, Me.IsGameGoingLive)
         ''SQL
 
     End Sub
@@ -780,7 +784,10 @@ Public Class Quiz_Operator
 
         '' ******* CASPARCG ******* CASPARCG *******
         GraphicsProcessingUnit.resetVariables()
-        DataLayer.DisposeATAvoteData()
+
+        If MockQuestions_CheckBox.Checked = False Then
+            QuizShowDataLayer.DisposeATAvoteData()
+        End If
 
 
     End Sub
@@ -888,7 +895,7 @@ Public Class Quiz_Operator
 
     Public Sub ataEndVote()
 
-        Dim AtaPercentData() As String = DataLayer.GetATAvoteData()
+        Dim AtaPercentData() As String = QuizShowDataLayer.GetATAvoteData()
 
         A_pub.Text = AtaPercentData(0)
         B_pub.Text = AtaPercentData(1)
@@ -1114,7 +1121,7 @@ Public Class Quiz_Operator
         End If
 
         ''SQL
-        DataLayer.DisposeAnsweredGameQuestionsDB(1)
+        QuizShowDataLayer.DisposeAnsweredGameQuestions(1)
         ''SQL
 
         MomentStatus = "NewGame_Fired" ''IZMENA!!!
@@ -1137,7 +1144,7 @@ Public Class Quiz_Operator
         GraphicsProcessingUnit.removeSecondMilestone()
         GraphicsProcessingUnit.MoneyTreeFlyOut()
 
-        GraphicsProcessingUnit.InteractiveWallScreenObj.AnyBackgroundLoop("GoodbyeToContestant", False)
+        GraphicsProcessingUnit.InteractiveWallScreenObj.AnyBackgroundLoop("GoodbyeToContestant")
 
     End Sub
 
@@ -1159,7 +1166,7 @@ Public Class Quiz_Operator
 
         If ataVoteTime_TextBox.Text <> defaultATAvoteTime Then
             Try
-                Dim VoteArray As String() = DataLayer.GetATAvoteData()
+                Dim VoteArray As String() = QuizShowDataLayer.GetATAvoteData()
                 A_pub.Text = VoteArray.ElementAt(0)
                 B_pub.Text = VoteArray.ElementAt(1)
                 C_pub.Text = VoteArray.ElementAt(2)
@@ -1455,7 +1462,9 @@ Public Class Quiz_Operator
         D_pub.Text = "0"
 
         MomentStatus = "AskAudience_Questioning" ''IZMENA!!!
-        DataLayer.DisposeATAvoteData()
+        If MockQuestions_CheckBox.Checked = False Then
+            QuizShowDataLayer.DisposeATAvoteData()
+        End If
 
         GraphicsProcessingUnit.InteractiveWallScreenObj.AudienceAsking()
 
@@ -1480,7 +1489,7 @@ Public Class Quiz_Operator
 
         MomentStatus = "PhoneFriend_Dialing" ''IZMENA!!!
 
-        GraphicsProcessingUnit.InteractiveWallScreenObj.AnyBackgroundLoop("WwtbamStudioV2", False)
+        GraphicsProcessingUnit.InteractiveWallScreenObj.AnyBackgroundLoop("PhoneFriendDialing")
 
     End Sub
 
@@ -1984,7 +1993,7 @@ Public Class Quiz_Operator
         MainGameMusicLayerObj.PlayDoubleDipBackground()
         DDIP_1_Label_Click(DDIP_1_Label, Nothing)
 
-        GraphicsProcessingUnit.InteractiveWallScreenObj.AnyBackgroundLoop("MotionBackgroundPulsingCircles")
+        GraphicsProcessingUnit.InteractiveWallScreenObj.AnyBackgroundLoop("DoubleDipFirstFinal")
     End Sub
 
     Private Sub DoubleDipCancel_Label_Click(sender As Object, e As EventArgs) Handles DoubleDipCancel_Label.Click
@@ -2307,7 +2316,7 @@ Public Class Quiz_Operator
             MainGameMusicLayerObj.PlayArbitrarySound(soundToPlay)
 
             If soundToPlay.NUMBER = "1" Then
-                GraphicsProcessingUnit.InteractiveWallScreenObj.AnyBackgroundLoop("WwtbamIntroV1", False)
+                GraphicsProcessingUnit.InteractiveWallScreenObj.AnyBackgroundLoop("WwtbamIntroV1")
             ElseIf soundToPlay.NUMBER = "4" Or soundToPlay.NUMBER = "5" Or soundToPlay.NUMBER = "112" Then
                 GraphicsProcessingUnit.InteractiveWallScreenObj.AnyBackgroundLoop("WwtbamStudioV1")
             ElseIf soundToPlay.NUMBER = "2" Or soundToPlay.NUMBER = "3" Then
@@ -2430,5 +2439,13 @@ Public Class Quiz_Operator
         Lifeline4_PictureBox.Visible = True
 
         Me.TabControl2.SelectedTab = TabPage6
+    End Sub
+
+    Private Sub MockQuestions_CheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles MockQuestions_CheckBox.CheckedChanged
+        QuizShowDataLayer = New DataLayer
+        If MockQuestions_CheckBox.Checked Then
+            QuizShowDataLayer = New MockDataLayer
+        End If
+
     End Sub
 End Class

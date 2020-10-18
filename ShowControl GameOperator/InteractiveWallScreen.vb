@@ -49,34 +49,12 @@ Public Class InteractiveWallScreen
     End Sub
 
     Public Sub AudienceAsking()
-        If Not IsOnWallScreen Then
-            Return
-        End If
-        Try
-            If casparWallScreen.IsConnected Then
-                casparWallScreen.Channels(0).Clear(0)
-                casparWallScreen.Channels(0).LoadBG(20, $"AudienceAsking", False)
-                casparWallScreen.Channels(0).SetVolume(20, 0, 8, Easing.EaseInBack)
-                casparWallScreen.Channels(0).Play(20)
-            End If
-        Catch ex As Exception
-        End Try
+        WallScreenBackgroundPlay("AudienceAsking")
 
     End Sub
 
     Public Sub AudienceVoting()
-        If Not IsOnWallScreen Then
-            Return
-        End If
-        Try
-            If casparWallScreen.IsConnected Then
-                casparWallScreen.Channels(0).Clear(0)
-                casparWallScreen.Channels(0).LoadBG(20, $"AudienceVoting", False)
-                casparWallScreen.Channels(0).SetVolume(20, 0, 8, Easing.EaseInBack)
-                casparWallScreen.Channels(0).Play(20)
-            End If
-        Catch ex As Exception
-        End Try
+        WallScreenBackgroundPlay("AudienceVoting")
 
     End Sub
 
@@ -85,20 +63,8 @@ Public Class InteractiveWallScreen
 
     End Sub
 
-
-    Public Sub AnyBackgroundLoop(bed As String, Optional isLoop As Boolean = True)
-        If Not IsOnWallScreen Then
-            Return
-        End If
-        Try
-            If casparWallScreen.IsConnected Then
-                casparWallScreen.Channels(0).Clear(0)
-                casparWallScreen.Channels(0).LoadBG(20, $"{bed}", isLoop)
-                casparWallScreen.Channels(0).SetVolume(20, 0, 8, Easing.EaseInBack)
-                casparWallScreen.Channels(0).Play(20)
-            End If
-        Catch ex As Exception
-        End Try
+    Public Sub AnyBackgroundLoop(bed As String)
+        WallScreenBackgroundPlay(bed)
 
     End Sub
 

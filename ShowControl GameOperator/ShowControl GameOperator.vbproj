@@ -131,6 +131,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MockDataLayer.vb" />
     <Compile Include="Deserializers\BASICGAMECONFIGURATIONS.vb" />
     <Compile Include="ConfigurationContext.vb" />
     <Compile Include="Deserializers\GRAPHICSGAMECONFIGURATION.vb" />
@@ -151,6 +152,7 @@
     </Compile>
     <Compile Include="GuiContext.vb" />
     <Compile Include="InteractiveWallScreen.vb" />
+    <Compile Include="IQuizShowDataLayer.vb" />
     <Compile Include="WwtbamLocalizer.vb" />
     <Compile Include="MusicLayer\MainGameMusicLayerMp3.vb" />
     <Compile Include="Deserializers\WWTBAMMAINGAMEPLAYSTATE.vb" />

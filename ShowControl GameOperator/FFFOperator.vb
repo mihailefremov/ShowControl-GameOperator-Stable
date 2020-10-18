@@ -12,6 +12,9 @@ Public Class FFFOperator
     Dim questionID As String = "0"
 
     Private Shared _MomentStatus As String
+
+    Private QuizShowDataLayer As IQuizShowDataLayer
+
     Private Shared Property MomentStatus
         Get
             Return _MomentStatus
@@ -39,7 +42,7 @@ Public Class FFFOperator
     Private Sub LoadFFFQuestion_Button_Click(sender As Object, e As EventArgs) Handles LoadFFFQuestion_Button.Click
         MomentStatus = "LoadedQuestion_Fired"
         ResetContestantScores()
-        Using selectedQuestionTable As DataTable = DataLayer.SelectSuitableQuestion(LevelQFF_TextBox.Text, "2")
+        Using selectedQuestionTable As DataTable = QuizShowDataLayer.SelectSuitableQuestion(LevelQFF_TextBox.Text, "2")
             With selectedQuestionTable
                 If selectedQuestionTable.Rows.Count > 0 Then
                     QuestionFFF_TextBox.Text = .Rows(0)("Question").ToString().Replace("|", vbCrLf)
@@ -76,7 +79,7 @@ Public Class FFFOperator
         End If
         FastestFingerManaging.QuestionLoad(QuestionFFF_TextBox.Text, AnswerAFFF_TextBox.Text, AnswerBFFF_TextBox.Text, AnswerCFFF_TextBox.Text, AnswerDFFF_TextBox.Text)
         FastestFingerManaging.QuestionFire()
-        DataLayer.MarkQuestionAnsweredDB(questionID, Quiz_Operator.IsGameGoingLive)
+        QuizShowDataLayer.MarkQuestionAnswered(questionID, Quiz_Operator.IsGameGoingLive)
         MusicFF.FFFQuestionPlay()
         GraphicsProcessingUnit.InteractiveWallScreenObj.MotionBackgroundDuringQuestion("2001")
     End Sub
@@ -91,7 +94,7 @@ Public Class FFFOperator
         Dim tFFUnits As Task = Task.Run(Sub()
                                             FastestFingerManaging.FastestFingerFirstFire()
                                         End Sub)
-        DataLayer.MarkQuestionFiredDB(questionID, Quiz_Operator.IsGameGoingLive)
+        QuizShowDataLayer.MarkQuestionFired(questionID, Quiz_Operator.IsGameGoingLive)
         My.Computer.Audio.Play("C:\WWTBAM Removable Disc\UK 2007\11.Three Beeps.wav", AudioPlayMode.Background)
         MusicFF.FFFastestFingerFirstPlay()
 

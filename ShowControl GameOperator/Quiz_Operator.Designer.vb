@@ -226,6 +226,8 @@ Partial Class Quiz_Operator
         Me.MusicList_ComboBox = New System.Windows.Forms.ComboBox()
         Me.SoundPlay_Button = New System.Windows.Forms.Button()
         Me.SoundMute_Button = New System.Windows.Forms.Button()
+        Me.MockQuestions_CheckBox = New System.Windows.Forms.CheckBox()
+        Me.EnableHostContScreens_CheckBox = New System.Windows.Forms.CheckBox()
         Me.GameControl_TabControl.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage4.SuspendLayout()
@@ -1318,6 +1320,8 @@ Partial Class Quiz_Operator
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.EnableHostContScreens_CheckBox)
+        Me.TabPage3.Controls.Add(Me.MockQuestions_CheckBox)
         Me.TabPage3.Controls.Add(Me.SecondsToDissolveAfterCorrectAnswer_TextBox)
         Me.TabPage3.Controls.Add(Me.StarApacheServer_Button)
         Me.TabPage3.Controls.Add(Me.ReloadConfiguration_Button)
@@ -1336,7 +1340,7 @@ Partial Class Quiz_Operator
         Me.SecondsToDissolveAfterCorrectAnswer_TextBox.BackColor = System.Drawing.Color.White
         Me.SecondsToDissolveAfterCorrectAnswer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.SecondsToDissolveAfterCorrectAnswer_TextBox.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SecondsToDissolveAfterCorrectAnswer_TextBox.Location = New System.Drawing.Point(490, 149)
+        Me.SecondsToDissolveAfterCorrectAnswer_TextBox.Location = New System.Drawing.Point(490, 163)
         Me.SecondsToDissolveAfterCorrectAnswer_TextBox.Name = "SecondsToDissolveAfterCorrectAnswer_TextBox"
         Me.SecondsToDissolveAfterCorrectAnswer_TextBox.Size = New System.Drawing.Size(18, 13)
         Me.SecondsToDissolveAfterCorrectAnswer_TextBox.TabIndex = 1262
@@ -1406,7 +1410,7 @@ Partial Class Quiz_Operator
         Me.SumeShow_CheckBox.Checked = True
         Me.SumeShow_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked
         Me.SumeShow_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SumeShow_CheckBox.Location = New System.Drawing.Point(238, 125)
+        Me.SumeShow_CheckBox.Location = New System.Drawing.Point(238, 140)
         Me.SumeShow_CheckBox.Name = "SumeShow_CheckBox"
         Me.SumeShow_CheckBox.Size = New System.Drawing.Size(161, 17)
         Me.SumeShow_CheckBox.TabIndex = 1260
@@ -1419,7 +1423,7 @@ Partial Class Quiz_Operator
         Me.Empty_CheckBox.Checked = True
         Me.Empty_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked
         Me.Empty_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Empty_CheckBox.Location = New System.Drawing.Point(238, 148)
+        Me.Empty_CheckBox.Location = New System.Drawing.Point(238, 163)
         Me.Empty_CheckBox.Name = "Empty_CheckBox"
         Me.Empty_CheckBox.Size = New System.Drawing.Size(246, 17)
         Me.Empty_CheckBox.TabIndex = 1261
@@ -2717,6 +2721,30 @@ Partial Class Quiz_Operator
         Me.SoundMute_Button.Text = "MUTE"
         Me.SoundMute_Button.UseVisualStyleBackColor = False
         '
+        'MockQuestions_CheckBox
+        '
+        Me.MockQuestions_CheckBox.AutoSize = True
+        Me.MockQuestions_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MockQuestions_CheckBox.Location = New System.Drawing.Point(237, 86)
+        Me.MockQuestions_CheckBox.Name = "MockQuestions_CheckBox"
+        Me.MockQuestions_CheckBox.Size = New System.Drawing.Size(101, 17)
+        Me.MockQuestions_CheckBox.TabIndex = 1302
+        Me.MockQuestions_CheckBox.Text = "Mock questions"
+        Me.MockQuestions_CheckBox.UseVisualStyleBackColor = True
+        '
+        'EnableHostContScreens_CheckBox
+        '
+        Me.EnableHostContScreens_CheckBox.AutoSize = True
+        Me.EnableHostContScreens_CheckBox.Checked = True
+        Me.EnableHostContScreens_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.EnableHostContScreens_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EnableHostContScreens_CheckBox.Location = New System.Drawing.Point(237, 106)
+        Me.EnableHostContScreens_CheckBox.Name = "EnableHostContScreens_CheckBox"
+        Me.EnableHostContScreens_CheckBox.Size = New System.Drawing.Size(180, 17)
+        Me.EnableHostContScreens_CheckBox.TabIndex = 1303
+        Me.EnableHostContScreens_CheckBox.Text = "Enable Host Contestant Screens"
+        Me.EnableHostContScreens_CheckBox.UseVisualStyleBackColor = True
+        '
         'Quiz_Operator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2995,4 +3023,6 @@ Partial Class Quiz_Operator
     Friend WithEvents GetContestantClicks_CheckBox As CheckBox
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents ChangeTheStateOfLifelines_Label As Label
+    Friend WithEvents EnableHostContScreens_CheckBox As CheckBox
+    Friend WithEvents MockQuestions_CheckBox As CheckBox
 End Class
