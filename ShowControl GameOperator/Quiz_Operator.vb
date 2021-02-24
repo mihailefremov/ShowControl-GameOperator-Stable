@@ -117,7 +117,7 @@ Public Class Quiz_Operator
     Dim FinalAnswer1 As String = ""
     Public Property FinalAnswer As String
         Get
-            Return FinalAnswer1
+            Return FinalAnswer1.Trim
         End Get
         Set(value As String)
             FinalAnswer1 = value
@@ -128,7 +128,7 @@ Public Class Quiz_Operator
     Dim CorrectAnswer1 As String = ""
     Public Property CorrectAnswer As String
         Get
-            Return CorrectAnswer1
+            Return CorrectAnswer1.Trim
         End Get
         Set(value As String)
             CorrectAnswer1 = value
@@ -161,7 +161,7 @@ Public Class Quiz_Operator
     Dim LevelQ1 As String = 0
     Public Property LevelQ As String
         Get
-            Return LevelQ1
+            Return LevelQ1.Trim
         End Get
         Set(value As String)
             LevelQ1 = value
@@ -261,14 +261,14 @@ Public Class Quiz_Operator
 
         Try
             Dim ConfigurationPath As String = GameConfiguration.Default.DefaultGameConfigurationPath
-            Dim BasicConfigurationText As String = System.IO.File.ReadAllText(String.Format("{0}\{1}", ConfigurationPath, "BasicGameConfiguration.xml"))
+            Dim ConfigurationText As String = System.IO.File.ReadAllText(String.Format("{0}\{1}", ConfigurationPath, "BasicGameConfiguration.xml"))
 
-            Dim BasicConfigurationReader As System.IO.TextReader = New System.IO.StringReader(BasicConfigurationText)
+            Dim ConfigurationReader As System.IO.TextReader = New System.IO.StringReader(ConfigurationText)
 
             Dim serializer As Xml.Serialization.XmlSerializer = New Xml.Serialization.XmlSerializer(GetType(Xml2CSharp.BASICGAMECONFIGURATIONS))
             Dim WwtbamConfiguraiton As Xml2CSharp.BASICGAMECONFIGURATIONS
 
-            WwtbamConfiguraiton = serializer.Deserialize(BasicConfigurationReader)
+            WwtbamConfiguraiton = serializer.Deserialize(ConfigurationReader)
 
             QuizShowDataLayer = New DataLayer
 
@@ -339,6 +339,13 @@ Public Class Quiz_Operator
 
 #Region "WALLSCREEN"
             GraphicsProcessingUnit.InteractiveWallScreenObj.LoadWallScreenConfiguration(String.Format("{0}\{1}", GameConfiguration.Default.DefaultGameConfigurationPath, "WallScreenConfiguration.xml"))
+#End Region
+
+#Region "GRAPHICS"
+            serializer = New Xml.Serialization.XmlSerializer(GetType(Xml2CSharp.GRAPHICSGAMECONFIGURATION))
+            ConfigurationText = System.IO.File.ReadAllText(String.Format("{0}\{1}", ConfigurationPath, "GraphicsGameConfiguration.xml"))
+            ConfigurationReader = New System.IO.StringReader(ConfigurationText)
+            GuiContext.CommonGraphicsConfiguration = serializer.Deserialize(ConfigurationReader)
 #End Region
 
         Catch ex As Exception
@@ -472,8 +479,6 @@ Public Class Quiz_Operator
 
         AnswerDappear_Label.BackColor = Color.Yellow
 
-        TimerQuestionRemove.Interval = Val(SecondsToDissolveAfterCorrectAnswer_TextBox.Text) * 1000
-
         If GraphicsProcessingUnit.casparQA.IsConnected Then
             GraphicsProcessingUnit.CGQuestionSet(QuestionText, Answer1Text, Answer2Text, Answer3Text, Answer4Text, QuestionForSume, ActiveLifelinesNames.Replace("DDIP", "DD"))
             GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Update(GraphicsProcessingUnit.questionCGlayer, GraphicsProcessingUnit.cgDataQA)
@@ -570,11 +575,6 @@ Public Class Quiz_Operator
 
         LimitedGameClockStop_Label_Click(LimitedGameClockStop_Label, Nothing)
 
-        If Not FinalAnswer = CorrectAnswer Then
-            SumeShow_CheckBox.Checked = False
-            Empty_CheckBox.Checked = False
-        End If
-
         MainGameMusicLayerObj.PlayFinalAnswerSound(LevelQ_TextBox.Text, DoubleDipState)
 
         If Val(LevelQ) >= 6 And Val(LevelQ) <= 15 Then
@@ -597,6 +597,36 @@ Public Class Quiz_Operator
 
         GraphicsProcessingUnit.CGgleenQAstop()
 
+    End Sub
+
+    Private Sub PrizeWonAppearanceSetup()
+        Dim finalCase As String = "CORRECT"
+        Dim stateCase As String = "CURRENTPRIZEWON"
+        If Not FinalAnswer = CorrectAnswer Then
+            finalCase = "WRONG"
+            stateCase = "TOTALPRIZEWON"
+        End If
+        If LevelQ = "666" Then
+            finalCase += "GUESS"
+            stateCase = "TOTALPRIZEWON"
+        End If
+        Dim listSumeShowConfigs As List(Of Xml2CSharp.CONFIGURATION) = GuiContext.CommonGraphicsConfiguration.CONFIGURATION
+        Dim sumShow As Xml2CSharp.CONFIGURATION = listSumeShowConfigs.LastOrDefault(Function(x) x.STATE?.Split(";").Contains(stateCase) AndAlso x.CASE?.Split(";").Contains(finalCase) _
+            AndAlso (x.AFFECTEDLEVELS?.Split(";").Contains(LevelQ) OrElse x.AFFECTEDLEVELS?.Split(";").Contains("ALL", StringComparer.OrdinalIgnoreCase)))
+        Dim sumShowCheckBoxChecked As Boolean = IIf(sumShow?.AUTOSHOW.ToUpper.Trim = "TRUE", True, False)
+        Dim emptyCheckBoxChecked As Boolean = IIf(sumShow?.AUTOREMOVE.ToUpper.Trim = "TRUE", True, False)
+        Dim sumShowIntrval As Integer = 1500
+        If Not String.IsNullOrWhiteSpace(sumShow?.MILISECONDSTOSHOW) Then
+            sumShowIntrval = Integer.Parse(sumShow?.MILISECONDSTOSHOW)
+        End If
+        Timer_SumeShow.Interval = sumShowIntrval
+        Dim sumRemoveIntrval As Integer = 1500
+        If Not String.IsNullOrWhiteSpace(sumShow?.MILISECONDSTOREMOVE) Then
+            sumRemoveIntrval = Integer.Parse(sumShow?.MILISECONDSTOREMOVE)
+        End If
+        TimerQuestionRemove.Interval = sumShowIntrval + sumRemoveIntrval
+        SumeShow_CheckBox.Checked = sumShowCheckBoxChecked
+        Empty_CheckBox.Checked = emptyCheckBoxChecked
     End Sub
 
     Private Sub FinalA_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FinalA_Button.Click, AnswerA_TextBox.DoubleClick
@@ -1036,15 +1066,6 @@ Public Class Quiz_Operator
     End Sub
 
     Private Sub WalkAwayStart_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WalkAwayStart_Button.Click
-        SumeShow_CheckBox.Checked = False
-        Empty_CheckBox.Checked = False
-
-        If LevelQ = "1" Or LevelQ = "2" Or LevelQ = "3" Or LevelQ = "4" Or LevelQ = "5" Or LevelQ = "6" Or LevelQ = "7" Or LevelQ = "8" Or LevelQ = "9" Or LevelQ = "10" Then
-            'LightDown.URL = "C:\WWTBAM Removable Disc\UK 2007\33.Little Quitter.wav"
-        End If
-        If LevelQ = "11" Or LevelQ = "12" Or LevelQ = "13" Or LevelQ = "14" Or LevelQ = "15" Or LevelQ = "16" Then
-            'LightDown.URL = "C:\WWTBAM Removable Disc\UK 2007\34.Big Quitter.wav"
-        End If
 
         Dim TextBox As String = "QSum" + Val(LevelQ - 1).ToString + "_TextBox"
         For Each tb As TextBox In Me.Controls.OfType(Of TextBox)()
@@ -1109,8 +1130,6 @@ Public Class Quiz_Operator
     End Sub
 
     Private Sub NewGame_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewGame_Label.Click
-        SumeShow_CheckBox.Checked = True
-        Empty_CheckBox.Checked = True
 
         FinalAnswer = "T"
         DoubleDipFirstAnswer = ""
@@ -1318,16 +1337,14 @@ Public Class Quiz_Operator
     End Sub
     Private Sub CorrectAnswerReveal_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CorrectAnswerReveal_Button.Click
 
-        TimerQuestionRemove.Interval = Val(SecondsToDissolveAfterCorrectAnswer_TextBox.Text) * 1000
-
         Timer_STOP.Interval = 555
-
-        Timer_SumeShow.Interval = 1140
 
         If LevelQ = "5" Then
             Timer_STOP.Start()
 
         End If
+
+        PrizeWonAppearanceSetup()
 
         If Empty_CheckBox.Checked = True Then
             TimerQuestionRemove.Start()
@@ -2026,9 +2043,6 @@ Public Class Quiz_Operator
             GraphicsProcessingUnit.DobleDip(FinalAnswer)
             ''
             DoubleDipState = "DoubleDipSecondFinal"
-
-            SumeShow_CheckBox.Checked = True
-            Empty_CheckBox.Checked = True
 
         ElseIf (CorrectAnswer <> FinalAnswer) Then
             CorrectAnswerReveal_Button_Click(CorrectAnswerReveal_Button, Nothing)

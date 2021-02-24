@@ -3,49 +3,35 @@ Imports System.Xml.Serialization
 Imports System.Collections.Generic
 
 Namespace Xml2CSharp
-    <XmlRoot(ElementName:="AUTOREMOVEQUESTIONDEFAULT")>
-    Public Class AUTOREMOVEQUESTIONDEFAULT
-        <XmlElement(ElementName:="SECONDS")>
-        Public Property SECONDS As String
-    End Class
-
-    <XmlRoot(ElementName:="AUTOREMOVEQUESTIONSPECIFIC")>
-    Public Class AUTOREMOVEQUESTIONSPECIFIC
-        <XmlElement(ElementName:="LEVEL")>
-        Public Property LEVEL As String
-        <XmlElement(ElementName:="SECONDS")>
-        Public Property SECONDS As String
-    End Class
-
-    <XmlRoot(ElementName:="AUTOSHOWCURRENTPRIZEWONDEFAULT")>
-    Public Class AUTOSHOWCURRENTPRIZEWONDEFAULT
-        <XmlElement(ElementName:="LEVEL")>
-        Public Property LEVEL As String
-        <XmlElement(ElementName:="SECONDS")>
-        Public Property SECONDS As String
-    End Class
-
-    <XmlRoot(ElementName:="AUTOSHOWCURRENTPRIZEWONSPECIFIC")>
-    Public Class AUTOSHOWCURRENTPRIZEWONSPECIFIC
-        <XmlElement(ElementName:="LEVEL")>
-        Public Property LEVEL As String
-        <XmlElement(ElementName:="SECONDS")>
-        Public Property SECONDS As String
+    <XmlRoot(ElementName:="CONFIGURATION")>
+    Public Class CONFIGURATION
+        <XmlElement(ElementName:="STATE")>
+        Public Property STATE As String
+        <XmlElement(ElementName:="CASE")>
+        Public Property [CASE] As String
+        <XmlElement(ElementName:="AFFECTEDLEVELS")>
+        Public Property AFFECTEDLEVELS As String
+        <XmlElement(ElementName:="AUTOSHOW")>
+        Public Property AUTOSHOW As String
+        <XmlElement(ElementName:="MILISECONDSTOSHOW")>
+        Public Property MILISECONDSTOSHOW As String
+        <XmlElement(ElementName:="AUTOREMOVE")>
+        Public Property AUTOREMOVE As String
+        <XmlElement(ElementName:="MILISECONDSTOREMOVE")>
+        Public Property MILISECONDSTOREMOVE As String
+        <XmlElement(ElementName:="BARHOP")>
+        Public Property BARHOP As String
+        <XmlElement(ElementName:="MILISECONDSBETWEENHOP")>
+        Public Property MILISECONDSBETWEENHOP As String
+        <XmlElement(ElementName:="LIFELINESPING")>
+        Public Property LIFELINESPING As String
+        <XmlElement(ElementName:="INCLUDEEXTRALIFELINE")>
+        Public Property INCLUDEEXTRALIFELINE As String
     End Class
 
     <XmlRoot(ElementName:="GRAPHICSGAMECONFIGURATION")>
     Public Class GRAPHICSGAMECONFIGURATION
-        <XmlElement(ElementName:="AUTOREMOVEQUESTIONIFCORRECT")>
-        Public Property AUTOREMOVEQUESTIONIFCORRECT As String
-        <XmlElement(ElementName:="AUTOREMOVEQUESTIONDEFAULT")>
-        Public Property AUTOREMOVEQUESTIONDEFAULT As AUTOREMOVEQUESTIONDEFAULT
-        <XmlElement(ElementName:="AUTOREMOVEQUESTIONSPECIFIC")>
-        Public Property AUTOREMOVEQUESTIONSPECIFIC As List(Of AUTOREMOVEQUESTIONSPECIFIC)
-        <XmlElement(ElementName:="AUTOSHOWCURRENTPRIZEWON")>
-        Public Property AUTOSHOWCURRENTPRIZEWON As String
-        <XmlElement(ElementName:="AUTOSHOWCURRENTPRIZEWONDEFAULT")>
-        Public Property AUTOSHOWCURRENTPRIZEWONDEFAULT As AUTOSHOWCURRENTPRIZEWONDEFAULT
-        <XmlElement(ElementName:="AUTOSHOWCURRENTPRIZEWONSPECIFIC")>
-        Public Property AUTOSHOWCURRENTPRIZEWONSPECIFIC As List(Of AUTOSHOWCURRENTPRIZEWONSPECIFIC)
+        <XmlElement(ElementName:="CONFIGURATION")>
+        Public Property CONFIGURATION As List(Of CONFIGURATION)
     End Class
 End Namespace

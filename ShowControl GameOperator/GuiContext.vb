@@ -206,4 +206,6 @@
         Next
     End Sub
 
+    Public Shared CommonGraphicsConfiguration As Xml2CSharp.GRAPHICSGAMECONFIGURATION
+
 End Class
