@@ -992,8 +992,6 @@ Public Class Quiz_Operator
         ShowHideAudienceGraph_Label_Click(ShowHideAudienceGraph_Label, Nothing)
         'showATAGraph
 
-        ''CASPARCG***** CASPARCG****
-
         MomentStatus = "AskAudience_Voting" ''IZMENA!!!
 
         GraphicsProcessingUnit.InteractiveWallScreenObj.AudienceVoting()
@@ -1016,6 +1014,9 @@ Public Class Quiz_Operator
             '*** CASPARCG
             GraphicsProcessingUnit.PhoneAFriend("END")
             '*** CASPARCG
+
+            Me.TabControl2.SelectedTab = TabPage6
+            GraphicsProcessingUnit.InteractiveWallScreenObj.MotionBackgroundDuringQuestion(LevelQ)
 
         End If
 
@@ -1127,6 +1128,9 @@ Public Class Quiz_Operator
 
         MomentStatus = "PhoneFriend_Interrupted" ''IZMENA!!!
         Me.TabControl2.SelectedTab = TabPage6
+
+        GraphicsProcessingUnit.InteractiveWallScreenObj.MotionBackgroundDuringQuestion(LevelQ)
+
     End Sub
 
     Private Sub NewGame_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewGame_Label.Click
