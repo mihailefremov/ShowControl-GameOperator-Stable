@@ -10,7 +10,7 @@ Public Class Quiz_Operator
     Public Shared SwitchedQuestion As Integer
     Public Shared questionID As String
 
-    Public MainGameMusicLayerObj As New MainGameMusicLayer
+    Public MainGameMusicLayerObj As MainGameMusicLayer
 
     Public Localizer As WwtbamLocalizer
 
@@ -352,6 +352,8 @@ Public Class Quiz_Operator
             MessageBox.Show(ex.Message)
 
         End Try
+
+        MainGameMusicLayerObj = New MainGameMusicLayer()
 
     End Sub
 
@@ -870,7 +872,7 @@ Public Class Quiz_Operator
     End Sub
 
     Private Sub FiftyFiftyStart_Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FiftyFiftyStart_Label.Click
-        My.Computer.Audio.Play("C:\WWTBAM Removable Disc\UK 2007\40.50-50.wav", AudioPlayMode.Background)
+        MainGameMusicLayerObj.PlayLifelineSound("5050", "FIRE")
 
         Dim ListRemoved As New List(Of Short)
 
@@ -1049,7 +1051,7 @@ Public Class Quiz_Operator
 
         LevelQ = "888"
 
-        My.Computer.Audio.Play("C:\WWTBAM Removable Disc\UK 2007\102.Alternate Animate.wav", AudioPlayMode.Background)
+        MainGameMusicLayerObj.PlayLifelineSound("STQ", "INVOKE")
 
         STQ_1_Label_Click(STQ_1_Label, Nothing)
 
@@ -1866,7 +1868,7 @@ Public Class Quiz_Operator
 
     Private Sub VariableMilestoneSet_Button_Click(sender As Object, e As EventArgs) Handles VariableMilestoneSet_Button.Click
         VariableMilestone_TextBox.Text = LevelQ
-        My.Computer.Audio.Play("C:\WWTBAM Removable Disc\UK 2007\29.QMilestone - Change.wav")
+        MainGameMusicLayerObj.PlayMilestoneSetSound()
 
         Dim TextBox As String 'Izbeli gi prvo
         For index As Integer = 6 To 15 - 1

@@ -460,6 +460,8 @@
         LifelineSoundWindowsMediaPlayer.Stop()
 
         Select Case Lifeline + " " + State
+            Case "5050 FIRE"
+                LifelineSoundWindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(40).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(40).TITLE)))
             Case "ATA ASK"
                 LifelineSoundWindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(41).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(41).TITLE)))
             Case "ATA VOTE"
@@ -472,10 +474,17 @@
                 LifelineSoundWindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(45).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(45).TITLE)))
             Case "PAF ABORT"
                 LifelineSoundWindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(46).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(46).TITLE)))
+            Case "STQ INVOKE"
+                LifelineSoundWindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(102).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(102).TITLE)))
         End Select
 
         LifelineSoundWindowsMediaPlayer.Play()
 
+    End Sub
+
+    Sub PlayMilestoneSetSound()
+        AnyMusicLXAxWindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(123).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(123).TITLE)))
+        AnyMusicLXAxWindowsMediaPlayer.Play()
     End Sub
 
     Sub PlayArbitrarySound(Sound As Xml2CSharp.SOUND)
