@@ -29,5 +29,13 @@ Namespace Xml2CSharp
             Next
             Return SOUND.ElementAt(0) 'TODO return test sound
         End Function
+        Public Function GetSoundByDescription(Description As String) As SOUND
+            For Each SOUND1 In SOUND
+                If String.Equals(SOUND1.DESCRIPTION.Trim(), Description.Trim(), StringComparison.OrdinalIgnoreCase) Then
+                    Return SOUND1
+                End If
+            Next
+            Return SOUND.ElementAt(0) 'TODO return test sound
+        End Function
     End Class
 End Namespace

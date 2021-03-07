@@ -44,13 +44,14 @@
 
     Private LifelineSoundWindowsMediaPlayer As New System.Windows.Media.MediaPlayer
 
-    Private AnyMusicLXAxWindowsMediaPlayer As New System.Windows.Media.MediaPlayer
+    Private AnyMusicSoundMediaPlayer As New System.Windows.Media.MediaPlayer
     Private ArbitrarySoundMediaPlayer As New Windows.Media.MediaPlayer
+    Private SecondArbitrarySoundMediaPlayer As New Windows.Media.MediaPlayer
 
 
     Public WwtbamMusicPlaylistConfig As New Xml2CSharp.MUSICPLAYLISTCONFIGURATION
 
-    Public Mute As Boolean = False
+    Private MuteSfx As Boolean = False
 
     Sub New()
         'Music configuration
@@ -63,89 +64,64 @@
         Me.WwtbamMusicPlaylistConfig = serializer.Deserialize(MusicConfigurationReader)
 
         Q1to5AxWindowsMediaPlayer1.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(28).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(28).TITLE)))
-        Q1to5AxWindowsMediaPlayer1.Stop()
 
         Q6AxWindowsMediaPlayer1.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(58).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(58).TITLE)))
         'Q6AxWindowsMediaPlayer1.Open(New Uri("C:\WWTBAM Removable Disc\UK 2007\120.Q6 - Heartbeat Loop.wav"))
-        Q6AxWindowsMediaPlayer1.Stop()
 
         Q7AxWindowsMediaPlayer1.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(63).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(63).TITLE)))
         'Q7AxWindowsMediaPlayer1.Open(New Uri("C\WWTBAM Removable Disc\UK 2007\121.Q7 - Heartbeat Loop.wav"))
-        Q7AxWindowsMediaPlayer1.Stop()
 
         Q8AxWindowsMediaPlayer1.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(68).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(68).TITLE)))
         'Q8AxWindowsMediaPlayer1.Open(New Uri("C:\WWTBAM Removable Disc\UK 2007\122.Q8 - Heartbeat Loop.wav"))
-        Q8AxWindowsMediaPlayer1.Stop()
 
         Q9AxWindowsMediaPlayer1.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(73).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(73).TITLE)))
         'Q9AxWindowsMediaPlayer1.Open(New Uri("C\WWTBAM Removable Disc\UK 2007\123.Q9 - Heartbeat Loop.wav"))
-        Q9AxWindowsMediaPlayer1.Stop()
 
         Q10AxWindowsMediaPlayer1.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(78).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(78).TITLE)))
         'Q10AxWindowsMediaPlayer1.Open(New Uri("C:\WWTBAM Removable Disc\UK 2007\124.Q10 - Heartbeat Loop.wav"))
-        Q10AxWindowsMediaPlayer1.Stop()
 
         Q11AxWindowsMediaPlayer1.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(83).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(83).TITLE)))
         'Q11AxWindowsMediaPlayer1.Open(New Uri("C\WWTBAM Removable Disc\UK 2007\125.Q11 - Heartbeat Loop.wav"))
-        Q11AxWindowsMediaPlayer1.Stop()
 
         Q12AxWindowsMediaPlayer1.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(87).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(87).TITLE)))
         'Q12AxWindowsMediaPlayer1.Open(New Uri("C:\WWTBAM Removable Disc\UK 2007\126.Q12 - Heartbeat Loop.wav"))
-        Q12AxWindowsMediaPlayer1.Stop()
 
         Q13AxWindowsMediaPlayer1.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(91).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(91).TITLE)))
         'Q13AxWindowsMediaPlayer1.Open(New Uri("C\WWTBAM Removable Disc\UK 2007\127.Q13 - Heartbeat Loop.wav"))
-        Q13AxWindowsMediaPlayer1.Stop()
 
         Q14AxWindowsMediaPlayer1.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(95).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(95).TITLE)))
         'Q14AxWindowsMediaPlayer1.Open(New Uri("C:\WWTBAM Removable Disc\UK 2007\128.Q14 - Heartbeat Loop.wav"))
-        Q14AxWindowsMediaPlayer1.Stop()
 
         Q15AxWindowsMediaPlayer1.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(99).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(99).TITLE)))
         'Q15AxWindowsMediaPlayer1.Open(New Uri("C\WWTBAM Removable Disc\UK 2007\129.Q15 - Heartbeat Loop.wav"))
-        Q15AxWindowsMediaPlayer1.Stop()
 
         DoubleDipBackground_WindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(107).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(107).TITLE)))
-        DoubleDipBackground_WindowsMediaPlayer.Stop()
 
         LetsPLAYQ1to5AxWindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(27).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(27).TITLE)))
-        LetsPLAYQ1to5AxWindowsMediaPlayer.Stop()
 
         LetsPLAYQ6AxWindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(32).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(32).TITLE)))
-        LetsPLAYQ6AxWindowsMediaPlayer.Stop()
 
         LetsPLAYQ7AxWindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(62).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(62).TITLE)))
-        LetsPLAYQ7AxWindowsMediaPlayer.Stop()
 
         LetsPLAYQ8AxWindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(67).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(67).TITLE)))
-        LetsPLAYQ8AxWindowsMediaPlayer.Stop()
 
         LetsPLAYQ9AxWindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(72).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(72).TITLE)))
-        LetsPLAYQ9AxWindowsMediaPlayer.Stop()
 
         LetsPLAYQ10AxWindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(77).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(77).TITLE)))
-        LetsPLAYQ10AxWindowsMediaPlayer.Stop()
 
         'LimitedClock_WindowsMediaPlayer.Open(New Uri("C:\WWTBAM Removable Disc\US 2008\Clock 100 Seconds.wav"))
-        'LimitedClock_WindowsMediaPlayer.Stop()
 
         WalkAwayLXAxWindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(34).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(34).TITLE)))
-        WalkAwayLXAxWindowsMediaPlayer.Stop()
 
         FinalAnswer611MediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(59).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(59).TITLE)))
-        FinalAnswer611MediaPlayer.Stop()
 
         FinalAnswer712MediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(64).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(64).TITLE)))
-        FinalAnswer712MediaPlayer.Stop()
 
         FinalAnswer813MediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(69).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(69).TITLE)))
-        FinalAnswer813MediaPlayer.Stop()
 
         FinalAnswer914MediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(74).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(74).TITLE)))
-        FinalAnswer914MediaPlayer.Stop()
 
         FinalAnswer1015MediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(79).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(79).TITLE)))
-        FinalAnswer1015MediaPlayer.Stop()
 
         CorrectAnswerQ1MediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(29).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(29).TITLE)))
         CorrectAnswerQ5MediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(31).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(31).TITLE)))
@@ -159,8 +135,6 @@
         CorrectAnswerQ13MediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(93).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(93).TITLE)))
         CorrectAnswerQ14MediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(97).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(97).TITLE)))
         CorrectAnswerQ15MediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(101).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(101).TITLE)))
-
-        StopCorrectAnswer()
 
     End Sub
 
@@ -221,7 +195,7 @@
     End Sub
 
     Sub PlayHeartbeatMusic(level As String)
-        If Mute Then Return
+        If Mute() Then Return
         Select Case level
             Case "1", "2", "3", "4", "5"
                 Q1to5AxWindowsMediaPlayer1.Play()
@@ -250,7 +224,7 @@
     End Sub
 
     Sub PlayDoubleDipBackground()
-        If Mute Then Return
+        If Mute() Then Return
         StopHeartbeaLetsPlay()
         DoubleDipBackground_WindowsMediaPlayer.Play()
     End Sub
@@ -261,12 +235,11 @@
 
 
     Sub PlayFinalAnswerSound(LevelQ As String, DoubleDipState As String)
+        If Mute() Then Return
 
         If Not (LevelQ = "1" Or LevelQ = "2" Or LevelQ = "3" Or LevelQ = "4" Or LevelQ = "5") Then
             StopAll()
         End If
-
-        If Mute Then Return
 
         StopFinalAnswer()
 
@@ -304,9 +277,10 @@
     End Sub
 
     Sub PlayCorrectAnswer(LevelQ As String, VariableMilestone As String)
+        If Mute() Then Return
+
         StopFinalAnswer()
         StopCorrectAnswer()
-        If Mute Then Return
 
         If LevelQ = "5" Then
             CorrectAnswerQ5MediaPlayer.Play()
@@ -365,7 +339,7 @@
     End Sub
 
     Sub PlayIncorrectAnswer(LevelQ, DoubleDipState)
-        If Mute Then Return
+        If Mute() Then Return
 
         StopAll()
 
@@ -419,9 +393,9 @@
     End Sub
 
     Sub PlayLXSound(LevelQ_TextBox As String, VariableMilestone_TextBox As String)
-        StopLetsPlay()
-        If Mute Then Return
-
+        If Mute() Then Return
+		
+		StopLetsPlay()      
         If Val(LevelQ_TextBox) >= 1 And Val(LevelQ_TextBox) <= 5 Then
             LetsPLAYQ1to5AxWindowsMediaPlayer.Play()
         ElseIf Val(LevelQ_TextBox) = 11 And (Val(VariableMilestone_TextBox) <> 10) Then
@@ -445,15 +419,30 @@
     End Sub
 
     Sub StopAll()
+        StopLetsPlay()
         StopHeartbeaLetsPlay()
         StopFinalAnswer()
         StopCorrectAnswer()
         StopIncorrectAnswer()
         My.Computer.Audio.Stop()
+        LifelineSoundWindowsMediaPlayer.Stop()
         ArbitrarySoundMediaPlayer.Stop()
+        SecondArbitrarySoundMediaPlayer.Stop()
+        AnyMusicSoundMediaPlayer.Stop()
     End Sub
 
+    Property Mute() As Boolean
+        Get
+            Return MuteSfx
+        End Get
+        Set(value As Boolean)
+            MuteSfx = value
+        End Set
+    End Property
+
     Sub PlayLifelineSound(Lifeline As String, State As String)
+        If Mute() Then Return
+
         Lifeline = Lifeline.ToUpper
         State = State.ToUpper
 
@@ -483,16 +472,31 @@
     End Sub
 
     Sub PlayMilestoneSetSound()
-        AnyMusicLXAxWindowsMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(123).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(123).TITLE)))
-        AnyMusicLXAxWindowsMediaPlayer.Play()
+        If Mute() Then Return
+
+        AnyMusicSoundMediaPlayer.Open(New Uri(String.Format("{0}\{1}", WwtbamMusicPlaylistConfig.GetSoundByNumber(123).LOCATION, WwtbamMusicPlaylistConfig.GetSoundByNumber(123).TITLE)))
+        AnyMusicSoundMediaPlayer.Play()
     End Sub
 
     Sub PlayArbitrarySound(Sound As Xml2CSharp.SOUND)
-        ArbitrarySoundMediaPlayer.Stop()
-        If Mute Then Return
+        PlayArbitrarySound(Sound, InBackground:=False)
+    End Sub
 
-        ArbitrarySoundMediaPlayer.Open(New Uri(String.Format("{0}\{1}", Sound.LOCATION, Sound.TITLE)))
-        ArbitrarySoundMediaPlayer.Play()
+    Sub PlayArbitrarySound(Sound As Xml2CSharp.SOUND, InBackground As Boolean)
+        If Mute() Then Return
+
+        If InBackground Then
+            'do nothing about first sound player
+            SecondArbitrarySoundMediaPlayer.Stop()
+            SecondArbitrarySoundMediaPlayer.Open(New Uri(String.Format("{0}\{1}", Sound.LOCATION, Sound.TITLE)))
+            SecondArbitrarySoundMediaPlayer.Play()
+        Else
+            ArbitrarySoundMediaPlayer.Stop()
+            ArbitrarySoundMediaPlayer.Open(New Uri(String.Format("{0}\{1}", Sound.LOCATION, Sound.TITLE)))
+            ArbitrarySoundMediaPlayer.Play()
+
+            SecondArbitrarySoundMediaPlayer.Stop()
+        End If
     End Sub
 
     Sub LimitedClockPlay()
