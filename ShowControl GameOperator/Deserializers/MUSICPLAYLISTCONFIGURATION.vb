@@ -27,7 +27,7 @@ Namespace Xml2CSharp
                     Return SOUND1
                 End If
             Next
-            Return SOUND.ElementAt(0) 'TODO return test sound
+            Return New Xml2CSharp.SOUND() With {.LOCATION = "C:\Windows\Media", .TITLE = "Windows Navigation Start.wav"} 'default windows sound
         End Function
         Public Function GetSoundByDescription(Description As String) As SOUND
             For Each SOUND1 In SOUND
@@ -35,7 +35,7 @@ Namespace Xml2CSharp
                     Return SOUND1
                 End If
             Next
-            Return SOUND.ElementAt(0) 'TODO return test sound
+            Return New Xml2CSharp.SOUND() With {.LOCATION = "C:\Windows\Media", .TITLE = "Windows Navigation Start.wav"} 'default windows sound
         End Function
     End Class
 End Namespace

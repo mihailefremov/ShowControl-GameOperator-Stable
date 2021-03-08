@@ -12,8 +12,8 @@
                 <URL></URL>
                 <LOOP></LOOP>
             </VIDEO>
+			<RANDOMIZE></RANDOMIZE>
         </BACKGROUNDS>
-        <RANDOMIZE></RANDOMIZE>
     </GAMEPART>
     <GAMEPART>
         <STATE></STATE>
@@ -28,7 +28,7 @@
                 <URL></URL>
                 <LOOP></LOOP>
             </VIDEO>
+			<RANDOMIZE></RANDOMIZE>
         </BACKGROUNDS>
-        <RANDOMIZE></RANDOMIZE>
     </GAMEPART>
 </INTERACTIVEWALLSCREEN>

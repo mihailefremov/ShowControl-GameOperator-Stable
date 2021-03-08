@@ -15,6 +15,8 @@ Namespace Xml2CSharp
     Public Class BACKGROUNDS
         <XmlElement(ElementName:="VIDEO")>
         Public Property VIDEO As List(Of VIDEO)
+        <XmlElement(ElementName:="RANDOMIZE")>
+        Public Property RANDOMIZE As String
     End Class
 
     <XmlRoot(ElementName:="GAMEPART")>
@@ -27,8 +29,6 @@ Namespace Xml2CSharp
         Public Property DESCRIPTION As String
         <XmlElement(ElementName:="BACKGROUNDS")>
         Public Property BACKGROUNDS As BACKGROUNDS
-        <XmlElement(ElementName:="RANDOMIZE")>
-        Public Property RANDOMIZE As String
     End Class
 
     <XmlRoot(ElementName:="INTERACTIVEWALLSCREEN")>

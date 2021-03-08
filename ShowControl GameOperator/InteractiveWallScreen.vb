@@ -94,15 +94,24 @@ Public Class InteractiveWallScreen
 
         Try
             For Each configuredGamePart As Xml2CSharp.GAMEPART In WallScreenConfiguration.GAMEPART
-                If String.Equals(configuredGamePart.STATE, State) Then
+                If String.Equals(configuredGamePart.STATE, State, StringComparison.OrdinalIgnoreCase) Then
                     configuredGamePart.AFFECTEDLEVELS = configuredGamePart.AFFECTEDLEVELS.Trim.Replace(" ", "").Replace(",", ";")
                     Dim configuredGamePartAffectedLevels As String() = configuredGamePart.AFFECTEDLEVELS.Split(";")
                     If configuredGamePartAffectedLevels.Count = 0 Then configuredGamePartAffectedLevels = {""}
+                    If configuredGamePart.BACKGROUNDS Is Nothing OrElse configuredGamePart.BACKGROUNDS.VIDEO?.Count = 0 Then Continue For
 
                     For Each configuredGamePartLevel As String In configuredGamePartAffectedLevels
                         If String.Equals(configuredGamePartLevel, Level, StringComparison.OrdinalIgnoreCase) Then
 
                             Dim index As Integer = New Random().Next(configuredGamePart.BACKGROUNDS.VIDEO.Count) 'get random video
+                            Dim isRandom As Boolean = False
+                            If String.Equals(configuredGamePart.BACKGROUNDS.RANDOMIZE, "True", StringComparison.OrdinalIgnoreCase) _
+                                OrElse String.Equals(configuredGamePart.BACKGROUNDS.RANDOMIZE, "Yes", StringComparison.OrdinalIgnoreCase) _
+                                    OrElse String.Equals(configuredGamePart.BACKGROUNDS.RANDOMIZE, "1", StringComparison.OrdinalIgnoreCase) Then
+                                isRandom = True
+                            End If
+                            If Not isRandom Then index = configuredGamePart.BACKGROUNDS.VIDEO.Count - 1
+
                             Dim selectedVideo As Xml2CSharp.VIDEO = configuredGamePart.BACKGROUNDS.VIDEO.ElementAt(index)
 
                             Dim isLoop As Boolean = False
