@@ -88,8 +88,15 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HttpApiRequests, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\HttpApiRequests.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Build.Framework" />
-    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="Svt.Caspar">
       <HintPath>References\Svt.Caspar.dll</HintPath>
@@ -281,12 +288,6 @@
     <None Include="Resources\5050_X.png" />
     <None Include="Resources\5050_1.png" />
     <None Include="Resources\5050_0.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\HttpApiRequests\HttpApiRequests.csproj">
-      <Project>{b877ec89-e685-4b15-8ee1-f4f3e49c2e4f}</Project>
-      <Name>HttpApiRequests</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
