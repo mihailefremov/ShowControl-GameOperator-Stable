@@ -381,7 +381,7 @@ Public Class Quiz_Operator
             Using selectedQuestionTable As DataTable = QuizShowDataLayer.SelectSuitableQuestion(LevelQ)
                 With selectedQuestionTable
                     If selectedQuestionTable.Rows.Count > 0 Then
-                        QuestionText = .Rows(0)("Question").ToString().Replace("|", vbCrLf)
+                        QuestionText = .Rows(0)("Question").ToString() '.Replace("|", vbCrLf)
                         Answer1Text = .Rows(0)("Answer1").ToString()
                         Answer2Text = .Rows(0)("Answer2").ToString()
                         Answer3Text = .Rows(0)("Answer3").ToString()

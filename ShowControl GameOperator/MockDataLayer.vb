@@ -37,7 +37,7 @@ Public Class MockDataLayer
         dbDataTable.Columns.Add("QuestionID")
         dbDataTable.Rows.Add()
 
-        Dim QuestionText As String = "Question:" + questionLevel + vbCrLf + "Question:" + questionLevel
+        Dim QuestionText As String = "Question:" + questionLevel + "|" + "Question:" + questionLevel
         Dim Answer1Text As String = "Answer 1" + " Qnr:" + questionLevel
         Dim Answer2Text As String = "Answer 2" + " Qnr:" + questionLevel
         Dim Answer3Text As String = "Answer 3" + " Qnr:" + questionLevel

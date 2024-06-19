@@ -1,4 +1,6 @@
-﻿Imports Svt.Caspar
+﻿Imports System.Xml
+Imports Newtonsoft.Json
+Imports Svt.Caspar
 
 Public Class GraphicsProcessingUnit
 
@@ -34,6 +36,7 @@ Public Class GraphicsProcessingUnit
 
     Public Shared Sub CGQuestionSet(Question As String, Answer1 As String, Answer2 As String, Answer3 As String, Answer4 As String, QuestionForSume As String, LifelinesNames As String)
         '' ******* CASPARCG ******* CASPARCG ******* CASPARCG ******* ******* CASPARCG ******* CASPARCG ******* CASPARCG *******
+        '' CG 1-20 UPDATE 1 "{\"QuestionML_TextField\":\"АСДАСДКАПКДПАКСПДКАПКДПОАКПДАО\"}"\r\n
 
         Dim Question_Text As String
         Question_Text = Question
@@ -41,7 +44,7 @@ Public Class GraphicsProcessingUnit
         cgDataQA.SetData("QuestionSL_TextField", "")
         cgDataQA.SetData("QuestionML_TextField", "")
 
-        If Question_Text.Contains(vbLf) Or Question_Text.Contains(vbCr) Or Question_Text.Contains("\n") Or Question_Text.Contains("\r\n") Then
+        If Question_Text.Contains("|") Then
             cgDataQA.SetData("QuestionML_TextField", Question)
         Else
             cgDataQA.SetData("QuestionSL_TextField", Question)
@@ -62,6 +65,8 @@ Public Class GraphicsProcessingUnit
         cgDataQA.SetData("QuestionFor_TextField", QuestionForSume)
 
         cgDataQA.SetData("Lifelines_TextField", LifelinesNames)
+
+        cgDataQA.ToAMCPEscapedXml()
 
     End Sub
 
