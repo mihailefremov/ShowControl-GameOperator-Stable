@@ -73,14 +73,6 @@
     End Enum
 
     Friend Shared Sub SomethingToDoWithLifeline(lifelinePosition As Short, action As LifelineAction)
-        Select Case action
-            Case LifelineAction.Used
-                XmarkLifeline(lifelinePosition)
-            Case LifelineAction.NotUsed
-                UnusedLifeline(lifelinePosition)
-            Case LifelineAction.InUse
-                InUsemarkLifeline(lifelinePosition)
-        End Select
         Select Case lifelinePosition
             Case 1
                 Lifeline1Active = action
@@ -90,6 +82,14 @@
                 Lifeline3Active = action
             Case 4
                 Lifeline4Active = action
+        End Select
+        Select Case action
+            Case LifelineAction.Used
+                XmarkLifeline(lifelinePosition)
+            Case LifelineAction.NotUsed
+                UnusedLifeline(lifelinePosition)
+            Case LifelineAction.InUse
+                InUsemarkLifeline(lifelinePosition)
         End Select
     End Sub
 

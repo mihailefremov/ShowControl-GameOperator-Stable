@@ -15,7 +15,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="questionFlashTempl" Type="System.String" Scope="User">
-      <Value Profile="(Default)">wwtbam/currentWorking/QuestionFireUKp1v1-clock</Value>
+      <Value Profile="(Default)">WWTBAM-4K-QA/WWTBAM-4K-QA</Value>
     </Setting>
     <Setting Name="casparHostName" Type="System.String" Scope="User">
       <Value Profile="(Default)">192.168.100.2</Value>
@@ -45,7 +45,7 @@
       <Value Profile="(Default)">audiencevotes</Value>
     </Setting>
     <Setting Name="moneyTreeFlashTempl" Type="System.String" Scope="User">
-      <Value Profile="(Default)">wwtbam/currentWorking/MoneyTreeUIp1</Value>
+      <Value Profile="(Default)">WWTBAM-4K-MT/WWTBAM-4K-MT</Value>
     </Setting>
     <Setting Name="rightOrderFlashTempl" Type="System.String" Scope="User">
       <Value Profile="(Default)">wwtbam/currentWorking/FFFRightOrderUIp2</Value>
@@ -72,13 +72,13 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="gameQuestionsServer" Type="System.String" Scope="User">
-      <Value Profile="(Default)">IDEA-PC\SQLEXPRESS01</Value>
+      <Value Profile="(Default)">DESKTOP-4MKSC1R</Value>
     </Setting>
     <Setting Name="UseMySqlForAta" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="phoneAfriendFlashTempl" Type="System.String" Scope="User">
-      <Value Profile="(Default)">wwtbam/currentWorking/PhoneAFriendClockUKp1v1</Value>
+      <Value Profile="(Default)">WWTBAM-4K-PAF/WWTBAM-4K-PAF</Value>
     </Setting>
   </Settings>
 </SettingsFile>

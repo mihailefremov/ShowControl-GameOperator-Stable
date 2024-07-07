@@ -1,4 +1,5 @@
-﻿Imports System.Xml
+﻿Imports System.Reflection.Emit
+Imports System.Xml
 Imports Newtonsoft.Json
 Imports Svt.Caspar
 
@@ -65,6 +66,7 @@ Public Class GraphicsProcessingUnit
         cgDataQA.SetData("QuestionFor_TextField", QuestionForSume)
 
         cgDataQA.SetData("Lifelines_TextField", LifelinesNames)
+        cgDataQA.SetData("UsedLifelines_TextField", Quiz_Operator.LifelinesState)
 
         cgDataQA.ToAMCPEscapedXml()
 
@@ -75,7 +77,7 @@ Public Class GraphicsProcessingUnit
         If LevelQ_TextBox <= 5 Then
             '' ******* CASPARCG ******* CASPARCG *******
             If casparQA.IsConnected Then
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "show15sClock")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "show15sClock")
             End If
             '' ******* CASPARCG ******* CASPARCG *******
 
@@ -84,7 +86,7 @@ Public Class GraphicsProcessingUnit
         If LevelQ_TextBox > 5 Then
             '' ******* CASPARCG ******* CASPARCG *******
             If casparQA.IsConnected Then
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "show30sClock")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "show30sClock")
             End If
             '' ******* CASPARCG ******* CASPARCG *******
 
@@ -97,7 +99,7 @@ Public Class GraphicsProcessingUnit
         If LevelQ_TextBox <= 5 And IsGameLimited = True Then
             '' ******* CASPARCG ******* CASPARCG *******
             If casparQA.IsConnected Then
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "hide15sClock")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "hide15sClock")
             End If
             '' ******* CASPARCG ******* CASPARCG *******
 
@@ -105,7 +107,7 @@ Public Class GraphicsProcessingUnit
         If LevelQ_TextBox > 5 And IsGameLimited = True Then
             '' ******* CASPARCG ******* CASPARCG *******
             If casparQA.IsConnected Then
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "hide30sClock")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "hide30sClock")
             End If
             '' ******* CASPARCG ******* CASPARCG *******
 
@@ -116,7 +118,7 @@ Public Class GraphicsProcessingUnit
     Public Shared Sub CGtemplateSet()
         '' ******* CASPARCG ******* 
         If casparQA.IsConnected Then
-            casparQA.Channels(questionCGchannel).CG.Add(questionCGlayer, My.Settings.questionFlashTempl, False, cgDataQA)
+            casparQA.Channels(questionCGchannel).CG.Add(questionCGlayer, questionCGchannel, My.Settings.questionFlashTempl, False, cgDataQA)
         End If
         '' ******* CASPARCG ******* 
     End Sub
@@ -129,8 +131,8 @@ Public Class GraphicsProcessingUnit
 
             '' ******* CASPARCG ******* CASPARCG *******
             If casparQA.IsConnected Then
-                casparQA.Channels(questionCGchannel).CG.Update(questionCGlayer, cgDataQA)
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "TotalWinStrap_Show")
+                casparQA.Channels(questionCGchannel).CG.Update(questionCGlayer, questionCGchannel, cgDataQA)
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "TotalWinStrap_Show")
             End If
             '' ******* CASPARCG ******* CASPARCG *******
         ElseIf LevelQ_TextBox <> "888" Then
@@ -138,8 +140,8 @@ Public Class GraphicsProcessingUnit
             '' ******* CASPARCG ******* CASPARCG *******
             cgDataQA.SetData("SumeWon_TextField", QuestionForSume)
             If casparQA.IsConnected Then
-                casparQA.Channels(questionCGchannel).CG.Update(questionCGlayer, cgDataQA)
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "WinningStrap_Show")
+                casparQA.Channels(questionCGchannel).CG.Update(questionCGlayer, questionCGchannel, cgDataQA)
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "WinningStrap_Show")
             End If
             '' ******* CASPARCG ******* CASPARCG *******
 
@@ -167,7 +169,7 @@ Public Class GraphicsProcessingUnit
 
     Friend Shared Sub UpdateQAData()
         If casparQA.IsConnected Then
-            casparQA.Channels(questionCGchannel).CG.Update(questionCGlayer, cgDataQA)
+            casparQA.Channels(questionCGchannel).CG.Update(questionCGlayer, questionCGchannel, cgDataQA)
         End If
     End Sub
 
@@ -182,10 +184,10 @@ Public Class GraphicsProcessingUnit
     Friend Shared Sub Activate3Lifelines()
         numberoflifelines = 3
         If casparQA.IsConnected Then
-            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "threeLifelines")
+            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "threeLifelines")
         End If
         If casparMT.IsConnected Then
-            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, "threeLifelines")
+            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, moneyTreeCGchannel, "threeLifelines")
         End If
 
     End Sub
@@ -194,12 +196,12 @@ Public Class GraphicsProcessingUnit
         ActivateLifelines()
         If casparQA.IsConnected Then
             If flagLifeLineRemindGraph = False Then
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "lifelineRemindFlyIn")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "lifelineRemindFlyIn")
                 flagLifeLineRemindGraph = True
 
                 'showLLRforGraph
             Else
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "lifelineRemindFlyOut")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "lifelineRemindFlyOut")
                 flagLifeLineRemindGraph = False
                 'hideLLRforGraph
             End If
@@ -210,47 +212,49 @@ Public Class GraphicsProcessingUnit
     Public Shared Sub MarkCGlifelines(lifeline1Active As Short, lifeline2Active As Short, lifeline3Active As Short, lifeline4Active As Short)
         If casparQA.IsConnected Then
             If lifeline1Active = 0 Then
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "markXLifeline1")
-                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, "markXLifeline1")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "markXLifeline1")
+                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, moneyTreeCGchannel, "markXLifeline1")
                 'markXLifeline1
             End If
             If lifeline2Active = 0 Then
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "markXLifeline2")
-                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, "markXLifeline2")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "markXLifeline2")
+                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, moneyTreeCGchannel, "markXLifeline2")
                 'markXLifeline2
             End If
             If lifeline3Active = 0 Then
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "markXLifeline3")
-                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, "markXLifeline3")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "markXLifeline3")
+                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, moneyTreeCGchannel, "markXLifeline3")
                 'markXLifeline3
             End If
             If lifeline4Active = 0 Then
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "markXLifeline4")
-                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, "markXLifeline4")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "markXLifeline4")
+                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, moneyTreeCGchannel, "markXLifeline4")
                 'markXLifeline4
             End If
             '''''''''''''''''
             If lifeline1Active = 1 Then
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "mark0Lifeline1")
-                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, "mark0Lifeline1")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "mark0Lifeline1")
+                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, moneyTreeCGchannel, "mark0Lifeline1")
                 'markXLifeline1
             End If
             If lifeline2Active = 1 Then
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "mark0Lifeline2")
-                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, "mark0Lifeline2")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "mark0Lifeline2")
+                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, moneyTreeCGchannel, "mark0Lifeline2")
                 'markXLifeline2
             End If
             If lifeline3Active = 1 Then
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "mark0Lifeline3")
-                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, "mark0Lifeline3")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "mark0Lifeline3")
+                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, moneyTreeCGchannel, "mark0Lifeline3")
                 'markXLifeline3
             End If
             If lifeline4Active = 1 Then
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "mark0Lifeline4")
-                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, "mark0Lifeline4")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "mark0Lifeline4")
+                casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, moneyTreeCGchannel, "mark0Lifeline4")
                 'markXLifeline4
             End If
-
+            Dim lif = String.Format("{0};{1};{2};{3}", Helpers.ConvertLifelineStateToReadable(lifeline1Active), Helpers.ConvertLifelineStateToReadable(lifeline2Active), Helpers.ConvertLifelineStateToReadable(lifeline3Active), Helpers.ConvertLifelineStateToReadable(lifeline4Active))
+            cgDataMT.SetData("UsedLifelines_TextField", lif)
+            casparMT.Channels(moneyTreeCGchannel).CG.Update(moneyTreeCGlayer, moneyTreeCGchannel, cgDataMT)
         End If
     End Sub
 
@@ -263,45 +267,49 @@ Public Class GraphicsProcessingUnit
         End If
 
         If casparQA.IsConnected Then
-            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, $"{translatedLifelines}Lifelines")
+            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, $"{translatedLifelines}Lifelines")
         End If
         If casparMT.IsConnected Then
-            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, $"{translatedLifelines}Lifelines")
+            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, questionCGchannel, $"{translatedLifelines}Lifelines")
         End If
     End Sub
 
     Public Shared Sub setSecondMilestoneAtQ(level As String)
         If casparMT.IsConnected Then
-            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, "setSecondMilestoneAtQ" + level)
+            cgDataMT.SetData("secondMilestoneLevel", level)
+            casparMT.Channels(moneyTreeCGchannel).CG.Update(moneyTreeCGlayer, moneyTreeCGchannel, cgDataMT)
+            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, moneyTreeCGchannel, "setSecondMilestoneLevel")
         End If
     End Sub
 
     Public Shared Sub removeSecondMilestone()
         If casparMT.IsConnected Then
-            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, "removeSecondMilestone")
+            cgDataMT.SetData("secondMilestoneLevel", 0)
+            casparMT.Channels(moneyTreeCGchannel).CG.Update(moneyTreeCGlayer, moneyTreeCGchannel, cgDataMT)
+            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, moneyTreeCGchannel, "setSecondMilestoneLevel")
         End If
     End Sub
 
     Public Shared Sub CGgleenQAstart()
         If casparQA.IsConnected Then
-            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "GleenQAstart")
+            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "GleenQAstart")
         End If
     End Sub
 
     Public Shared Sub CGgleenQAstop()
         Return
         If casparQA.IsConnected Then
-            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "GleenQAstop")
+            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "GleenQAstop")
         End If
     End Sub
 
     Public Shared Function ShowHideATAGraph() As Boolean
         If casparQA.IsConnected Then
             If flagATAgraph = False Then
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "showATAgraph")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "showATAgraph")
                 flagATAgraph = True
             Else
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "hideATAgraph")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "hideATAgraph")
                 flagATAgraph = False
             End If
         End If
@@ -321,13 +329,13 @@ Public Class GraphicsProcessingUnit
         If casparPhoneAFriend.IsConnected Then
             Select Case casePAF
                 Case "START"
-                    casparPhoneAFriend.Channels(phoneAfriendCGchannel).CG.Invoke(phoneAfriendCGlayer, "startPhoneAFriend")
+                    casparPhoneAFriend.Channels(phoneAfriendCGchannel).CG.Invoke(phoneAfriendCGlayer, phoneAfriendCGchannel, "startPhoneAFriend")
                 Case "ABORT"
-                    casparPhoneAFriend.Channels(phoneAfriendCGchannel).CG.Invoke(phoneAfriendCGlayer, "abortPhoneAFriend")
+                    casparPhoneAFriend.Channels(phoneAfriendCGchannel).CG.Invoke(phoneAfriendCGlayer, phoneAfriendCGchannel, "abortPhoneAFriend")
                 Case "END"
-                    casparPhoneAFriend.Channels(phoneAfriendCGchannel).CG.Invoke(phoneAfriendCGlayer, "endPhoneAFriend")
+                    casparPhoneAFriend.Channels(phoneAfriendCGchannel).CG.Invoke(phoneAfriendCGlayer, phoneAfriendCGchannel, "endPhoneAFriend")
             End Select
-            'GraphicsProcessingUnit.casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "QuestionAnswersFadeIN")
+            'GraphicsProcessingUnit.casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "QuestionAnswersFadeIN")
         End If
 
     End Sub
@@ -352,6 +360,9 @@ Public Class GraphicsProcessingUnit
             cgDataMT.SetData("sumq14", QSum14)
             cgDataMT.SetData("sumq15", QSum15)
             cgDataMT.SetData("Lifelines_TextField", LifelinesNames)
+            cgDataMT.SetData("UsedLifelines_TextField", Quiz_Operator.LifelinesState)
+            cgDataMT.SetData("secondMilestoneLevel", Quiz_Operator.VariableMilestone_TextBox.Text)
+            cgDataMT.SetData("reachedLevel", Math.Max(Quiz_Operator.LevelQ - 1, 0))
         End If
 
     End Sub
@@ -359,14 +370,14 @@ Public Class GraphicsProcessingUnit
     Public Shared Sub MoneyTreeFlyIn()
         If casparMT.IsConnected Then
             casparMT.Channels(moneyTreeCGchannel).CG.Play(moneyTreeCGlayer)
-            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, "MoneyTreeFlyIN")
+            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, moneyTreeCGchannel, "MoneyTreeFlyIN")
         End If
 
     End Sub
 
     Public Shared Sub MoneyTreeFlyOut()
         If casparMT.IsConnected Then
-            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, "MoneyTreeFlyOUT")
+            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, moneyTreeCGchannel, "MoneyTreeFlyOUT")
         End If
 
     End Sub
@@ -395,7 +406,7 @@ Public Class GraphicsProcessingUnit
 
             If casparQA.IsConnected Then
                 CASPARCGLog_TextBox.Text += "Connected with CasparCG-QA!" + vbCrLf
-                casparQA.Channels(questionCGchannel).CG.Add(questionCGlayer, My.Settings.questionFlashTempl, False, cgDataQA)
+                casparQA.Channels(questionCGchannel).CG.Add(questionCGlayer, questionCGchannel, My.Settings.questionFlashTempl, False, cgDataQA)
             Else
                 CASPARCGLog_TextBox.Text += "NOT Connected with CasparCG-QA!" + vbCrLf
                 casparQA.Settings.Hostname = My.Settings.casparHostName
@@ -404,9 +415,11 @@ Public Class GraphicsProcessingUnit
             End If
             '''''
 
+            System.Threading.Thread.Sleep(300)
+
             If casparMT.IsConnected Then
                 CASPARCGLog_TextBox.Text += "Connected with CasparCG-MT!" + vbCrLf
-                casparMT.Channels(moneyTreeCGchannel).CG.Add(moneyTreeCGlayer, My.Settings.moneyTreeFlashTempl, False, cgDataMT)
+                casparMT.Channels(moneyTreeCGchannel).CG.Add(moneyTreeCGlayer, moneyTreeCGchannel, My.Settings.moneyTreeFlashTempl, False, cgDataMT)
             Else
                 CASPARCGLog_TextBox.Text += "NOT Connected with CasparCG-MT!" + vbCrLf
                 casparMT.Settings.Hostname = My.Settings.casparHostName
@@ -415,9 +428,12 @@ Public Class GraphicsProcessingUnit
             End If
 
             '''''
+
+            System.Threading.Thread.Sleep(300)
+
             If casparPhoneAFriend.IsConnected Then
                 CASPARCGLog_TextBox.Text += "Connected with CasparCG-PAF!" + vbCrLf
-                casparPhoneAFriend.Channels(phoneAfriendCGchannel).CG.Add(5, My.Settings.phoneAfriendFlashTempl, False, cgDataPhoneAFriend)
+                casparPhoneAFriend.Channels(phoneAfriendCGchannel).CG.Add(phoneAfriendCGlayer, phoneAfriendCGchannel, My.Settings.phoneAfriendFlashTempl, False, cgDataPhoneAFriend)
             Else
                 CASPARCGLog_TextBox.Text += "NOT Connected with CasparCG-PAF!" + vbCrLf
                 casparPhoneAFriend.Settings.Hostname = My.Settings.casparHostName
@@ -425,7 +441,7 @@ Public Class GraphicsProcessingUnit
                 casparPhoneAFriend.Connect()
             End If
 
-            InteractiveWallScreenObj.Connect()
+            'InteractiveWallScreenObj.Connect()
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -440,12 +456,12 @@ Public Class GraphicsProcessingUnit
         If casparQA.IsConnected Then
             If flagQforGraph = False Then
                 cgDataQA.SetData("QuestionFor_TextField", QuestionForSume)
-                casparQA.Channels(questionCGchannel).CG.Update(questionCGlayer, cgDataQA)
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "showQforGraph")
+                casparQA.Channels(questionCGchannel).CG.Update(questionCGlayer, questionCGchannel, cgDataQA)
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "showQforGraph")
                 flagQforGraph = True
                 'showQforGraph
             Else
-                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "hideQforGraph")
+                casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "hideQforGraph")
                 'Qfor_Label.BackColor = Color.PaleGreen
                 flagQforGraph = False
                 'hideQforGraph
@@ -456,31 +472,32 @@ Public Class GraphicsProcessingUnit
 
     Public Shared Sub CorrectAnswer(CorrectAnswer As String)
         If casparQA.IsConnected Then
-            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "correctAnswer" + CorrectAnswer)
+            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "correctAnswer" + CorrectAnswer)
         End If
     End Sub
 
     Public Shared Sub DobleDip(FinalAnswer As String)
         If casparQA.IsConnected Then
-            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "doubleDipAnswer" + FinalAnswer)
+            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "doubleDipAnswer" + FinalAnswer)
         End If
     End Sub
 
     Public Shared Sub MoneyTreeLevel(MoneyTreeLevel As String)
         Dim MoneyTreeCommandInvoke As String = "setLevelPositionQ" + MoneyTreeLevel.ToString
-
         If casparMT.IsConnected Then
-            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, MoneyTreeCommandInvoke)
+            cgDataMT.SetData("reachedLevel", MoneyTreeLevel)
+            casparMT.Channels(moneyTreeCGchannel).CG.Update(moneyTreeCGlayer, moneyTreeCGchannel, cgDataMT)
+            casparMT.Channels(moneyTreeCGchannel).CG.Invoke(moneyTreeCGlayer, moneyTreeCGchannel, MoneyTreeCommandInvoke)
         End If
     End Sub
 
     Public Shared Sub WalkAwayQoppinion()
         '' ******* CASPARCG ******* CASPARCG ******* CASPARCG *******
         If casparQA.IsConnected Then
-            'casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "QuestionShow_Label") 'QuestionShow_Label 'casparQA_.Channels(0).CG.Invoke(1, "QuestionABCD_Label")
-            'casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "QuestionAnswersFlyIN")
-            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "QuestionABCD_Label")
-            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, "returnAnswersABCD")
+            'casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "QuestionShow_Label") 'QuestionShow_Label 'casparQA_.Channels(0).CG.Invoke(1, "QuestionABCD_Label")
+            'casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "QuestionAnswersFlyIN")
+            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "QuestionABCD_Label")
+            casparQA.Channels(questionCGchannel).CG.Invoke(questionCGlayer, questionCGchannel, "returnAnswersABCD")
             casparQA.Channels(questionCGchannel).CG.Play(questionCGlayer)
             'casparQA_.Channels(0).CG.Invoke(1, "fitSizeOFTexts")
         End If
@@ -490,7 +507,7 @@ Public Class GraphicsProcessingUnit
         If casparMT.IsConnected Then
 
             casparMT.Channels(moneyTreeCGchannel).CG.Play(moneyTreeCGlayer)
-            casparMT.Channels(moneyTreeCGchannel).CG.Update(moneyTreeCGlayer, cgDataMT)
+            casparMT.Channels(moneyTreeCGchannel).CG.Update(moneyTreeCGlayer, moneyTreeCGchannel, cgDataMT)
         End If
 
     End Sub

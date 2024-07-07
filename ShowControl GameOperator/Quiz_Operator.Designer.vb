@@ -120,6 +120,8 @@ Partial Class Quiz_Operator
         Me.DirectorIMessages_TextBox = New System.Windows.Forms.TextBox()
         Me.DirectorIMessage_TextBox = New System.Windows.Forms.TextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.EnableHostContScreens_CheckBox = New System.Windows.Forms.CheckBox()
+        Me.MockQuestions_CheckBox = New System.Windows.Forms.CheckBox()
         Me.SecondsToDissolveAfterCorrectAnswer_TextBox = New System.Windows.Forms.TextBox()
         Me.StarApacheServer_Button = New System.Windows.Forms.Button()
         Me.ReloadConfiguration_Button = New System.Windows.Forms.Button()
@@ -226,8 +228,6 @@ Partial Class Quiz_Operator
         Me.MusicList_ComboBox = New System.Windows.Forms.ComboBox()
         Me.SoundPlay_Button = New System.Windows.Forms.Button()
         Me.SoundMute_Button = New System.Windows.Forms.Button()
-        Me.MockQuestions_CheckBox = New System.Windows.Forms.CheckBox()
-        Me.EnableHostContScreens_CheckBox = New System.Windows.Forms.CheckBox()
         Me.GameControl_TabControl.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage4.SuspendLayout()
@@ -269,9 +269,10 @@ Partial Class Quiz_Operator
         Me.RemoveQuestion_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.RemoveQuestion_Button.Font = New System.Drawing.Font("Arial Narrow", 11.25!)
         Me.RemoveQuestion_Button.ForeColor = System.Drawing.Color.Black
-        Me.RemoveQuestion_Button.Location = New System.Drawing.Point(804, 62)
+        Me.RemoveQuestion_Button.Location = New System.Drawing.Point(1072, 76)
+        Me.RemoveQuestion_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RemoveQuestion_Button.Name = "RemoveQuestion_Button"
-        Me.RemoveQuestion_Button.Size = New System.Drawing.Size(184, 38)
+        Me.RemoveQuestion_Button.Size = New System.Drawing.Size(245, 47)
         Me.RemoveQuestion_Button.TabIndex = 173
         Me.RemoveQuestion_Button.Text = "Load/Reload Question"
         Me.RemoveQuestion_Button.UseVisualStyleBackColor = False
@@ -281,9 +282,10 @@ Partial Class Quiz_Operator
         Me.WalkAwayQoppinion_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.WalkAwayQoppinion_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.WalkAwayQoppinion_Label.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.WalkAwayQoppinion_Label.Location = New System.Drawing.Point(611, 280)
+        Me.WalkAwayQoppinion_Label.Location = New System.Drawing.Point(815, 345)
+        Me.WalkAwayQoppinion_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.WalkAwayQoppinion_Label.Name = "WalkAwayQoppinion_Label"
-        Me.WalkAwayQoppinion_Label.Size = New System.Drawing.Size(199, 50)
+        Me.WalkAwayQoppinion_Label.Size = New System.Drawing.Size(265, 62)
         Me.WalkAwayQoppinion_Label.TabIndex = 164
         Me.WalkAwayQoppinion_Label.Text = "Guess Answer"
         Me.WalkAwayQoppinion_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -303,10 +305,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum15_TextBox.BackColor = System.Drawing.Color.Bisque
         Me.QSum15_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum15_TextBox.Location = New System.Drawing.Point(1085, 104)
+        Me.QSum15_TextBox.Location = New System.Drawing.Point(1447, 128)
+        Me.QSum15_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum15_TextBox.Name = "QSum15_TextBox"
         Me.QSum15_TextBox.ReadOnly = True
-        Me.QSum15_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum15_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum15_TextBox.TabIndex = 142
         Me.QSum15_TextBox.Text = "4 МИЛИОНИ"
         '
@@ -314,10 +317,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum14_TextBox.BackColor = System.Drawing.Color.White
         Me.QSum14_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum14_TextBox.Location = New System.Drawing.Point(1085, 136)
+        Me.QSum14_TextBox.Location = New System.Drawing.Point(1447, 167)
+        Me.QSum14_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum14_TextBox.Name = "QSum14_TextBox"
         Me.QSum14_TextBox.ReadOnly = True
-        Me.QSum14_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum14_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum14_TextBox.TabIndex = 141
         Me.QSum14_TextBox.Text = "2,000,000"
         '
@@ -325,10 +329,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum13_TextBox.BackColor = System.Drawing.Color.White
         Me.QSum13_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum13_TextBox.Location = New System.Drawing.Point(1085, 169)
+        Me.QSum13_TextBox.Location = New System.Drawing.Point(1447, 208)
+        Me.QSum13_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum13_TextBox.Name = "QSum13_TextBox"
         Me.QSum13_TextBox.ReadOnly = True
-        Me.QSum13_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum13_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum13_TextBox.TabIndex = 140
         Me.QSum13_TextBox.Text = "1,000,000"
         '
@@ -336,10 +341,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum12_TextBox.BackColor = System.Drawing.Color.White
         Me.QSum12_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum12_TextBox.Location = New System.Drawing.Point(1085, 201)
+        Me.QSum12_TextBox.Location = New System.Drawing.Point(1447, 247)
+        Me.QSum12_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum12_TextBox.Name = "QSum12_TextBox"
         Me.QSum12_TextBox.ReadOnly = True
-        Me.QSum12_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum12_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum12_TextBox.TabIndex = 139
         Me.QSum12_TextBox.Text = "500,000"
         '
@@ -347,10 +353,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum11_TextBox.BackColor = System.Drawing.Color.White
         Me.QSum11_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum11_TextBox.Location = New System.Drawing.Point(1085, 233)
+        Me.QSum11_TextBox.Location = New System.Drawing.Point(1447, 287)
+        Me.QSum11_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum11_TextBox.Name = "QSum11_TextBox"
         Me.QSum11_TextBox.ReadOnly = True
-        Me.QSum11_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum11_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum11_TextBox.TabIndex = 138
         Me.QSum11_TextBox.Text = "250,000"
         '
@@ -358,10 +365,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum10_TextBox.BackColor = System.Drawing.Color.White
         Me.QSum10_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum10_TextBox.Location = New System.Drawing.Point(1085, 265)
+        Me.QSum10_TextBox.Location = New System.Drawing.Point(1447, 326)
+        Me.QSum10_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum10_TextBox.Name = "QSum10_TextBox"
         Me.QSum10_TextBox.ReadOnly = True
-        Me.QSum10_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum10_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum10_TextBox.TabIndex = 137
         Me.QSum10_TextBox.Text = "125,000"
         '
@@ -369,10 +377,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum9_TextBox.BackColor = System.Drawing.Color.White
         Me.QSum9_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum9_TextBox.Location = New System.Drawing.Point(1085, 297)
+        Me.QSum9_TextBox.Location = New System.Drawing.Point(1447, 366)
+        Me.QSum9_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum9_TextBox.Name = "QSum9_TextBox"
         Me.QSum9_TextBox.ReadOnly = True
-        Me.QSum9_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum9_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum9_TextBox.TabIndex = 136
         Me.QSum9_TextBox.Text = "64,000"
         '
@@ -380,10 +389,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum8_TextBox.BackColor = System.Drawing.Color.White
         Me.QSum8_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum8_TextBox.Location = New System.Drawing.Point(1085, 329)
+        Me.QSum8_TextBox.Location = New System.Drawing.Point(1447, 405)
+        Me.QSum8_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum8_TextBox.Name = "QSum8_TextBox"
         Me.QSum8_TextBox.ReadOnly = True
-        Me.QSum8_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum8_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum8_TextBox.TabIndex = 135
         Me.QSum8_TextBox.Text = "32,000"
         '
@@ -391,10 +401,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum7_TextBox.BackColor = System.Drawing.Color.White
         Me.QSum7_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum7_TextBox.Location = New System.Drawing.Point(1085, 362)
+        Me.QSum7_TextBox.Location = New System.Drawing.Point(1447, 446)
+        Me.QSum7_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum7_TextBox.Name = "QSum7_TextBox"
         Me.QSum7_TextBox.ReadOnly = True
-        Me.QSum7_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum7_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum7_TextBox.TabIndex = 134
         Me.QSum7_TextBox.Text = "16,000"
         '
@@ -402,10 +413,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum6_TextBox.BackColor = System.Drawing.Color.White
         Me.QSum6_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum6_TextBox.Location = New System.Drawing.Point(1085, 396)
+        Me.QSum6_TextBox.Location = New System.Drawing.Point(1447, 487)
+        Me.QSum6_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum6_TextBox.Name = "QSum6_TextBox"
         Me.QSum6_TextBox.ReadOnly = True
-        Me.QSum6_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum6_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum6_TextBox.TabIndex = 133
         Me.QSum6_TextBox.Text = "8,000"
         '
@@ -413,10 +425,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum5_TextBox.BackColor = System.Drawing.Color.Bisque
         Me.QSum5_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum5_TextBox.Location = New System.Drawing.Point(1085, 428)
+        Me.QSum5_TextBox.Location = New System.Drawing.Point(1447, 527)
+        Me.QSum5_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum5_TextBox.Name = "QSum5_TextBox"
         Me.QSum5_TextBox.ReadOnly = True
-        Me.QSum5_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum5_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum5_TextBox.TabIndex = 132
         Me.QSum5_TextBox.Text = "5,000"
         '
@@ -424,10 +437,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum4_TextBox.BackColor = System.Drawing.Color.White
         Me.QSum4_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum4_TextBox.Location = New System.Drawing.Point(1085, 460)
+        Me.QSum4_TextBox.Location = New System.Drawing.Point(1447, 566)
+        Me.QSum4_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum4_TextBox.Name = "QSum4_TextBox"
         Me.QSum4_TextBox.ReadOnly = True
-        Me.QSum4_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum4_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum4_TextBox.TabIndex = 131
         Me.QSum4_TextBox.Text = "3,000"
         '
@@ -435,10 +449,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum3_TextBox.BackColor = System.Drawing.Color.White
         Me.QSum3_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum3_TextBox.Location = New System.Drawing.Point(1085, 492)
+        Me.QSum3_TextBox.Location = New System.Drawing.Point(1447, 606)
+        Me.QSum3_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum3_TextBox.Name = "QSum3_TextBox"
         Me.QSum3_TextBox.ReadOnly = True
-        Me.QSum3_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum3_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum3_TextBox.TabIndex = 130
         Me.QSum3_TextBox.Text = "2,000"
         '
@@ -446,10 +461,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum2_TextBox.BackColor = System.Drawing.Color.White
         Me.QSum2_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum2_TextBox.Location = New System.Drawing.Point(1085, 524)
+        Me.QSum2_TextBox.Location = New System.Drawing.Point(1447, 645)
+        Me.QSum2_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum2_TextBox.Name = "QSum2_TextBox"
         Me.QSum2_TextBox.ReadOnly = True
-        Me.QSum2_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum2_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum2_TextBox.TabIndex = 129
         Me.QSum2_TextBox.Text = "1,000"
         '
@@ -457,10 +473,11 @@ Partial Class Quiz_Operator
         '
         Me.QSum1_TextBox.BackColor = System.Drawing.Color.White
         Me.QSum1_TextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.QSum1_TextBox.Location = New System.Drawing.Point(1085, 556)
+        Me.QSum1_TextBox.Location = New System.Drawing.Point(1447, 684)
+        Me.QSum1_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QSum1_TextBox.Name = "QSum1_TextBox"
         Me.QSum1_TextBox.ReadOnly = True
-        Me.QSum1_TextBox.Size = New System.Drawing.Size(238, 26)
+        Me.QSum1_TextBox.Size = New System.Drawing.Size(316, 30)
         Me.QSum1_TextBox.TabIndex = 127
         Me.QSum1_TextBox.Text = "500"
         '
@@ -471,9 +488,10 @@ Partial Class Quiz_Operator
         Me.FinalD_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.FinalD_Button.Font = New System.Drawing.Font("Arial", 11.75!)
         Me.FinalD_Button.ForeColor = System.Drawing.Color.Black
-        Me.FinalD_Button.Location = New System.Drawing.Point(335, 170)
+        Me.FinalD_Button.Location = New System.Drawing.Point(447, 209)
+        Me.FinalD_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.FinalD_Button.Name = "FinalD_Button"
-        Me.FinalD_Button.Size = New System.Drawing.Size(249, 40)
+        Me.FinalD_Button.Size = New System.Drawing.Size(332, 49)
         Me.FinalD_Button.TabIndex = 124
         Me.FinalD_Button.Text = "Final D"
         Me.FinalD_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -487,9 +505,10 @@ Partial Class Quiz_Operator
         Me.FinalC_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.FinalC_Button.Font = New System.Drawing.Font("Arial", 11.75!)
         Me.FinalC_Button.ForeColor = System.Drawing.Color.Black
-        Me.FinalC_Button.Location = New System.Drawing.Point(68, 170)
+        Me.FinalC_Button.Location = New System.Drawing.Point(91, 209)
+        Me.FinalC_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.FinalC_Button.Name = "FinalC_Button"
-        Me.FinalC_Button.Size = New System.Drawing.Size(249, 40)
+        Me.FinalC_Button.Size = New System.Drawing.Size(332, 49)
         Me.FinalC_Button.TabIndex = 123
         Me.FinalC_Button.Text = "Final C"
         Me.FinalC_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -503,9 +522,10 @@ Partial Class Quiz_Operator
         Me.FinalB_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.FinalB_Button.Font = New System.Drawing.Font("Arial", 11.75!)
         Me.FinalB_Button.ForeColor = System.Drawing.Color.Black
-        Me.FinalB_Button.Location = New System.Drawing.Point(335, 123)
+        Me.FinalB_Button.Location = New System.Drawing.Point(447, 151)
+        Me.FinalB_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.FinalB_Button.Name = "FinalB_Button"
-        Me.FinalB_Button.Size = New System.Drawing.Size(249, 40)
+        Me.FinalB_Button.Size = New System.Drawing.Size(332, 49)
         Me.FinalB_Button.TabIndex = 122
         Me.FinalB_Button.Text = "Final B"
         Me.FinalB_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -519,9 +539,10 @@ Partial Class Quiz_Operator
         Me.FinalA_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.FinalA_Button.Font = New System.Drawing.Font("Arial", 11.75!)
         Me.FinalA_Button.ForeColor = System.Drawing.Color.Black
-        Me.FinalA_Button.Location = New System.Drawing.Point(68, 123)
+        Me.FinalA_Button.Location = New System.Drawing.Point(91, 151)
+        Me.FinalA_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.FinalA_Button.Name = "FinalA_Button"
-        Me.FinalA_Button.Size = New System.Drawing.Size(249, 40)
+        Me.FinalA_Button.Size = New System.Drawing.Size(332, 49)
         Me.FinalA_Button.TabIndex = 121
         Me.FinalA_Button.Text = "Final A"
         Me.FinalA_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -532,18 +553,20 @@ Partial Class Quiz_Operator
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(17, 139)
+        Me.Label6.Location = New System.Drawing.Point(23, 171)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(115, 18)
+        Me.Label6.Size = New System.Drawing.Size(145, 24)
         Me.Label6.TabIndex = 120
         Me.Label6.Text = "Correct Answer:"
         '
         'Label5
         '
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(18, 5)
+        Me.Label5.Location = New System.Drawing.Point(24, 6)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(39, 18)
+        Me.Label5.Size = New System.Drawing.Size(52, 22)
         Me.Label5.TabIndex = 119
         Me.Label5.Text = "Qst:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -552,10 +575,11 @@ Partial Class Quiz_Operator
         '
         Me.LevelQ_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LevelQ_TextBox.Font = New System.Drawing.Font("Arial", 16.25!, System.Drawing.FontStyle.Bold)
-        Me.LevelQ_TextBox.Location = New System.Drawing.Point(14, 29)
+        Me.LevelQ_TextBox.Location = New System.Drawing.Point(19, 36)
+        Me.LevelQ_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LevelQ_TextBox.Name = "LevelQ_TextBox"
         Me.LevelQ_TextBox.ReadOnly = True
-        Me.LevelQ_TextBox.Size = New System.Drawing.Size(40, 32)
+        Me.LevelQ_TextBox.Size = New System.Drawing.Size(52, 39)
         Me.LevelQ_TextBox.TabIndex = 118
         Me.LevelQ_TextBox.Text = "0"
         Me.LevelQ_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -564,52 +588,58 @@ Partial Class Quiz_Operator
         '
         Me.CorrectAnswer_TextBox.BackColor = System.Drawing.Color.Lime
         Me.CorrectAnswer_TextBox.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.CorrectAnswer_TextBox.Location = New System.Drawing.Point(135, 137)
+        Me.CorrectAnswer_TextBox.Location = New System.Drawing.Point(180, 169)
+        Me.CorrectAnswer_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CorrectAnswer_TextBox.Name = "CorrectAnswer_TextBox"
-        Me.CorrectAnswer_TextBox.Size = New System.Drawing.Size(52, 29)
+        Me.CorrectAnswer_TextBox.Size = New System.Drawing.Size(68, 35)
         Me.CorrectAnswer_TextBox.TabIndex = 117
         Me.CorrectAnswer_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'AnswerD_TextBox
         '
         Me.AnswerD_TextBox.Font = New System.Drawing.Font("Arial", 16.0!)
-        Me.AnswerD_TextBox.Location = New System.Drawing.Point(524, 101)
+        Me.AnswerD_TextBox.Location = New System.Drawing.Point(699, 124)
+        Me.AnswerD_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.AnswerD_TextBox.Name = "AnswerD_TextBox"
-        Me.AnswerD_TextBox.Size = New System.Drawing.Size(439, 32)
+        Me.AnswerD_TextBox.Size = New System.Drawing.Size(584, 38)
         Me.AnswerD_TextBox.TabIndex = 112
         '
         'AnswerC_TextBox
         '
         Me.AnswerC_TextBox.Font = New System.Drawing.Font("Arial", 16.0!)
-        Me.AnswerC_TextBox.Location = New System.Drawing.Point(49, 102)
+        Me.AnswerC_TextBox.Location = New System.Drawing.Point(65, 126)
+        Me.AnswerC_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.AnswerC_TextBox.Name = "AnswerC_TextBox"
-        Me.AnswerC_TextBox.Size = New System.Drawing.Size(439, 32)
+        Me.AnswerC_TextBox.Size = New System.Drawing.Size(584, 38)
         Me.AnswerC_TextBox.TabIndex = 111
         '
         'AnswerB_TextBox
         '
         Me.AnswerB_TextBox.Font = New System.Drawing.Font("Arial", 16.0!)
-        Me.AnswerB_TextBox.Location = New System.Drawing.Point(524, 66)
+        Me.AnswerB_TextBox.Location = New System.Drawing.Point(699, 81)
+        Me.AnswerB_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.AnswerB_TextBox.Name = "AnswerB_TextBox"
-        Me.AnswerB_TextBox.Size = New System.Drawing.Size(439, 32)
+        Me.AnswerB_TextBox.Size = New System.Drawing.Size(584, 38)
         Me.AnswerB_TextBox.TabIndex = 110
         '
         'AnswerA_TextBox
         '
         Me.AnswerA_TextBox.Font = New System.Drawing.Font("Arial", 16.0!)
-        Me.AnswerA_TextBox.Location = New System.Drawing.Point(49, 66)
+        Me.AnswerA_TextBox.Location = New System.Drawing.Point(65, 81)
+        Me.AnswerA_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.AnswerA_TextBox.Name = "AnswerA_TextBox"
-        Me.AnswerA_TextBox.Size = New System.Drawing.Size(439, 32)
+        Me.AnswerA_TextBox.Size = New System.Drawing.Size(584, 38)
         Me.AnswerA_TextBox.TabIndex = 109
         '
         'Question_TextBox
         '
         Me.Question_TextBox.AcceptsReturn = True
         Me.Question_TextBox.Font = New System.Drawing.Font("Arial", 16.0!)
-        Me.Question_TextBox.Location = New System.Drawing.Point(21, 5)
+        Me.Question_TextBox.Location = New System.Drawing.Point(28, 6)
+        Me.Question_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Question_TextBox.Multiline = True
         Me.Question_TextBox.Name = "Question_TextBox"
-        Me.Question_TextBox.Size = New System.Drawing.Size(944, 56)
+        Me.Question_TextBox.Size = New System.Drawing.Size(1257, 68)
         Me.Question_TextBox.TabIndex = 108
         Me.Question_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -618,9 +648,10 @@ Partial Class Quiz_Operator
         Me.NewGame_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.NewGame_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.NewGame_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NewGame_Label.Location = New System.Drawing.Point(872, 657)
+        Me.NewGame_Label.Location = New System.Drawing.Point(1163, 809)
+        Me.NewGame_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.NewGame_Label.Name = "NewGame_Label"
-        Me.NewGame_Label.Size = New System.Drawing.Size(179, 29)
+        Me.NewGame_Label.Size = New System.Drawing.Size(239, 36)
         Me.NewGame_Label.TabIndex = 198
         Me.NewGame_Label.Text = "New Game"
         Me.NewGame_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -630,9 +661,10 @@ Partial Class Quiz_Operator
         Me.QuestionLoad_Label.BackColor = System.Drawing.Color.Khaki
         Me.QuestionLoad_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.QuestionLoad_Label.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.QuestionLoad_Label.Location = New System.Drawing.Point(385, 161)
+        Me.QuestionLoad_Label.Location = New System.Drawing.Point(513, 198)
+        Me.QuestionLoad_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.QuestionLoad_Label.Name = "QuestionLoad_Label"
-        Me.QuestionLoad_Label.Size = New System.Drawing.Size(179, 36)
+        Me.QuestionLoad_Label.Size = New System.Drawing.Size(239, 44)
         Me.QuestionLoad_Label.TabIndex = 199
         Me.QuestionLoad_Label.Text = " Load " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Question"
         Me.QuestionLoad_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -645,9 +677,10 @@ Partial Class Quiz_Operator
         Me.WonPrizeReveal_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.WonPrizeReveal_Button.Font = New System.Drawing.Font("Arial Narrow", 12.0!)
         Me.WonPrizeReveal_Button.ForeColor = System.Drawing.Color.Black
-        Me.WonPrizeReveal_Button.Location = New System.Drawing.Point(68, 63)
+        Me.WonPrizeReveal_Button.Location = New System.Drawing.Point(91, 78)
+        Me.WonPrizeReveal_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.WonPrizeReveal_Button.Name = "WonPrizeReveal_Button"
-        Me.WonPrizeReveal_Button.Size = New System.Drawing.Size(516, 45)
+        Me.WonPrizeReveal_Button.Size = New System.Drawing.Size(688, 55)
         Me.WonPrizeReveal_Button.TabIndex = 202
         Me.WonPrizeReveal_Button.Text = "PRIZE SHOW"
         Me.WonPrizeReveal_Button.UseVisualStyleBackColor = False
@@ -658,9 +691,10 @@ Partial Class Quiz_Operator
         Me.threeLifelinesStatus_Label.BackColor = System.Drawing.Color.Silver
         Me.threeLifelinesStatus_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.threeLifelinesStatus_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.threeLifelinesStatus_Label.Location = New System.Drawing.Point(31, 192)
+        Me.threeLifelinesStatus_Label.Location = New System.Drawing.Point(41, 236)
+        Me.threeLifelinesStatus_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.threeLifelinesStatus_Label.Name = "threeLifelinesStatus_Label"
-        Me.threeLifelinesStatus_Label.Size = New System.Drawing.Size(79, 33)
+        Me.threeLifelinesStatus_Label.Size = New System.Drawing.Size(105, 41)
         Me.threeLifelinesStatus_Label.TabIndex = 204
         Me.threeLifelinesStatus_Label.Text = "3LFL"
         Me.threeLifelinesStatus_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -670,9 +704,10 @@ Partial Class Quiz_Operator
         Me.fourLifelinesStatus_Label.BackColor = System.Drawing.Color.Orange
         Me.fourLifelinesStatus_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.fourLifelinesStatus_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fourLifelinesStatus_Label.Location = New System.Drawing.Point(120, 192)
+        Me.fourLifelinesStatus_Label.Location = New System.Drawing.Point(160, 236)
+        Me.fourLifelinesStatus_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.fourLifelinesStatus_Label.Name = "fourLifelinesStatus_Label"
-        Me.fourLifelinesStatus_Label.Size = New System.Drawing.Size(79, 33)
+        Me.fourLifelinesStatus_Label.Size = New System.Drawing.Size(105, 41)
         Me.fourLifelinesStatus_Label.TabIndex = 205
         Me.fourLifelinesStatus_Label.Text = "4LFL"
         Me.fourLifelinesStatus_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -681,9 +716,10 @@ Partial Class Quiz_Operator
         '
         Me.FinalAnswer_TextBox.BackColor = System.Drawing.Color.Yellow
         Me.FinalAnswer_TextBox.Font = New System.Drawing.Font("Arial", 14.0!)
-        Me.FinalAnswer_TextBox.Location = New System.Drawing.Point(196, 137)
+        Me.FinalAnswer_TextBox.Location = New System.Drawing.Point(261, 169)
+        Me.FinalAnswer_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.FinalAnswer_TextBox.Name = "FinalAnswer_TextBox"
-        Me.FinalAnswer_TextBox.Size = New System.Drawing.Size(55, 29)
+        Me.FinalAnswer_TextBox.Size = New System.Drawing.Size(72, 34)
         Me.FinalAnswer_TextBox.TabIndex = 207
         Me.FinalAnswer_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -694,9 +730,10 @@ Partial Class Quiz_Operator
         Me.CorrectAnswerReveal_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.CorrectAnswerReveal_Button.Font = New System.Drawing.Font("Arial", 11.75!)
         Me.CorrectAnswerReveal_Button.ForeColor = System.Drawing.Color.White
-        Me.CorrectAnswerReveal_Button.Location = New System.Drawing.Point(68, 150)
+        Me.CorrectAnswerReveal_Button.Location = New System.Drawing.Point(91, 185)
+        Me.CorrectAnswerReveal_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CorrectAnswerReveal_Button.Name = "CorrectAnswerReveal_Button"
-        Me.CorrectAnswerReveal_Button.Size = New System.Drawing.Size(516, 45)
+        Me.CorrectAnswerReveal_Button.Size = New System.Drawing.Size(688, 55)
         Me.CorrectAnswerReveal_Button.TabIndex = 226
         Me.CorrectAnswerReveal_Button.Text = "Reveal CORRECT"
         Me.CorrectAnswerReveal_Button.UseVisualStyleBackColor = False
@@ -725,9 +762,10 @@ Partial Class Quiz_Operator
         '
         Me.CGConnection_Button.BackColor = System.Drawing.Color.Snow
         Me.CGConnection_Button.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CGConnection_Button.Location = New System.Drawing.Point(16, 44)
+        Me.CGConnection_Button.Location = New System.Drawing.Point(21, 54)
+        Me.CGConnection_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CGConnection_Button.Name = "CGConnection_Button"
-        Me.CGConnection_Button.Size = New System.Drawing.Size(172, 47)
+        Me.CGConnection_Button.Size = New System.Drawing.Size(229, 58)
         Me.CGConnection_Button.TabIndex = 1229
         Me.CGConnection_Button.Text = "Caspar CG Connection"
         Me.CGConnection_Button.UseVisualStyleBackColor = False
@@ -736,9 +774,10 @@ Partial Class Quiz_Operator
         '
         Me.MoneyTreeHop_Button.BackColor = System.Drawing.SystemColors.Control
         Me.MoneyTreeHop_Button.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.MoneyTreeHop_Button.Location = New System.Drawing.Point(810, 64)
+        Me.MoneyTreeHop_Button.Location = New System.Drawing.Point(1080, 79)
+        Me.MoneyTreeHop_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MoneyTreeHop_Button.Name = "MoneyTreeHop_Button"
-        Me.MoneyTreeHop_Button.Size = New System.Drawing.Size(33, 32)
+        Me.MoneyTreeHop_Button.Size = New System.Drawing.Size(44, 39)
         Me.MoneyTreeHop_Button.TabIndex = 1231
         Me.MoneyTreeHop_Button.Text = "->"
         Me.MoneyTreeHop_Button.UseVisualStyleBackColor = False
@@ -747,9 +786,10 @@ Partial Class Quiz_Operator
         '
         Me.Button1.BackColor = System.Drawing.Color.White
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Button1.Location = New System.Drawing.Point(746, 64)
+        Me.Button1.Location = New System.Drawing.Point(995, 79)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(37, 32)
+        Me.Button1.Size = New System.Drawing.Size(49, 39)
         Me.Button1.TabIndex = 1232
         Me.Button1.Text = "LF1"
         Me.Button1.UseVisualStyleBackColor = False
@@ -758,9 +798,10 @@ Partial Class Quiz_Operator
         '
         Me.Button2.BackColor = System.Drawing.Color.White
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Button2.Location = New System.Drawing.Point(746, 101)
+        Me.Button2.Location = New System.Drawing.Point(995, 124)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(37, 32)
+        Me.Button2.Size = New System.Drawing.Size(49, 39)
         Me.Button2.TabIndex = 1233
         Me.Button2.Text = "LF2"
         Me.Button2.UseVisualStyleBackColor = False
@@ -769,9 +810,10 @@ Partial Class Quiz_Operator
         '
         Me.Button3.BackColor = System.Drawing.Color.White
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Button3.Location = New System.Drawing.Point(746, 139)
+        Me.Button3.Location = New System.Drawing.Point(995, 171)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(37, 32)
+        Me.Button3.Size = New System.Drawing.Size(49, 39)
         Me.Button3.TabIndex = 1234
         Me.Button3.Text = "LF3"
         Me.Button3.UseVisualStyleBackColor = False
@@ -780,9 +822,10 @@ Partial Class Quiz_Operator
         '
         Me.Button4.BackColor = System.Drawing.Color.White
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Button4.Location = New System.Drawing.Point(746, 177)
+        Me.Button4.Location = New System.Drawing.Point(995, 218)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(37, 32)
+        Me.Button4.Size = New System.Drawing.Size(49, 39)
         Me.Button4.TabIndex = 1235
         Me.Button4.Text = "LF4"
         Me.Button4.UseVisualStyleBackColor = False
@@ -792,9 +835,10 @@ Partial Class Quiz_Operator
         Me.MoneyTreeHop_TextBox.BackColor = System.Drawing.Color.White
         Me.MoneyTreeHop_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.MoneyTreeHop_TextBox.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MoneyTreeHop_TextBox.Location = New System.Drawing.Point(810, 97)
+        Me.MoneyTreeHop_TextBox.Location = New System.Drawing.Point(1080, 119)
+        Me.MoneyTreeHop_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MoneyTreeHop_TextBox.Name = "MoneyTreeHop_TextBox"
-        Me.MoneyTreeHop_TextBox.Size = New System.Drawing.Size(33, 13)
+        Me.MoneyTreeHop_TextBox.Size = New System.Drawing.Size(44, 16)
         Me.MoneyTreeHop_TextBox.TabIndex = 1236
         Me.MoneyTreeHop_TextBox.Text = "5"
         Me.MoneyTreeHop_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -802,9 +846,10 @@ Partial Class Quiz_Operator
         'CasparServerIP_TextBox
         '
         Me.CasparServerIP_TextBox.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CasparServerIP_TextBox.Location = New System.Drawing.Point(16, 17)
+        Me.CasparServerIP_TextBox.Location = New System.Drawing.Point(21, 21)
+        Me.CasparServerIP_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CasparServerIP_TextBox.Name = "CasparServerIP_TextBox"
-        Me.CasparServerIP_TextBox.Size = New System.Drawing.Size(172, 22)
+        Me.CasparServerIP_TextBox.Size = New System.Drawing.Size(228, 26)
         Me.CasparServerIP_TextBox.TabIndex = 1238
         Me.CasparServerIP_TextBox.Text = "127.0.0.1"
         Me.CasparServerIP_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -817,10 +862,11 @@ Partial Class Quiz_Operator
         Me.GameControl_TabControl.Controls.Add(Me.TabPage2)
         Me.GameControl_TabControl.Controls.Add(Me.TabPage3)
         Me.GameControl_TabControl.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GameControl_TabControl.Location = New System.Drawing.Point(35, 10)
+        Me.GameControl_TabControl.Location = New System.Drawing.Point(47, 12)
+        Me.GameControl_TabControl.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GameControl_TabControl.Name = "GameControl_TabControl"
         Me.GameControl_TabControl.SelectedIndex = 0
-        Me.GameControl_TabControl.Size = New System.Drawing.Size(1013, 275)
+        Me.GameControl_TabControl.Size = New System.Drawing.Size(1351, 338)
         Me.GameControl_TabControl.TabIndex = 1245
         '
         'TabPage1
@@ -844,19 +890,21 @@ Partial Class Quiz_Operator
         Me.TabPage1.Controls.Add(Me.CorrectAnswer_TextBox)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.FinalAnswer_TextBox)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1005, 247)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage1.Size = New System.Drawing.Size(1343, 307)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "     QuestionPlayOut     "
         '
         'RandomizeAnswers_CheckBox
         '
         Me.RandomizeAnswers_CheckBox.AutoSize = True
-        Me.RandomizeAnswers_CheckBox.Location = New System.Drawing.Point(824, 140)
+        Me.RandomizeAnswers_CheckBox.Location = New System.Drawing.Point(1099, 172)
+        Me.RandomizeAnswers_CheckBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RandomizeAnswers_CheckBox.Name = "RandomizeAnswers_CheckBox"
-        Me.RandomizeAnswers_CheckBox.Size = New System.Drawing.Size(139, 19)
+        Me.RandomizeAnswers_CheckBox.Size = New System.Drawing.Size(167, 22)
         Me.RandomizeAnswers_CheckBox.TabIndex = 1255
         Me.RandomizeAnswers_CheckBox.Text = "Randomize Answers"
         Me.RandomizeAnswers_CheckBox.UseVisualStyleBackColor = True
@@ -864,11 +912,12 @@ Partial Class Quiz_Operator
         'Pronunciation_TextBox
         '
         Me.Pronunciation_TextBox.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Pronunciation_TextBox.Location = New System.Drawing.Point(698, 168)
+        Me.Pronunciation_TextBox.Location = New System.Drawing.Point(931, 207)
+        Me.Pronunciation_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Pronunciation_TextBox.Multiline = True
         Me.Pronunciation_TextBox.Name = "Pronunciation_TextBox"
         Me.Pronunciation_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.Pronunciation_TextBox.Size = New System.Drawing.Size(265, 72)
+        Me.Pronunciation_TextBox.Size = New System.Drawing.Size(352, 88)
         Me.Pronunciation_TextBox.TabIndex = 1254
         Me.Pronunciation_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -879,9 +928,10 @@ Partial Class Quiz_Operator
         Me.ClearExplanation_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ClearExplanation_Label.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ClearExplanation_Label.ForeColor = System.Drawing.Color.Red
-        Me.ClearExplanation_Label.Location = New System.Drawing.Point(574, 226)
+        Me.ClearExplanation_Label.Location = New System.Drawing.Point(765, 278)
+        Me.ClearExplanation_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.ClearExplanation_Label.Name = "ClearExplanation_Label"
-        Me.ClearExplanation_Label.Size = New System.Drawing.Size(65, 16)
+        Me.ClearExplanation_Label.Size = New System.Drawing.Size(80, 19)
         Me.ClearExplanation_Label.TabIndex = 1253
         Me.ClearExplanation_Label.Text = "Clear Exp"
         '
@@ -891,20 +941,22 @@ Partial Class Quiz_Operator
         Me.SendExplanation_Label.BackColor = System.Drawing.Color.LightGoldenrodYellow
         Me.SendExplanation_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.SendExplanation_Label.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SendExplanation_Label.Location = New System.Drawing.Point(482, 227)
+        Me.SendExplanation_Label.Location = New System.Drawing.Point(643, 279)
+        Me.SendExplanation_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.SendExplanation_Label.Name = "SendExplanation_Label"
-        Me.SendExplanation_Label.Size = New System.Drawing.Size(65, 16)
+        Me.SendExplanation_Label.Size = New System.Drawing.Size(79, 19)
         Me.SendExplanation_Label.TabIndex = 1252
         Me.SendExplanation_Label.Text = "Send Exp"
         '
         'MoreQuestionInfoForHost_TextBox
         '
         Me.MoreQuestionInfoForHost_TextBox.Font = New System.Drawing.Font("Arial", 13.25!)
-        Me.MoreQuestionInfoForHost_TextBox.Location = New System.Drawing.Point(17, 168)
+        Me.MoreQuestionInfoForHost_TextBox.Location = New System.Drawing.Point(23, 207)
+        Me.MoreQuestionInfoForHost_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MoreQuestionInfoForHost_TextBox.Multiline = True
         Me.MoreQuestionInfoForHost_TextBox.Name = "MoreQuestionInfoForHost_TextBox"
         Me.MoreQuestionInfoForHost_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.MoreQuestionInfoForHost_TextBox.Size = New System.Drawing.Size(675, 72)
+        Me.MoreQuestionInfoForHost_TextBox.Size = New System.Drawing.Size(899, 88)
         Me.MoreQuestionInfoForHost_TextBox.TabIndex = 1251
         Me.MoreQuestionInfoForHost_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -912,9 +964,10 @@ Partial Class Quiz_Operator
         '
         Me.LimitedGameClock_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.LimitedGameClock_TextBox.Font = New System.Drawing.Font("Arial", 11.25!)
-        Me.LimitedGameClock_TextBox.Location = New System.Drawing.Point(270, 141)
+        Me.LimitedGameClock_TextBox.Location = New System.Drawing.Point(360, 174)
+        Me.LimitedGameClock_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LimitedGameClock_TextBox.Name = "LimitedGameClock_TextBox"
-        Me.LimitedGameClock_TextBox.Size = New System.Drawing.Size(42, 25)
+        Me.LimitedGameClock_TextBox.Size = New System.Drawing.Size(55, 29)
         Me.LimitedGameClock_TextBox.TabIndex = 1232
         Me.LimitedGameClock_TextBox.Text = "15"
         Me.LimitedGameClock_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -925,9 +978,10 @@ Partial Class Quiz_Operator
         Me.AnswerAappear_Label.BackColor = System.Drawing.Color.Yellow
         Me.AnswerAappear_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.AnswerAappear_Label.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.AnswerAappear_Label.Location = New System.Drawing.Point(14, 70)
+        Me.AnswerAappear_Label.Location = New System.Drawing.Point(19, 86)
+        Me.AnswerAappear_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AnswerAappear_Label.Name = "AnswerAappear_Label"
-        Me.AnswerAappear_Label.Size = New System.Drawing.Size(47, 22)
+        Me.AnswerAappear_Label.Size = New System.Drawing.Size(59, 29)
         Me.AnswerAappear_Label.TabIndex = 113
         Me.AnswerAappear_Label.Text = "•A:  "
         '
@@ -937,9 +991,10 @@ Partial Class Quiz_Operator
         Me.AnswerBappear_Label.BackColor = System.Drawing.Color.Yellow
         Me.AnswerBappear_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.AnswerBappear_Label.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.AnswerBappear_Label.Location = New System.Drawing.Point(490, 70)
+        Me.AnswerBappear_Label.Location = New System.Drawing.Point(653, 86)
+        Me.AnswerBappear_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AnswerBappear_Label.Name = "AnswerBappear_Label"
-        Me.AnswerBappear_Label.Size = New System.Drawing.Size(48, 22)
+        Me.AnswerBappear_Label.Size = New System.Drawing.Size(59, 29)
         Me.AnswerBappear_Label.TabIndex = 114
         Me.AnswerBappear_Label.Text = "•B:  "
         '
@@ -949,9 +1004,10 @@ Partial Class Quiz_Operator
         Me.AnswerCappear_Label.BackColor = System.Drawing.Color.Yellow
         Me.AnswerCappear_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.AnswerCappear_Label.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.AnswerCappear_Label.Location = New System.Drawing.Point(14, 105)
+        Me.AnswerCappear_Label.Location = New System.Drawing.Point(19, 129)
+        Me.AnswerCappear_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AnswerCappear_Label.Name = "AnswerCappear_Label"
-        Me.AnswerCappear_Label.Size = New System.Drawing.Size(48, 22)
+        Me.AnswerCappear_Label.Size = New System.Drawing.Size(59, 29)
         Me.AnswerCappear_Label.TabIndex = 115
         Me.AnswerCappear_Label.Text = "•C:  "
         '
@@ -961,9 +1017,10 @@ Partial Class Quiz_Operator
         Me.AnswerDappear_Label.BackColor = System.Drawing.Color.Yellow
         Me.AnswerDappear_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.AnswerDappear_Label.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.AnswerDappear_Label.Location = New System.Drawing.Point(491, 105)
+        Me.AnswerDappear_Label.Location = New System.Drawing.Point(655, 129)
+        Me.AnswerDappear_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AnswerDappear_Label.Name = "AnswerDappear_Label"
-        Me.AnswerDappear_Label.Size = New System.Drawing.Size(48, 22)
+        Me.AnswerDappear_Label.Size = New System.Drawing.Size(59, 29)
         Me.AnswerDappear_Label.TabIndex = 116
         Me.AnswerDappear_Label.Text = "•D:  "
         '
@@ -989,10 +1046,11 @@ Partial Class Quiz_Operator
         Me.TabPage4.Controls.Add(Me.Button3)
         Me.TabPage4.Controls.Add(Me.MoneyTreeHop_TextBox)
         Me.TabPage4.Controls.Add(Me.Button4)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1005, 247)
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage4.Size = New System.Drawing.Size(1343, 307)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "     MoneyPlayOut      "
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -1004,9 +1062,10 @@ Partial Class Quiz_Operator
         Me.TenthQMilestoneSet_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.TenthQMilestoneSet_Button.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.TenthQMilestoneSet_Button.ForeColor = System.Drawing.Color.Black
-        Me.TenthQMilestoneSet_Button.Location = New System.Drawing.Point(262, 30)
+        Me.TenthQMilestoneSet_Button.Location = New System.Drawing.Point(349, 37)
+        Me.TenthQMilestoneSet_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TenthQMilestoneSet_Button.Name = "TenthQMilestoneSet_Button"
-        Me.TenthQMilestoneSet_Button.Size = New System.Drawing.Size(173, 47)
+        Me.TenthQMilestoneSet_Button.Size = New System.Drawing.Size(231, 58)
         Me.TenthQMilestoneSet_Button.TabIndex = 1258
         Me.TenthQMilestoneSet_Button.Text = "10 Question milestone set"
         Me.TenthQMilestoneSet_Button.UseVisualStyleBackColor = False
@@ -1017,9 +1076,10 @@ Partial Class Quiz_Operator
         Me.Label52.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label52.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.Label52.ForeColor = System.Drawing.Color.Ivory
-        Me.Label52.Location = New System.Drawing.Point(607, 86)
+        Me.Label52.Location = New System.Drawing.Point(809, 106)
+        Me.Label52.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(112, 37)
+        Me.Label52.Size = New System.Drawing.Size(149, 46)
         Me.Label52.TabIndex = 1257
         Me.Label52.Text = "Back To Current Tree"
         Me.Label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1031,9 +1091,10 @@ Partial Class Quiz_Operator
         Me.VariableMilestoneSet_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.VariableMilestoneSet_Button.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.VariableMilestoneSet_Button.ForeColor = System.Drawing.Color.Black
-        Me.VariableMilestoneSet_Button.Location = New System.Drawing.Point(262, 90)
+        Me.VariableMilestoneSet_Button.Location = New System.Drawing.Point(349, 111)
+        Me.VariableMilestoneSet_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.VariableMilestoneSet_Button.Name = "VariableMilestoneSet_Button"
-        Me.VariableMilestoneSet_Button.Size = New System.Drawing.Size(173, 43)
+        Me.VariableMilestoneSet_Button.Size = New System.Drawing.Size(231, 53)
         Me.VariableMilestoneSet_Button.TabIndex = 1247
         Me.VariableMilestoneSet_Button.Text = "MILESTONE SET"
         Me.VariableMilestoneSet_Button.UseVisualStyleBackColor = False
@@ -1041,9 +1102,10 @@ Partial Class Quiz_Operator
         'VariableMilestone_TextBox
         '
         Me.VariableMilestone_TextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.VariableMilestone_TextBox.Location = New System.Drawing.Point(441, 97)
+        Me.VariableMilestone_TextBox.Location = New System.Drawing.Point(588, 119)
+        Me.VariableMilestone_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.VariableMilestone_TextBox.Name = "VariableMilestone_TextBox"
-        Me.VariableMilestone_TextBox.Size = New System.Drawing.Size(59, 29)
+        Me.VariableMilestone_TextBox.Size = New System.Drawing.Size(77, 34)
         Me.VariableMilestone_TextBox.TabIndex = 1246
         Me.VariableMilestone_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1053,9 +1115,10 @@ Partial Class Quiz_Operator
         Me.Label51.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label51.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.Label51.ForeColor = System.Drawing.Color.Ivory
-        Me.Label51.Location = New System.Drawing.Point(658, 30)
+        Me.Label51.Location = New System.Drawing.Point(877, 37)
+        Me.Label51.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(75, 37)
+        Me.Label51.Size = New System.Drawing.Size(100, 46)
         Me.Label51.TabIndex = 1256
         Me.Label51.Text = "Jump To Safe"
         Me.Label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1066,9 +1129,10 @@ Partial Class Quiz_Operator
         Me.Label50.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label50.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.Label50.ForeColor = System.Drawing.Color.Ivory
-        Me.Label50.Location = New System.Drawing.Point(532, 86)
+        Me.Label50.Location = New System.Drawing.Point(709, 106)
+        Me.Label50.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(60, 37)
+        Me.Label50.Size = New System.Drawing.Size(80, 46)
         Me.Label50.TabIndex = 1255
         Me.Label50.Text = "Jump 1"
         Me.Label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1079,9 +1143,10 @@ Partial Class Quiz_Operator
         Me.Label26.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label26.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.Label26.ForeColor = System.Drawing.Color.Ivory
-        Me.Label26.Location = New System.Drawing.Point(532, 30)
+        Me.Label26.Location = New System.Drawing.Point(709, 37)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(112, 37)
+        Me.Label26.Size = New System.Drawing.Size(149, 46)
         Me.Label26.TabIndex = 1254
         Me.Label26.Text = "Rule Explain"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1091,9 +1156,10 @@ Partial Class Quiz_Operator
         Me.MoneyTreeHide_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.MoneyTreeHide_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MoneyTreeHide_Label.Font = New System.Drawing.Font("Arial", 8.0!)
-        Me.MoneyTreeHide_Label.Location = New System.Drawing.Point(118, 21)
+        Me.MoneyTreeHide_Label.Location = New System.Drawing.Point(157, 26)
+        Me.MoneyTreeHide_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MoneyTreeHide_Label.Name = "MoneyTreeHide_Label"
-        Me.MoneyTreeHide_Label.Size = New System.Drawing.Size(81, 86)
+        Me.MoneyTreeHide_Label.Size = New System.Drawing.Size(108, 106)
         Me.MoneyTreeHide_Label.TabIndex = 1247
         Me.MoneyTreeHide_Label.Text = "MONEY TREE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "HIDE"
         Me.MoneyTreeHide_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1103,9 +1169,10 @@ Partial Class Quiz_Operator
         Me.Button5.BackColor = System.Drawing.SystemColors.Control
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        Me.Button5.Location = New System.Drawing.Point(121, 127)
+        Me.Button5.Location = New System.Drawing.Point(161, 156)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(78, 49)
+        Me.Button5.Size = New System.Drawing.Size(104, 60)
         Me.Button5.TabIndex = 1253
         Me.Button5.Text = "Money Tree FlyOUT"
         Me.Button5.UseVisualStyleBackColor = False
@@ -1115,9 +1182,10 @@ Partial Class Quiz_Operator
         Me.MoneyTreeShow_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.MoneyTreeShow_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MoneyTreeShow_Label.Font = New System.Drawing.Font("Arial", 8.0!)
-        Me.MoneyTreeShow_Label.Location = New System.Drawing.Point(31, 21)
+        Me.MoneyTreeShow_Label.Location = New System.Drawing.Point(41, 26)
+        Me.MoneyTreeShow_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MoneyTreeShow_Label.Name = "MoneyTreeShow_Label"
-        Me.MoneyTreeShow_Label.Size = New System.Drawing.Size(81, 86)
+        Me.MoneyTreeShow_Label.Size = New System.Drawing.Size(108, 106)
         Me.MoneyTreeShow_Label.TabIndex = 1246
         Me.MoneyTreeShow_Label.Text = "MONEY TREE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "SHOW"
         Me.MoneyTreeShow_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1127,9 +1195,10 @@ Partial Class Quiz_Operator
         Me.MoneyTreeFly_Button.BackColor = System.Drawing.SystemColors.Control
         Me.MoneyTreeFly_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.MoneyTreeFly_Button.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        Me.MoneyTreeFly_Button.Location = New System.Drawing.Point(34, 127)
+        Me.MoneyTreeFly_Button.Location = New System.Drawing.Point(45, 156)
+        Me.MoneyTreeFly_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MoneyTreeFly_Button.Name = "MoneyTreeFly_Button"
-        Me.MoneyTreeFly_Button.Size = New System.Drawing.Size(78, 49)
+        Me.MoneyTreeFly_Button.Size = New System.Drawing.Size(104, 60)
         Me.MoneyTreeFly_Button.TabIndex = 1252
         Me.MoneyTreeFly_Button.Text = "Money Tree FlyIN"
         Me.MoneyTreeFly_Button.UseVisualStyleBackColor = False
@@ -1139,9 +1208,10 @@ Partial Class Quiz_Operator
         Me.MoneyTreeMoment_Textbox.BackColor = System.Drawing.Color.White
         Me.MoneyTreeMoment_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.MoneyTreeMoment_Textbox.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MoneyTreeMoment_Textbox.Location = New System.Drawing.Point(847, 64)
+        Me.MoneyTreeMoment_Textbox.Location = New System.Drawing.Point(1129, 79)
+        Me.MoneyTreeMoment_Textbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MoneyTreeMoment_Textbox.Name = "MoneyTreeMoment_Textbox"
-        Me.MoneyTreeMoment_Textbox.Size = New System.Drawing.Size(33, 13)
+        Me.MoneyTreeMoment_Textbox.Size = New System.Drawing.Size(44, 16)
         Me.MoneyTreeMoment_Textbox.TabIndex = 1243
         Me.MoneyTreeMoment_Textbox.Text = "0"
         Me.MoneyTreeMoment_Textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -1154,9 +1224,10 @@ Partial Class Quiz_Operator
         Me.TabPage5.Controls.Add(Me.AutoWhiteGleen_CheckBox)
         Me.TabPage5.Controls.Add(Me.CasparServerIP_TextBox)
         Me.TabPage5.Controls.Add(Me.CGConnection_Button)
-        Me.TabPage5.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(1005, 247)
+        Me.TabPage5.Size = New System.Drawing.Size(1343, 307)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "CharacterGenerator"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -1164,11 +1235,12 @@ Partial Class Quiz_Operator
         'CASPARCGLog_TextBox
         '
         Me.CASPARCGLog_TextBox.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.CASPARCGLog_TextBox.Location = New System.Drawing.Point(209, 17)
+        Me.CASPARCGLog_TextBox.Location = New System.Drawing.Point(279, 21)
+        Me.CASPARCGLog_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CASPARCGLog_TextBox.Multiline = True
         Me.CASPARCGLog_TextBox.Name = "CASPARCGLog_TextBox"
         Me.CASPARCGLog_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.CASPARCGLog_TextBox.Size = New System.Drawing.Size(387, 182)
+        Me.CASPARCGLog_TextBox.Size = New System.Drawing.Size(515, 223)
         Me.CASPARCGLog_TextBox.TabIndex = 1242
         Me.CASPARCGLog_TextBox.WordWrap = False
         '
@@ -1177,9 +1249,10 @@ Partial Class Quiz_Operator
         Me.TextBox1.BackColor = System.Drawing.Color.White
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(159, 168)
+        Me.TextBox1.Location = New System.Drawing.Point(212, 207)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(32, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(42, 23)
         Me.TextBox1.TabIndex = 1240
         Me.TextBox1.Text = "7"
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -1189,9 +1262,10 @@ Partial Class Quiz_Operator
         Me.MoneyTreeSet_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.MoneyTreeSet_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MoneyTreeSet_Label.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MoneyTreeSet_Label.Location = New System.Drawing.Point(90, 102)
+        Me.MoneyTreeSet_Label.Location = New System.Drawing.Point(120, 126)
+        Me.MoneyTreeSet_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MoneyTreeSet_Label.Name = "MoneyTreeSet_Label"
-        Me.MoneyTreeSet_Label.Size = New System.Drawing.Size(98, 32)
+        Me.MoneyTreeSet_Label.Size = New System.Drawing.Size(131, 39)
         Me.MoneyTreeSet_Label.TabIndex = 1259
         Me.MoneyTreeSet_Label.Text = "MONEY TREE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "SET"
         Me.MoneyTreeSet_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1200,9 +1274,10 @@ Partial Class Quiz_Operator
         '
         Me.AutoWhiteGleen_CheckBox.AutoSize = True
         Me.AutoWhiteGleen_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AutoWhiteGleen_CheckBox.Location = New System.Drawing.Point(19, 163)
+        Me.AutoWhiteGleen_CheckBox.Location = New System.Drawing.Point(25, 201)
+        Me.AutoWhiteGleen_CheckBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.AutoWhiteGleen_CheckBox.Name = "AutoWhiteGleen_CheckBox"
-        Me.AutoWhiteGleen_CheckBox.Size = New System.Drawing.Size(128, 30)
+        Me.AutoWhiteGleen_CheckBox.Size = New System.Drawing.Size(166, 38)
         Me.AutoWhiteGleen_CheckBox.TabIndex = 1239
         Me.AutoWhiteGleen_CheckBox.Text = "Auto QuestionAnswer" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Gleen"
         Me.AutoWhiteGleen_CheckBox.UseVisualStyleBackColor = True
@@ -1219,10 +1294,11 @@ Partial Class Quiz_Operator
         Me.TabPage2.Controls.Add(Me.DirectorIMessages_TextBox)
         Me.TabPage2.Controls.Add(Me.DirectorIMessage_TextBox)
         Me.TabPage2.Controls.Add(Me.QuestionLoad_Label)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1005, 247)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage2.Size = New System.Drawing.Size(1343, 307)
         Me.TabPage2.TabIndex = 5
         Me.TabPage2.Text = "HostContestant Screen"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -1231,9 +1307,10 @@ Partial Class Quiz_Operator
         '
         Me.GetContestantClicks_CheckBox.AutoSize = True
         Me.GetContestantClicks_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GetContestantClicks_CheckBox.Location = New System.Drawing.Point(388, 208)
+        Me.GetContestantClicks_CheckBox.Location = New System.Drawing.Point(517, 256)
+        Me.GetContestantClicks_CheckBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GetContestantClicks_CheckBox.Name = "GetContestantClicks_CheckBox"
-        Me.GetContestantClicks_CheckBox.Size = New System.Drawing.Size(128, 17)
+        Me.GetContestantClicks_CheckBox.Size = New System.Drawing.Size(165, 21)
         Me.GetContestantClicks_CheckBox.TabIndex = 1245
         Me.GetContestantClicks_CheckBox.Text = "Get Contestant Clicks"
         Me.GetContestantClicks_CheckBox.UseVisualStyleBackColor = True
@@ -1241,9 +1318,10 @@ Partial Class Quiz_Operator
         'ContestantPartner_Textbox
         '
         Me.ContestantPartner_Textbox.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.ContestantPartner_Textbox.Location = New System.Drawing.Point(388, 117)
+        Me.ContestantPartner_Textbox.Location = New System.Drawing.Point(517, 144)
+        Me.ContestantPartner_Textbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ContestantPartner_Textbox.Name = "ContestantPartner_Textbox"
-        Me.ContestantPartner_Textbox.Size = New System.Drawing.Size(160, 23)
+        Me.ContestantPartner_Textbox.Size = New System.Drawing.Size(212, 27)
         Me.ContestantPartner_Textbox.TabIndex = 260
         Me.ContestantPartner_Textbox.Text = "PARTNER"
         Me.ContestantPartner_Textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -1251,9 +1329,10 @@ Partial Class Quiz_Operator
         'ContestantCity_Textbox
         '
         Me.ContestantCity_Textbox.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.ContestantCity_Textbox.Location = New System.Drawing.Point(388, 85)
+        Me.ContestantCity_Textbox.Location = New System.Drawing.Point(517, 105)
+        Me.ContestantCity_Textbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ContestantCity_Textbox.Name = "ContestantCity_Textbox"
-        Me.ContestantCity_Textbox.Size = New System.Drawing.Size(160, 23)
+        Me.ContestantCity_Textbox.Size = New System.Drawing.Size(212, 27)
         Me.ContestantCity_Textbox.TabIndex = 259
         Me.ContestantCity_Textbox.Text = "CITY"
         Me.ContestantCity_Textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -1261,9 +1340,10 @@ Partial Class Quiz_Operator
         'ContestantLastName_Textbox
         '
         Me.ContestantLastName_Textbox.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.ContestantLastName_Textbox.Location = New System.Drawing.Point(388, 53)
+        Me.ContestantLastName_Textbox.Location = New System.Drawing.Point(517, 65)
+        Me.ContestantLastName_Textbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ContestantLastName_Textbox.Name = "ContestantLastName_Textbox"
-        Me.ContestantLastName_Textbox.Size = New System.Drawing.Size(160, 23)
+        Me.ContestantLastName_Textbox.Size = New System.Drawing.Size(212, 27)
         Me.ContestantLastName_Textbox.TabIndex = 258
         Me.ContestantLastName_Textbox.Text = "LASTNAME"
         Me.ContestantLastName_Textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -1271,9 +1351,10 @@ Partial Class Quiz_Operator
         'ContestantName_Textbox
         '
         Me.ContestantName_Textbox.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.ContestantName_Textbox.Location = New System.Drawing.Point(388, 21)
+        Me.ContestantName_Textbox.Location = New System.Drawing.Point(517, 26)
+        Me.ContestantName_Textbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ContestantName_Textbox.Name = "ContestantName_Textbox"
-        Me.ContestantName_Textbox.Size = New System.Drawing.Size(160, 23)
+        Me.ContestantName_Textbox.Size = New System.Drawing.Size(212, 27)
         Me.ContestantName_Textbox.TabIndex = 257
         Me.ContestantName_Textbox.Text = "NAME"
         Me.ContestantName_Textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -1281,9 +1362,10 @@ Partial Class Quiz_Operator
         'DirectorBlinkIMessage_TextBox
         '
         Me.DirectorBlinkIMessage_TextBox.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.DirectorBlinkIMessage_TextBox.Location = New System.Drawing.Point(264, 174)
+        Me.DirectorBlinkIMessage_TextBox.Location = New System.Drawing.Point(352, 214)
+        Me.DirectorBlinkIMessage_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DirectorBlinkIMessage_TextBox.Name = "DirectorBlinkIMessage_TextBox"
-        Me.DirectorBlinkIMessage_TextBox.Size = New System.Drawing.Size(30, 24)
+        Me.DirectorBlinkIMessage_TextBox.Size = New System.Drawing.Size(39, 29)
         Me.DirectorBlinkIMessage_TextBox.TabIndex = 256
         Me.DirectorBlinkIMessage_TextBox.Text = "0"
         Me.DirectorBlinkIMessage_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -1291,9 +1373,10 @@ Partial Class Quiz_Operator
         'DirectorIMessage_Button
         '
         Me.DirectorIMessage_Button.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.DirectorIMessage_Button.Location = New System.Drawing.Point(300, 174)
+        Me.DirectorIMessage_Button.Location = New System.Drawing.Point(400, 214)
+        Me.DirectorIMessage_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DirectorIMessage_Button.Name = "DirectorIMessage_Button"
-        Me.DirectorIMessage_Button.Size = New System.Drawing.Size(51, 26)
+        Me.DirectorIMessage_Button.Size = New System.Drawing.Size(68, 32)
         Me.DirectorIMessage_Button.TabIndex = 255
         Me.DirectorIMessage_Button.Text = "SEND"
         Me.DirectorIMessage_Button.UseVisualStyleBackColor = True
@@ -1301,21 +1384,23 @@ Partial Class Quiz_Operator
         'DirectorIMessages_TextBox
         '
         Me.DirectorIMessages_TextBox.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.DirectorIMessages_TextBox.Location = New System.Drawing.Point(21, 21)
+        Me.DirectorIMessages_TextBox.Location = New System.Drawing.Point(28, 26)
+        Me.DirectorIMessages_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DirectorIMessages_TextBox.Multiline = True
         Me.DirectorIMessages_TextBox.Name = "DirectorIMessages_TextBox"
         Me.DirectorIMessages_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.DirectorIMessages_TextBox.Size = New System.Drawing.Size(330, 85)
+        Me.DirectorIMessages_TextBox.Size = New System.Drawing.Size(439, 104)
         Me.DirectorIMessages_TextBox.TabIndex = 254
         Me.DirectorIMessages_TextBox.WordWrap = False
         '
         'DirectorIMessage_TextBox
         '
         Me.DirectorIMessage_TextBox.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.DirectorIMessage_TextBox.Location = New System.Drawing.Point(21, 115)
+        Me.DirectorIMessage_TextBox.Location = New System.Drawing.Point(28, 142)
+        Me.DirectorIMessage_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DirectorIMessage_TextBox.Multiline = True
         Me.DirectorIMessage_TextBox.Name = "DirectorIMessage_TextBox"
-        Me.DirectorIMessage_TextBox.Size = New System.Drawing.Size(330, 55)
+        Me.DirectorIMessage_TextBox.Size = New System.Drawing.Size(439, 67)
         Me.DirectorIMessage_TextBox.TabIndex = 253
         '
         'TabPage3
@@ -1328,30 +1413,57 @@ Partial Class Quiz_Operator
         Me.TabPage3.Controls.Add(Me.GroupBox1)
         Me.TabPage3.Controls.Add(Me.SumeShow_CheckBox)
         Me.TabPage3.Controls.Add(Me.Empty_CheckBox)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(1005, 247)
+        Me.TabPage3.Size = New System.Drawing.Size(1343, 307)
         Me.TabPage3.TabIndex = 6
         Me.TabPage3.Text = "Configurations"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'EnableHostContScreens_CheckBox
+        '
+        Me.EnableHostContScreens_CheckBox.AutoSize = True
+        Me.EnableHostContScreens_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EnableHostContScreens_CheckBox.Location = New System.Drawing.Point(316, 130)
+        Me.EnableHostContScreens_CheckBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.EnableHostContScreens_CheckBox.Name = "EnableHostContScreens_CheckBox"
+        Me.EnableHostContScreens_CheckBox.Size = New System.Drawing.Size(235, 21)
+        Me.EnableHostContScreens_CheckBox.TabIndex = 1303
+        Me.EnableHostContScreens_CheckBox.Text = "Enable Host Contestant Screens"
+        Me.EnableHostContScreens_CheckBox.UseVisualStyleBackColor = True
+        '
+        'MockQuestions_CheckBox
+        '
+        Me.MockQuestions_CheckBox.AutoSize = True
+        Me.MockQuestions_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MockQuestions_CheckBox.Location = New System.Drawing.Point(316, 106)
+        Me.MockQuestions_CheckBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MockQuestions_CheckBox.Name = "MockQuestions_CheckBox"
+        Me.MockQuestions_CheckBox.Size = New System.Drawing.Size(128, 21)
+        Me.MockQuestions_CheckBox.TabIndex = 1302
+        Me.MockQuestions_CheckBox.Text = "Mock questions"
+        Me.MockQuestions_CheckBox.UseVisualStyleBackColor = True
         '
         'SecondsToDissolveAfterCorrectAnswer_TextBox
         '
         Me.SecondsToDissolveAfterCorrectAnswer_TextBox.BackColor = System.Drawing.Color.White
         Me.SecondsToDissolveAfterCorrectAnswer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.SecondsToDissolveAfterCorrectAnswer_TextBox.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SecondsToDissolveAfterCorrectAnswer_TextBox.Location = New System.Drawing.Point(490, 163)
+        Me.SecondsToDissolveAfterCorrectAnswer_TextBox.Location = New System.Drawing.Point(653, 201)
+        Me.SecondsToDissolveAfterCorrectAnswer_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SecondsToDissolveAfterCorrectAnswer_TextBox.Name = "SecondsToDissolveAfterCorrectAnswer_TextBox"
-        Me.SecondsToDissolveAfterCorrectAnswer_TextBox.Size = New System.Drawing.Size(18, 13)
+        Me.SecondsToDissolveAfterCorrectAnswer_TextBox.Size = New System.Drawing.Size(24, 16)
         Me.SecondsToDissolveAfterCorrectAnswer_TextBox.TabIndex = 1262
         Me.SecondsToDissolveAfterCorrectAnswer_TextBox.Text = "4.0"
         Me.SecondsToDissolveAfterCorrectAnswer_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'StarApacheServer_Button
         '
-        Me.StarApacheServer_Button.Location = New System.Drawing.Point(143, 21)
+        Me.StarApacheServer_Button.Location = New System.Drawing.Point(191, 26)
+        Me.StarApacheServer_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.StarApacheServer_Button.Name = "StarApacheServer_Button"
-        Me.StarApacheServer_Button.Size = New System.Drawing.Size(100, 41)
+        Me.StarApacheServer_Button.Size = New System.Drawing.Size(133, 50)
         Me.StarApacheServer_Button.TabIndex = 1244
         Me.StarApacheServer_Button.Text = "Start Apache Server"
         Me.StarApacheServer_Button.UseVisualStyleBackColor = True
@@ -1362,9 +1474,10 @@ Partial Class Quiz_Operator
         Me.ReloadConfiguration_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.ReloadConfiguration_Button.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.ReloadConfiguration_Button.ForeColor = System.Drawing.Color.Black
-        Me.ReloadConfiguration_Button.Location = New System.Drawing.Point(21, 21)
+        Me.ReloadConfiguration_Button.Location = New System.Drawing.Point(28, 26)
+        Me.ReloadConfiguration_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ReloadConfiguration_Button.Name = "ReloadConfiguration_Button"
-        Me.ReloadConfiguration_Button.Size = New System.Drawing.Size(101, 39)
+        Me.ReloadConfiguration_Button.Size = New System.Drawing.Size(135, 48)
         Me.ReloadConfiguration_Button.TabIndex = 1301
         Me.ReloadConfiguration_Button.Text = "RELOAD"
         Me.ReloadConfiguration_Button.UseVisualStyleBackColor = False
@@ -1373,9 +1486,11 @@ Partial Class Quiz_Operator
         '
         Me.GroupBox1.Controls.Add(Me.UnlimitedGame_RadioButton)
         Me.GroupBox1.Controls.Add(Me.LimitedGame_RadioButton)
-        Me.GroupBox1.Location = New System.Drawing.Point(21, 82)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 101)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(189, 100)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(252, 123)
         Me.GroupBox1.TabIndex = 1239
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Game Type"
@@ -1385,9 +1500,10 @@ Partial Class Quiz_Operator
         Me.UnlimitedGame_RadioButton.AutoSize = True
         Me.UnlimitedGame_RadioButton.Checked = True
         Me.UnlimitedGame_RadioButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UnlimitedGame_RadioButton.Location = New System.Drawing.Point(10, 31)
+        Me.UnlimitedGame_RadioButton.Location = New System.Drawing.Point(13, 38)
+        Me.UnlimitedGame_RadioButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.UnlimitedGame_RadioButton.Name = "UnlimitedGame_RadioButton"
-        Me.UnlimitedGame_RadioButton.Size = New System.Drawing.Size(82, 20)
+        Me.UnlimitedGame_RadioButton.Size = New System.Drawing.Size(100, 24)
         Me.UnlimitedGame_RadioButton.TabIndex = 1239
         Me.UnlimitedGame_RadioButton.TabStop = True
         Me.UnlimitedGame_RadioButton.Text = "Unlimited"
@@ -1397,9 +1513,10 @@ Partial Class Quiz_Operator
         '
         Me.LimitedGame_RadioButton.AutoSize = True
         Me.LimitedGame_RadioButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LimitedGame_RadioButton.Location = New System.Drawing.Point(10, 60)
+        Me.LimitedGame_RadioButton.Location = New System.Drawing.Point(13, 74)
+        Me.LimitedGame_RadioButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LimitedGame_RadioButton.Name = "LimitedGame_RadioButton"
-        Me.LimitedGame_RadioButton.Size = New System.Drawing.Size(120, 20)
+        Me.LimitedGame_RadioButton.Size = New System.Drawing.Size(154, 24)
         Me.LimitedGame_RadioButton.TabIndex = 1238
         Me.LimitedGame_RadioButton.Text = "Limited 30s 15s "
         Me.LimitedGame_RadioButton.UseVisualStyleBackColor = True
@@ -1410,9 +1527,10 @@ Partial Class Quiz_Operator
         Me.SumeShow_CheckBox.Checked = True
         Me.SumeShow_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked
         Me.SumeShow_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SumeShow_CheckBox.Location = New System.Drawing.Point(238, 140)
+        Me.SumeShow_CheckBox.Location = New System.Drawing.Point(317, 172)
+        Me.SumeShow_CheckBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SumeShow_CheckBox.Name = "SumeShow_CheckBox"
-        Me.SumeShow_CheckBox.Size = New System.Drawing.Size(161, 17)
+        Me.SumeShow_CheckBox.Size = New System.Drawing.Size(209, 21)
         Me.SumeShow_CheckBox.TabIndex = 1260
         Me.SumeShow_CheckBox.Text = "Sume show after 1.5 second"
         Me.SumeShow_CheckBox.UseVisualStyleBackColor = True
@@ -1423,9 +1541,10 @@ Partial Class Quiz_Operator
         Me.Empty_CheckBox.Checked = True
         Me.Empty_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked
         Me.Empty_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Empty_CheckBox.Location = New System.Drawing.Point(238, 163)
+        Me.Empty_CheckBox.Location = New System.Drawing.Point(317, 201)
+        Me.Empty_CheckBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Empty_CheckBox.Name = "Empty_CheckBox"
-        Me.Empty_CheckBox.Size = New System.Drawing.Size(246, 17)
+        Me.Empty_CheckBox.Size = New System.Drawing.Size(327, 21)
         Me.Empty_CheckBox.TabIndex = 1261
         Me.Empty_CheckBox.Text = "Dissolve question automatically after (seconds)"
         Me.Empty_CheckBox.UseVisualStyleBackColor = True
@@ -1435,9 +1554,10 @@ Partial Class Quiz_Operator
         Me.LimitedGameClockStop_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.LimitedGameClockStop_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LimitedGameClockStop_Label.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LimitedGameClockStop_Label.Location = New System.Drawing.Point(607, 62)
+        Me.LimitedGameClockStop_Label.Location = New System.Drawing.Point(809, 76)
+        Me.LimitedGameClockStop_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LimitedGameClockStop_Label.Name = "LimitedGameClockStop_Label"
-        Me.LimitedGameClockStop_Label.Size = New System.Drawing.Size(140, 36)
+        Me.LimitedGameClockStop_Label.Size = New System.Drawing.Size(187, 44)
         Me.LimitedGameClockStop_Label.TabIndex = 1231
         Me.LimitedGameClockStop_Label.Text = "CLOCK stop "
         Me.LimitedGameClockStop_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1447,9 +1567,10 @@ Partial Class Quiz_Operator
         Me.LimitedGameClockRestart_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.LimitedGameClockRestart_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LimitedGameClockRestart_Label.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LimitedGameClockRestart_Label.Location = New System.Drawing.Point(607, 110)
+        Me.LimitedGameClockRestart_Label.Location = New System.Drawing.Point(809, 135)
+        Me.LimitedGameClockRestart_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LimitedGameClockRestart_Label.Name = "LimitedGameClockRestart_Label"
-        Me.LimitedGameClockRestart_Label.Size = New System.Drawing.Size(140, 36)
+        Me.LimitedGameClockRestart_Label.Size = New System.Drawing.Size(187, 44)
         Me.LimitedGameClockRestart_Label.TabIndex = 1230
         Me.LimitedGameClockRestart_Label.Text = "CLOCK  restart"
         Me.LimitedGameClockRestart_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1459,9 +1580,10 @@ Partial Class Quiz_Operator
         Me.AnswersABCDappear_Label.BackColor = System.Drawing.Color.Yellow
         Me.AnswersABCDappear_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.AnswersABCDappear_Label.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AnswersABCDappear_Label.Location = New System.Drawing.Point(11, 86)
+        Me.AnswersABCDappear_Label.Location = New System.Drawing.Point(15, 106)
+        Me.AnswersABCDappear_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AnswersABCDappear_Label.Name = "AnswersABCDappear_Label"
-        Me.AnswersABCDappear_Label.Size = New System.Drawing.Size(51, 108)
+        Me.AnswersABCDappear_Label.Size = New System.Drawing.Size(68, 133)
         Me.AnswersABCDappear_Label.TabIndex = 1229
         Me.AnswersABCDappear_Label.Text = " •A:   •B:   •C:   •D: " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "reveal  " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.AnswersABCDappear_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1476,10 +1598,11 @@ Partial Class Quiz_Operator
         Me.TabControl2.Controls.Add(Me.TabPage6)
         Me.TabControl2.Controls.Add(Me.TabPage7)
         Me.TabControl2.Controls.Add(Me.TabPage12)
-        Me.TabControl2.Location = New System.Drawing.Point(35, 286)
+        Me.TabControl2.Location = New System.Drawing.Point(47, 352)
+        Me.TabControl2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(1017, 366)
+        Me.TabControl2.Size = New System.Drawing.Size(1356, 450)
         Me.TabControl2.TabIndex = 1251
         '
         'TabPage6
@@ -1509,10 +1632,11 @@ Partial Class Quiz_Operator
         Me.TabPage6.Controls.Add(Me.FinalC_Button)
         Me.TabPage6.Controls.Add(Me.FinalD_Button)
         Me.TabPage6.Controls.Add(Me.WalkAwayQoppinion_Label)
-        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage6.Name = "TabPage6"
-        Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(1009, 340)
+        Me.TabPage6.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage6.Size = New System.Drawing.Size(1348, 421)
         Me.TabPage6.TabIndex = 0
         Me.TabPage6.Text = "MainGame Questions"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -1524,9 +1648,10 @@ Partial Class Quiz_Operator
         Me.WalkAwayStart_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.WalkAwayStart_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.WalkAwayStart_Button.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.WalkAwayStart_Button.Location = New System.Drawing.Point(836, 281)
+        Me.WalkAwayStart_Button.Location = New System.Drawing.Point(1115, 346)
+        Me.WalkAwayStart_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.WalkAwayStart_Button.Name = "WalkAwayStart_Button"
-        Me.WalkAwayStart_Button.Size = New System.Drawing.Size(152, 48)
+        Me.WalkAwayStart_Button.Size = New System.Drawing.Size(203, 59)
         Me.WalkAwayStart_Button.TabIndex = 1253
         Me.WalkAwayStart_Button.UseVisualStyleBackColor = False
         Me.WalkAwayStart_Button.Visible = False
@@ -1538,9 +1663,10 @@ Partial Class Quiz_Operator
         Me.LifelineRemind_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.LifelineRemind_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.LifelineRemind_Button.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.LifelineRemind_Button.Location = New System.Drawing.Point(611, 220)
+        Me.LifelineRemind_Button.Location = New System.Drawing.Point(815, 271)
+        Me.LifelineRemind_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LifelineRemind_Button.Name = "LifelineRemind_Button"
-        Me.LifelineRemind_Button.Size = New System.Drawing.Size(233, 45)
+        Me.LifelineRemind_Button.Size = New System.Drawing.Size(311, 55)
         Me.LifelineRemind_Button.TabIndex = 1252
         Me.LifelineRemind_Button.UseVisualStyleBackColor = False
         Me.LifelineRemind_Button.Visible = False
@@ -1552,9 +1678,10 @@ Partial Class Quiz_Operator
         Me.QFor_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.QFor_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.QFor_Button.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.QFor_Button.Location = New System.Drawing.Point(611, 160)
+        Me.QFor_Button.Location = New System.Drawing.Point(815, 197)
+        Me.QFor_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.QFor_Button.Name = "QFor_Button"
-        Me.QFor_Button.Size = New System.Drawing.Size(81, 45)
+        Me.QFor_Button.Size = New System.Drawing.Size(108, 55)
         Me.QFor_Button.TabIndex = 1251
         Me.QFor_Button.UseVisualStyleBackColor = False
         Me.QFor_Button.Visible = False
@@ -1565,9 +1692,10 @@ Partial Class Quiz_Operator
         Me.SoundLX_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SoundLX_Button.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.SoundLX_Button.ForeColor = System.Drawing.Color.Black
-        Me.SoundLX_Button.Location = New System.Drawing.Point(611, 220)
+        Me.SoundLX_Button.Location = New System.Drawing.Point(815, 271)
+        Me.SoundLX_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SoundLX_Button.Name = "SoundLX_Button"
-        Me.SoundLX_Button.Size = New System.Drawing.Size(374, 46)
+        Me.SoundLX_Button.Size = New System.Drawing.Size(499, 57)
         Me.SoundLX_Button.TabIndex = 1250
         Me.SoundLX_Button.Text = "Light Down Sound Effect"
         Me.SoundLX_Button.UseVisualStyleBackColor = False
@@ -1578,9 +1706,10 @@ Partial Class Quiz_Operator
         Me.NextThing_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.NextThing_Button.Font = New System.Drawing.Font("Arial", 14.0!)
         Me.NextThing_Button.ForeColor = System.Drawing.Color.White
-        Me.NextThing_Button.Location = New System.Drawing.Point(69, 220)
+        Me.NextThing_Button.Location = New System.Drawing.Point(92, 271)
+        Me.NextThing_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.NextThing_Button.Name = "NextThing_Button"
-        Me.NextThing_Button.Size = New System.Drawing.Size(515, 46)
+        Me.NextThing_Button.Size = New System.Drawing.Size(687, 57)
         Me.NextThing_Button.TabIndex = 1249
         Me.NextThing_Button.Text = "CUE NEXT..."
         Me.NextThing_Button.UseVisualStyleBackColor = False
@@ -1589,19 +1718,21 @@ Partial Class Quiz_Operator
         '
         Me.MomentStatusCUEorder_TextBox.Enabled = False
         Me.MomentStatusCUEorder_TextBox.Font = New System.Drawing.Font("Arial", 16.0!)
-        Me.MomentStatusCUEorder_TextBox.Location = New System.Drawing.Point(68, 17)
+        Me.MomentStatusCUEorder_TextBox.Location = New System.Drawing.Point(91, 21)
+        Me.MomentStatusCUEorder_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MomentStatusCUEorder_TextBox.Name = "MomentStatusCUEorder_TextBox"
         Me.MomentStatusCUEorder_TextBox.ReadOnly = True
-        Me.MomentStatusCUEorder_TextBox.Size = New System.Drawing.Size(920, 32)
+        Me.MomentStatusCUEorder_TextBox.Size = New System.Drawing.Size(1225, 38)
         Me.MomentStatusCUEorder_TextBox.TabIndex = 1293
         Me.MomentStatusCUEorder_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(801, 116)
+        Me.Label1.Location = New System.Drawing.Point(1068, 143)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 24)
+        Me.Label1.Size = New System.Drawing.Size(61, 30)
         Me.Label1.TabIndex = 1296
         Me.Label1.Text = "QST"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1611,9 +1742,10 @@ Partial Class Quiz_Operator
         Me.Lifeline4_PictureBox.BackColor = System.Drawing.Color.Transparent
         Me.Lifeline4_PictureBox.BackgroundImage = Global.ShowControl_GameOperator.My.Resources.Resources.STQ_0
         Me.Lifeline4_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Lifeline4_PictureBox.Location = New System.Drawing.Point(321, 276)
+        Me.Lifeline4_PictureBox.Location = New System.Drawing.Point(428, 340)
+        Me.Lifeline4_PictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Lifeline4_PictureBox.Name = "Lifeline4_PictureBox"
-        Me.Lifeline4_PictureBox.Size = New System.Drawing.Size(78, 55)
+        Me.Lifeline4_PictureBox.Size = New System.Drawing.Size(104, 68)
         Me.Lifeline4_PictureBox.TabIndex = 1245
         Me.Lifeline4_PictureBox.TabStop = False
         Me.Lifeline4_PictureBox.Visible = False
@@ -1623,9 +1755,10 @@ Partial Class Quiz_Operator
         Me.Lifeline3_PictureBox.BackColor = System.Drawing.Color.Transparent
         Me.Lifeline3_PictureBox.BackgroundImage = Global.ShowControl_GameOperator.My.Resources.Resources.ATA_0
         Me.Lifeline3_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Lifeline3_PictureBox.Location = New System.Drawing.Point(237, 276)
+        Me.Lifeline3_PictureBox.Location = New System.Drawing.Point(316, 340)
+        Me.Lifeline3_PictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Lifeline3_PictureBox.Name = "Lifeline3_PictureBox"
-        Me.Lifeline3_PictureBox.Size = New System.Drawing.Size(78, 55)
+        Me.Lifeline3_PictureBox.Size = New System.Drawing.Size(104, 68)
         Me.Lifeline3_PictureBox.TabIndex = 1236
         Me.Lifeline3_PictureBox.TabStop = False
         Me.Lifeline3_PictureBox.Visible = False
@@ -1636,9 +1769,10 @@ Partial Class Quiz_Operator
         Me.LevelQset_ComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
         Me.LevelQset_ComboBox.FormattingEnabled = True
         Me.LevelQset_ComboBox.Items.AddRange(New Object() {"15", "14", "13", "12", "11", "10", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0"})
-        Me.LevelQset_ComboBox.Location = New System.Drawing.Point(853, 111)
+        Me.LevelQset_ComboBox.Location = New System.Drawing.Point(1137, 137)
+        Me.LevelQset_ComboBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LevelQset_ComboBox.Name = "LevelQset_ComboBox"
-        Me.LevelQset_ComboBox.Size = New System.Drawing.Size(135, 33)
+        Me.LevelQset_ComboBox.Size = New System.Drawing.Size(179, 37)
         Me.LevelQset_ComboBox.TabIndex = 1295
         Me.LevelQset_ComboBox.Text = "0"
         '
@@ -1647,9 +1781,10 @@ Partial Class Quiz_Operator
         Me.Lifeline2_PictureBox.BackColor = System.Drawing.Color.Transparent
         Me.Lifeline2_PictureBox.BackgroundImage = Global.ShowControl_GameOperator.My.Resources.Resources.PAF_0
         Me.Lifeline2_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Lifeline2_PictureBox.Location = New System.Drawing.Point(153, 276)
+        Me.Lifeline2_PictureBox.Location = New System.Drawing.Point(204, 340)
+        Me.Lifeline2_PictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Lifeline2_PictureBox.Name = "Lifeline2_PictureBox"
-        Me.Lifeline2_PictureBox.Size = New System.Drawing.Size(78, 55)
+        Me.Lifeline2_PictureBox.Size = New System.Drawing.Size(104, 68)
         Me.Lifeline2_PictureBox.TabIndex = 1235
         Me.Lifeline2_PictureBox.TabStop = False
         Me.Lifeline2_PictureBox.Visible = False
@@ -1659,9 +1794,10 @@ Partial Class Quiz_Operator
         Me.Lifeline1_PictureBox.BackColor = System.Drawing.Color.Transparent
         Me.Lifeline1_PictureBox.BackgroundImage = CType(resources.GetObject("Lifeline1_PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.Lifeline1_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Lifeline1_PictureBox.Location = New System.Drawing.Point(69, 276)
+        Me.Lifeline1_PictureBox.Location = New System.Drawing.Point(92, 340)
+        Me.Lifeline1_PictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Lifeline1_PictureBox.Name = "Lifeline1_PictureBox"
-        Me.Lifeline1_PictureBox.Size = New System.Drawing.Size(78, 55)
+        Me.Lifeline1_PictureBox.Size = New System.Drawing.Size(104, 68)
         Me.Lifeline1_PictureBox.TabIndex = 1234
         Me.Lifeline1_PictureBox.TabStop = False
         Me.Lifeline1_PictureBox.Visible = False
@@ -1669,10 +1805,11 @@ Partial Class Quiz_Operator
         'TabPage7
         '
         Me.TabPage7.Controls.Add(Me.TabControl1)
-        Me.TabPage7.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage7.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(1009, 340)
+        Me.TabPage7.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage7.Size = New System.Drawing.Size(1348, 421)
         Me.TabPage7.TabIndex = 3
         Me.TabPage7.Text = "  Lifelines  "
         Me.TabPage7.UseVisualStyleBackColor = True
@@ -1688,10 +1825,11 @@ Partial Class Quiz_Operator
         Me.TabControl1.Controls.Add(Me.ThreeAudienceMemberLifeline_TabPage)
         Me.TabControl1.Controls.Add(Me.StateOfLifelines_TabPage)
         Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(18, 15)
+        Me.TabControl1.Location = New System.Drawing.Point(24, 18)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(743, 304)
+        Me.TabControl1.Size = New System.Drawing.Size(991, 374)
         Me.TabControl1.TabIndex = 1253
         '
         'FiftyFiftyLifeline_TabPage
@@ -1707,10 +1845,11 @@ Partial Class Quiz_Operator
         Me.FiftyFiftyLifeline_TabPage.Controls.Add(Me.BremoveFF_Label)
         Me.FiftyFiftyLifeline_TabPage.Controls.Add(Me.CremoveFF_Label)
         Me.FiftyFiftyLifeline_TabPage.Controls.Add(Me.DremoveFF_Label)
-        Me.FiftyFiftyLifeline_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.FiftyFiftyLifeline_TabPage.Location = New System.Drawing.Point(4, 27)
+        Me.FiftyFiftyLifeline_TabPage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.FiftyFiftyLifeline_TabPage.Name = "FiftyFiftyLifeline_TabPage"
-        Me.FiftyFiftyLifeline_TabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.FiftyFiftyLifeline_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.FiftyFiftyLifeline_TabPage.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FiftyFiftyLifeline_TabPage.Size = New System.Drawing.Size(983, 343)
         Me.FiftyFiftyLifeline_TabPage.TabIndex = 0
         Me.FiftyFiftyLifeline_TabPage.Text = "  50-50  "
         Me.FiftyFiftyLifeline_TabPage.UseVisualStyleBackColor = True
@@ -1722,9 +1861,10 @@ Partial Class Quiz_Operator
         Me.FiftyFifty_0_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FiftyFifty_0_Label.Enabled = False
         Me.FiftyFifty_0_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FiftyFifty_0_Label.Location = New System.Drawing.Point(473, 16)
+        Me.FiftyFifty_0_Label.Location = New System.Drawing.Point(631, 20)
+        Me.FiftyFifty_0_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.FiftyFifty_0_Label.Name = "FiftyFifty_0_Label"
-        Me.FiftyFifty_0_Label.Size = New System.Drawing.Size(57, 18)
+        Me.FiftyFifty_0_Label.Size = New System.Drawing.Size(73, 23)
         Me.FiftyFifty_0_Label.TabIndex = 1226
         Me.FiftyFifty_0_Label.Text = "50-50 /"
         '
@@ -1735,9 +1875,10 @@ Partial Class Quiz_Operator
         Me.FiftyFifty_1_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FiftyFifty_1_Label.Enabled = False
         Me.FiftyFifty_1_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FiftyFifty_1_Label.Location = New System.Drawing.Point(536, 15)
+        Me.FiftyFifty_1_Label.Location = New System.Drawing.Point(715, 18)
+        Me.FiftyFifty_1_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.FiftyFifty_1_Label.Name = "FiftyFifty_1_Label"
-        Me.FiftyFifty_1_Label.Size = New System.Drawing.Size(98, 18)
+        Me.FiftyFifty_1_Label.Size = New System.Drawing.Size(123, 23)
         Me.FiftyFifty_1_Label.TabIndex = 1224
         Me.FiftyFifty_1_Label.Text = "50-50 BLINK"
         '
@@ -1748,9 +1889,10 @@ Partial Class Quiz_Operator
         Me.FiftyFifty_X_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FiftyFifty_X_Label.Enabled = False
         Me.FiftyFifty_X_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FiftyFifty_X_Label.Location = New System.Drawing.Point(640, 15)
+        Me.FiftyFifty_X_Label.Location = New System.Drawing.Point(853, 18)
+        Me.FiftyFifty_X_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.FiftyFifty_X_Label.Name = "FiftyFifty_X_Label"
-        Me.FiftyFifty_X_Label.Size = New System.Drawing.Size(74, 18)
+        Me.FiftyFifty_X_Label.Size = New System.Drawing.Size(94, 23)
         Me.FiftyFifty_X_Label.TabIndex = 1225
         Me.FiftyFifty_X_Label.Text = "50-50 (Х)"
         '
@@ -1761,9 +1903,10 @@ Partial Class Quiz_Operator
         Me.RandomSelection_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked
         Me.RandomSelection_CheckBox.Enabled = False
         Me.RandomSelection_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RandomSelection_CheckBox.Location = New System.Drawing.Point(246, 55)
+        Me.RandomSelection_CheckBox.Location = New System.Drawing.Point(328, 68)
+        Me.RandomSelection_CheckBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RandomSelection_CheckBox.Name = "RandomSelection_CheckBox"
-        Me.RandomSelection_CheckBox.Size = New System.Drawing.Size(99, 16)
+        Me.RandomSelection_CheckBox.Size = New System.Drawing.Size(131, 19)
         Me.RandomSelection_CheckBox.TabIndex = 1223
         Me.RandomSelection_CheckBox.Text = "Random Selection"
         Me.RandomSelection_CheckBox.UseVisualStyleBackColor = True
@@ -1775,9 +1918,10 @@ Partial Class Quiz_Operator
         Me.FiftyFiftyOptionsReset_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FiftyFiftyOptionsReset_Label.Enabled = False
         Me.FiftyFiftyOptionsReset_Label.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FiftyFiftyOptionsReset_Label.Location = New System.Drawing.Point(243, 18)
+        Me.FiftyFiftyOptionsReset_Label.Location = New System.Drawing.Point(324, 22)
+        Me.FiftyFiftyOptionsReset_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.FiftyFiftyOptionsReset_Label.Name = "FiftyFiftyOptionsReset_Label"
-        Me.FiftyFiftyOptionsReset_Label.Size = New System.Drawing.Size(51, 16)
+        Me.FiftyFiftyOptionsReset_Label.Size = New System.Drawing.Size(62, 19)
         Me.FiftyFiftyOptionsReset_Label.TabIndex = 1222
         Me.FiftyFiftyOptionsReset_Label.Text = "RESET"
         '
@@ -1786,9 +1930,10 @@ Partial Class Quiz_Operator
         Me.FiftyFifty_PictureBox.BackColor = System.Drawing.Color.Transparent
         Me.FiftyFifty_PictureBox.BackgroundImage = CType(resources.GetObject("FiftyFifty_PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.FiftyFifty_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.FiftyFifty_PictureBox.Location = New System.Drawing.Point(13, 13)
+        Me.FiftyFifty_PictureBox.Location = New System.Drawing.Point(17, 16)
+        Me.FiftyFifty_PictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.FiftyFifty_PictureBox.Name = "FiftyFifty_PictureBox"
-        Me.FiftyFifty_PictureBox.Size = New System.Drawing.Size(72, 50)
+        Me.FiftyFifty_PictureBox.Size = New System.Drawing.Size(96, 62)
         Me.FiftyFifty_PictureBox.TabIndex = 1221
         Me.FiftyFifty_PictureBox.TabStop = False
         '
@@ -1798,9 +1943,10 @@ Partial Class Quiz_Operator
         Me.FiftyFiftyStart_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FiftyFiftyStart_Label.Enabled = False
         Me.FiftyFiftyStart_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FiftyFiftyStart_Label.Location = New System.Drawing.Point(111, 100)
+        Me.FiftyFiftyStart_Label.Location = New System.Drawing.Point(148, 123)
+        Me.FiftyFiftyStart_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.FiftyFiftyStart_Label.Name = "FiftyFiftyStart_Label"
-        Me.FiftyFiftyStart_Label.Size = New System.Drawing.Size(113, 36)
+        Me.FiftyFiftyStart_Label.Size = New System.Drawing.Size(151, 44)
         Me.FiftyFiftyStart_Label.TabIndex = 159
         Me.FiftyFiftyStart_Label.Text = "TAKE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "TWO WRONG"
         Me.FiftyFiftyStart_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1811,9 +1957,10 @@ Partial Class Quiz_Operator
         Me.AremoveFF_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.AremoveFF_Label.Enabled = False
         Me.AremoveFF_Label.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.AremoveFF_Label.Location = New System.Drawing.Point(105, 13)
+        Me.AremoveFF_Label.Location = New System.Drawing.Point(140, 16)
+        Me.AremoveFF_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AremoveFF_Label.Name = "AremoveFF_Label"
-        Me.AremoveFF_Label.Size = New System.Drawing.Size(50, 21)
+        Me.AremoveFF_Label.Size = New System.Drawing.Size(67, 26)
         Me.AremoveFF_Label.TabIndex = 182
         Me.AremoveFF_Label.Text = "   A  "
         Me.AremoveFF_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1824,9 +1971,10 @@ Partial Class Quiz_Operator
         Me.BremoveFF_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BremoveFF_Label.Enabled = False
         Me.BremoveFF_Label.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.BremoveFF_Label.Location = New System.Drawing.Point(174, 13)
+        Me.BremoveFF_Label.Location = New System.Drawing.Point(232, 16)
+        Me.BremoveFF_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.BremoveFF_Label.Name = "BremoveFF_Label"
-        Me.BremoveFF_Label.Size = New System.Drawing.Size(50, 21)
+        Me.BremoveFF_Label.Size = New System.Drawing.Size(67, 26)
         Me.BremoveFF_Label.TabIndex = 183
         Me.BremoveFF_Label.Text = "  B  "
         Me.BremoveFF_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1837,9 +1985,10 @@ Partial Class Quiz_Operator
         Me.CremoveFF_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CremoveFF_Label.Enabled = False
         Me.CremoveFF_Label.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.CremoveFF_Label.Location = New System.Drawing.Point(105, 53)
+        Me.CremoveFF_Label.Location = New System.Drawing.Point(140, 65)
+        Me.CremoveFF_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.CremoveFF_Label.Name = "CremoveFF_Label"
-        Me.CremoveFF_Label.Size = New System.Drawing.Size(50, 21)
+        Me.CremoveFF_Label.Size = New System.Drawing.Size(67, 26)
         Me.CremoveFF_Label.TabIndex = 184
         Me.CremoveFF_Label.Text = "  C  "
         Me.CremoveFF_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1850,9 +1999,10 @@ Partial Class Quiz_Operator
         Me.DremoveFF_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DremoveFF_Label.Enabled = False
         Me.DremoveFF_Label.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.DremoveFF_Label.Location = New System.Drawing.Point(173, 53)
+        Me.DremoveFF_Label.Location = New System.Drawing.Point(231, 65)
+        Me.DremoveFF_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.DremoveFF_Label.Name = "DremoveFF_Label"
-        Me.DremoveFF_Label.Size = New System.Drawing.Size(50, 21)
+        Me.DremoveFF_Label.Size = New System.Drawing.Size(67, 26)
         Me.DremoveFF_Label.TabIndex = 185
         Me.DremoveFF_Label.Text = "  D  "
         Me.DremoveFF_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1875,10 +2025,11 @@ Partial Class Quiz_Operator
         Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.PAFabort_Label)
         Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.PAFready_Label)
         Me.PhoneAfriendLifeline_TabPage.Controls.Add(Me.PAF_PictureBox)
-        Me.PhoneAfriendLifeline_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.PhoneAfriendLifeline_TabPage.Location = New System.Drawing.Point(4, 27)
+        Me.PhoneAfriendLifeline_TabPage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PhoneAfriendLifeline_TabPage.Name = "PhoneAfriendLifeline_TabPage"
-        Me.PhoneAfriendLifeline_TabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.PhoneAfriendLifeline_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.PhoneAfriendLifeline_TabPage.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PhoneAfriendLifeline_TabPage.Size = New System.Drawing.Size(983, 343)
         Me.PhoneAfriendLifeline_TabPage.TabIndex = 1
         Me.PhoneAfriendLifeline_TabPage.Text = "Phone A Friend"
         Me.PhoneAfriendLifeline_TabPage.UseVisualStyleBackColor = True
@@ -1890,9 +2041,10 @@ Partial Class Quiz_Operator
         Me.PAF_1_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PAF_1_Label.Enabled = False
         Me.PAF_1_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PAF_1_Label.Location = New System.Drawing.Point(542, 13)
+        Me.PAF_1_Label.Location = New System.Drawing.Point(723, 16)
+        Me.PAF_1_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PAF_1_Label.Name = "PAF_1_Label"
-        Me.PAF_1_Label.Size = New System.Drawing.Size(88, 18)
+        Me.PAF_1_Label.Size = New System.Drawing.Size(109, 23)
         Me.PAF_1_Label.TabIndex = 1314
         Me.PAF_1_Label.Text = "PAF BLINK"
         '
@@ -1903,9 +2055,10 @@ Partial Class Quiz_Operator
         Me.PAF_0_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PAF_0_Label.Enabled = False
         Me.PAF_0_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PAF_0_Label.Location = New System.Drawing.Point(479, 14)
+        Me.PAF_0_Label.Location = New System.Drawing.Point(639, 17)
+        Me.PAF_0_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PAF_0_Label.Name = "PAF_0_Label"
-        Me.PAF_0_Label.Size = New System.Drawing.Size(55, 18)
+        Me.PAF_0_Label.Size = New System.Drawing.Size(71, 23)
         Me.PAF_0_Label.TabIndex = 1316
         Me.PAF_0_Label.Text = "PAF   /"
         '
@@ -1916,9 +2069,10 @@ Partial Class Quiz_Operator
         Me.PAF_X_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PAF_X_Label.Enabled = False
         Me.PAF_X_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PAF_X_Label.Location = New System.Drawing.Point(639, 13)
+        Me.PAF_X_Label.Location = New System.Drawing.Point(852, 16)
+        Me.PAF_X_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PAF_X_Label.Name = "PAF_X_Label"
-        Me.PAF_X_Label.Size = New System.Drawing.Size(68, 18)
+        Me.PAF_X_Label.Size = New System.Drawing.Size(86, 23)
         Me.PAF_X_Label.TabIndex = 1315
         Me.PAF_X_Label.Text = "PAF  (Х)"
         '
@@ -1928,9 +2082,10 @@ Partial Class Quiz_Operator
         Me.Label53.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label53.Enabled = False
         Me.Label53.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label53.Location = New System.Drawing.Point(505, 57)
+        Me.Label53.Location = New System.Drawing.Point(673, 70)
+        Me.Label53.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(218, 18)
+        Me.Label53.Size = New System.Drawing.Size(291, 22)
         Me.Label53.TabIndex = 1308
         Me.Label53.Text = "Friend 1"
         Me.Label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1941,9 +2096,10 @@ Partial Class Quiz_Operator
         Me.Label54.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label54.Enabled = False
         Me.Label54.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label54.Location = New System.Drawing.Point(478, 57)
+        Me.Label54.Location = New System.Drawing.Point(637, 70)
+        Me.Label54.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(23, 18)
+        Me.Label54.Size = New System.Drawing.Size(31, 22)
         Me.Label54.TabIndex = 1309
         Me.Label54.Text = "1"
         Me.Label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1954,9 +2110,10 @@ Partial Class Quiz_Operator
         Me.Label55.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label55.Enabled = False
         Me.Label55.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label55.Location = New System.Drawing.Point(505, 79)
+        Me.Label55.Location = New System.Drawing.Point(673, 97)
+        Me.Label55.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(218, 18)
+        Me.Label55.Size = New System.Drawing.Size(291, 22)
         Me.Label55.TabIndex = 1310
         Me.Label55.Text = "Friend 2"
         Me.Label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1967,9 +2124,10 @@ Partial Class Quiz_Operator
         Me.Label88.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label88.Enabled = False
         Me.Label88.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label88.Location = New System.Drawing.Point(478, 79)
+        Me.Label88.Location = New System.Drawing.Point(637, 97)
+        Me.Label88.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label88.Name = "Label88"
-        Me.Label88.Size = New System.Drawing.Size(23, 18)
+        Me.Label88.Size = New System.Drawing.Size(31, 22)
         Me.Label88.TabIndex = 1311
         Me.Label88.Text = "2"
         Me.Label88.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1980,9 +2138,10 @@ Partial Class Quiz_Operator
         Me.Label89.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label89.Enabled = False
         Me.Label89.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label89.Location = New System.Drawing.Point(505, 101)
+        Me.Label89.Location = New System.Drawing.Point(673, 124)
+        Me.Label89.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label89.Name = "Label89"
-        Me.Label89.Size = New System.Drawing.Size(218, 18)
+        Me.Label89.Size = New System.Drawing.Size(291, 22)
         Me.Label89.TabIndex = 1312
         Me.Label89.Text = "Friend 3"
         Me.Label89.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1993,9 +2152,10 @@ Partial Class Quiz_Operator
         Me.Label90.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label90.Enabled = False
         Me.Label90.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label90.Location = New System.Drawing.Point(478, 101)
+        Me.Label90.Location = New System.Drawing.Point(637, 124)
+        Me.Label90.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label90.Name = "Label90"
-        Me.Label90.Size = New System.Drawing.Size(23, 18)
+        Me.Label90.Size = New System.Drawing.Size(31, 22)
         Me.Label90.TabIndex = 1313
         Me.Label90.Text = "3"
         Me.Label90.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2006,9 +2166,10 @@ Partial Class Quiz_Operator
         Me.Label92.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label92.Enabled = False
         Me.Label92.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label92.Location = New System.Drawing.Point(230, 13)
+        Me.Label92.Location = New System.Drawing.Point(307, 16)
+        Me.Label92.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label92.Name = "Label92"
-        Me.Label92.Size = New System.Drawing.Size(116, 37)
+        Me.Label92.Size = New System.Drawing.Size(155, 46)
         Me.Label92.TabIndex = 1224
         Me.Label92.Text = "PAF FRIENDS HIDE"
         Me.Label92.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2019,9 +2180,10 @@ Partial Class Quiz_Operator
         Me.Label93.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label93.Enabled = False
         Me.Label93.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label93.Location = New System.Drawing.Point(91, 13)
+        Me.Label93.Location = New System.Drawing.Point(121, 16)
+        Me.Label93.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label93.Name = "Label93"
-        Me.Label93.Size = New System.Drawing.Size(116, 37)
+        Me.Label93.Size = New System.Drawing.Size(155, 46)
         Me.Label93.TabIndex = 1223
         Me.Label93.Text = "PAF FRIENDS SHOW"
         Me.Label93.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2032,9 +2194,10 @@ Partial Class Quiz_Operator
         Me.PAFstart_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PAFstart_Label.Enabled = False
         Me.PAFstart_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PAFstart_Label.Location = New System.Drawing.Point(91, 126)
+        Me.PAFstart_Label.Location = New System.Drawing.Point(121, 155)
+        Me.PAFstart_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PAFstart_Label.Name = "PAFstart_Label"
-        Me.PAFstart_Label.Size = New System.Drawing.Size(116, 43)
+        Me.PAFstart_Label.Size = New System.Drawing.Size(155, 53)
         Me.PAFstart_Label.TabIndex = 160
         Me.PAFstart_Label.Text = "PAF COUNTDOWN"
         Me.PAFstart_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2043,9 +2206,10 @@ Partial Class Quiz_Operator
         '
         Me.PAFsec_TextBox.Enabled = False
         Me.PAFsec_TextBox.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PAFsec_TextBox.Location = New System.Drawing.Point(94, 176)
+        Me.PAFsec_TextBox.Location = New System.Drawing.Point(125, 217)
+        Me.PAFsec_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PAFsec_TextBox.Name = "PAFsec_TextBox"
-        Me.PAFsec_TextBox.Size = New System.Drawing.Size(66, 35)
+        Me.PAFsec_TextBox.Size = New System.Drawing.Size(87, 42)
         Me.PAFsec_TextBox.TabIndex = 195
         Me.PAFsec_TextBox.Text = "30"
         Me.PAFsec_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -2056,9 +2220,10 @@ Partial Class Quiz_Operator
         Me.PAFabort_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PAFabort_Label.Enabled = False
         Me.PAFabort_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PAFabort_Label.Location = New System.Drawing.Point(91, 231)
+        Me.PAFabort_Label.Location = New System.Drawing.Point(121, 284)
+        Me.PAFabort_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PAFabort_Label.Name = "PAFabort_Label"
-        Me.PAFabort_Label.Size = New System.Drawing.Size(120, 30)
+        Me.PAFabort_Label.Size = New System.Drawing.Size(160, 37)
         Me.PAFabort_Label.TabIndex = 206
         Me.PAFabort_Label.Text = "PAF ABORT"
         Me.PAFabort_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2069,9 +2234,10 @@ Partial Class Quiz_Operator
         Me.PAFready_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PAFready_Label.Enabled = False
         Me.PAFready_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PAFready_Label.Location = New System.Drawing.Point(91, 67)
+        Me.PAFready_Label.Location = New System.Drawing.Point(121, 82)
+        Me.PAFready_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PAFready_Label.Name = "PAFready_Label"
-        Me.PAFready_Label.Size = New System.Drawing.Size(102, 37)
+        Me.PAFready_Label.Size = New System.Drawing.Size(136, 46)
         Me.PAFready_Label.TabIndex = 250
         Me.PAFready_Label.Text = "PAF INVOKE CALL"
         Me.PAFready_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2081,9 +2247,10 @@ Partial Class Quiz_Operator
         Me.PAF_PictureBox.BackColor = System.Drawing.Color.Transparent
         Me.PAF_PictureBox.BackgroundImage = CType(resources.GetObject("PAF_PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.PAF_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PAF_PictureBox.Location = New System.Drawing.Point(13, 13)
+        Me.PAF_PictureBox.Location = New System.Drawing.Point(17, 16)
+        Me.PAF_PictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PAF_PictureBox.Name = "PAF_PictureBox"
-        Me.PAF_PictureBox.Size = New System.Drawing.Size(72, 50)
+        Me.PAF_PictureBox.Size = New System.Drawing.Size(96, 62)
         Me.PAF_PictureBox.TabIndex = 1222
         Me.PAF_PictureBox.TabStop = False
         '
@@ -2107,10 +2274,11 @@ Partial Class Quiz_Operator
         Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.D_pub)
         Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.ataVoteTime_TextBox)
         Me.AskTheAudienceLifeline_TabPage.Controls.Add(Me.ATAready_Label)
-        Me.AskTheAudienceLifeline_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.AskTheAudienceLifeline_TabPage.Location = New System.Drawing.Point(4, 27)
+        Me.AskTheAudienceLifeline_TabPage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.AskTheAudienceLifeline_TabPage.Name = "AskTheAudienceLifeline_TabPage"
-        Me.AskTheAudienceLifeline_TabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.AskTheAudienceLifeline_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.AskTheAudienceLifeline_TabPage.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.AskTheAudienceLifeline_TabPage.Size = New System.Drawing.Size(983, 343)
         Me.AskTheAudienceLifeline_TabPage.TabIndex = 2
         Me.AskTheAudienceLifeline_TabPage.Text = "Ask The Audience"
         Me.AskTheAudienceLifeline_TabPage.UseVisualStyleBackColor = True
@@ -2120,9 +2288,10 @@ Partial Class Quiz_Operator
         Me.ATA_PictureBox.BackColor = System.Drawing.Color.Transparent
         Me.ATA_PictureBox.BackgroundImage = CType(resources.GetObject("ATA_PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.ATA_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ATA_PictureBox.Location = New System.Drawing.Point(13, 13)
+        Me.ATA_PictureBox.Location = New System.Drawing.Point(17, 16)
+        Me.ATA_PictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ATA_PictureBox.Name = "ATA_PictureBox"
-        Me.ATA_PictureBox.Size = New System.Drawing.Size(72, 50)
+        Me.ATA_PictureBox.Size = New System.Drawing.Size(96, 62)
         Me.ATA_PictureBox.TabIndex = 1223
         Me.ATA_PictureBox.TabStop = False
         '
@@ -2133,9 +2302,10 @@ Partial Class Quiz_Operator
         Me.ATA_0_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ATA_0_Label.Enabled = False
         Me.ATA_0_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ATA_0_Label.Location = New System.Drawing.Point(494, 17)
+        Me.ATA_0_Label.Location = New System.Drawing.Point(659, 21)
+        Me.ATA_0_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.ATA_0_Label.Name = "ATA_0_Label"
-        Me.ATA_0_Label.Size = New System.Drawing.Size(52, 18)
+        Me.ATA_0_Label.Size = New System.Drawing.Size(69, 23)
         Me.ATA_0_Label.TabIndex = 190
         Me.ATA_0_Label.Text = "ATA   /"
         '
@@ -2145,9 +2315,10 @@ Partial Class Quiz_Operator
         Me.ATAstart_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ATAstart_Label.Enabled = False
         Me.ATAstart_Label.Font = New System.Drawing.Font("Arial", 11.5!)
-        Me.ATAstart_Label.Location = New System.Drawing.Point(94, 51)
+        Me.ATAstart_Label.Location = New System.Drawing.Point(125, 63)
+        Me.ATAstart_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.ATAstart_Label.Name = "ATAstart_Label"
-        Me.ATAstart_Label.Size = New System.Drawing.Size(95, 30)
+        Me.ATAstart_Label.Size = New System.Drawing.Size(127, 37)
         Me.ATAstart_Label.TabIndex = 161
         Me.ATAstart_Label.Text = "ATA  VOTE"
         Me.ATAstart_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2159,9 +2330,10 @@ Partial Class Quiz_Operator
         Me.ATA_1_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ATA_1_Label.Enabled = False
         Me.ATA_1_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ATA_1_Label.Location = New System.Drawing.Point(557, 16)
+        Me.ATA_1_Label.Location = New System.Drawing.Point(743, 20)
+        Me.ATA_1_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.ATA_1_Label.Name = "ATA_1_Label"
-        Me.ATA_1_Label.Size = New System.Drawing.Size(85, 18)
+        Me.ATA_1_Label.Size = New System.Drawing.Size(107, 23)
         Me.ATA_1_Label.TabIndex = 184
         Me.ATA_1_Label.Text = "ATA BLINK"
         '
@@ -2171,9 +2343,10 @@ Partial Class Quiz_Operator
         Me.ATAendVote_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ATAendVote_Label.Enabled = False
         Me.ATAendVote_Label.Font = New System.Drawing.Font("Arial", 11.5!)
-        Me.ATAendVote_Label.Location = New System.Drawing.Point(94, 93)
+        Me.ATAendVote_Label.Location = New System.Drawing.Point(125, 114)
+        Me.ATAendVote_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.ATAendVote_Label.Name = "ATAendVote_Label"
-        Me.ATAendVote_Label.Size = New System.Drawing.Size(95, 30)
+        Me.ATAendVote_Label.Size = New System.Drawing.Size(127, 37)
         Me.ATAendVote_Label.TabIndex = 1248
         Me.ATAendVote_Label.Text = "END VOTE"
         Me.ATAendVote_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2185,9 +2358,10 @@ Partial Class Quiz_Operator
         Me.Label94.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label94.Enabled = False
         Me.Label94.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label94.Location = New System.Drawing.Point(88, 139)
+        Me.Label94.Location = New System.Drawing.Point(117, 171)
+        Me.Label94.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label94.Name = "Label94"
-        Me.Label94.Size = New System.Drawing.Size(23, 18)
+        Me.Label94.Size = New System.Drawing.Size(29, 23)
         Me.Label94.TabIndex = 187
         Me.Label94.Text = "A:"
         '
@@ -2198,9 +2372,10 @@ Partial Class Quiz_Operator
         Me.AutoEndATA_CheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate
         Me.AutoEndATA_CheckBox.Enabled = False
         Me.AutoEndATA_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AutoEndATA_CheckBox.Location = New System.Drawing.Point(255, 14)
+        Me.AutoEndATA_CheckBox.Location = New System.Drawing.Point(340, 17)
+        Me.AutoEndATA_CheckBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.AutoEndATA_CheckBox.Name = "AutoEndATA_CheckBox"
-        Me.AutoEndATA_CheckBox.Size = New System.Drawing.Size(60, 28)
+        Me.AutoEndATA_CheckBox.Size = New System.Drawing.Size(75, 34)
         Me.AutoEndATA_CheckBox.TabIndex = 1247
         Me.AutoEndATA_CheckBox.Text = "AutoEnd" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ATA"
         Me.AutoEndATA_CheckBox.UseVisualStyleBackColor = True
@@ -2212,9 +2387,10 @@ Partial Class Quiz_Operator
         Me.ATA_X_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ATA_X_Label.Enabled = False
         Me.ATA_X_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ATA_X_Label.Location = New System.Drawing.Point(648, 16)
+        Me.ATA_X_Label.Location = New System.Drawing.Point(864, 20)
+        Me.ATA_X_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.ATA_X_Label.Name = "ATA_X_Label"
-        Me.ATA_X_Label.Size = New System.Drawing.Size(65, 18)
+        Me.ATA_X_Label.Size = New System.Drawing.Size(84, 23)
         Me.ATA_X_Label.TabIndex = 188
         Me.ATA_X_Label.Text = "ATA  (Х)"
         '
@@ -2225,9 +2401,10 @@ Partial Class Quiz_Operator
         Me.Label95.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label95.Enabled = False
         Me.Label95.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label95.Location = New System.Drawing.Point(88, 169)
+        Me.Label95.Location = New System.Drawing.Point(117, 208)
+        Me.Label95.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label95.Name = "Label95"
-        Me.Label95.Size = New System.Drawing.Size(23, 18)
+        Me.Label95.Size = New System.Drawing.Size(29, 23)
         Me.Label95.TabIndex = 188
         Me.Label95.Text = "B:"
         '
@@ -2238,9 +2415,10 @@ Partial Class Quiz_Operator
         Me.Label96.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label96.Enabled = False
         Me.Label96.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label96.Location = New System.Drawing.Point(88, 198)
+        Me.Label96.Location = New System.Drawing.Point(117, 244)
+        Me.Label96.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label96.Name = "Label96"
-        Me.Label96.Size = New System.Drawing.Size(24, 18)
+        Me.Label96.Size = New System.Drawing.Size(30, 23)
         Me.Label96.TabIndex = 189
         Me.Label96.Text = "C:"
         '
@@ -2250,9 +2428,10 @@ Partial Class Quiz_Operator
         Me.Label97.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Label97.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label97.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label97.Location = New System.Drawing.Point(88, 229)
+        Me.Label97.Location = New System.Drawing.Point(117, 282)
+        Me.Label97.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label97.Name = "Label97"
-        Me.Label97.Size = New System.Drawing.Size(24, 18)
+        Me.Label97.Size = New System.Drawing.Size(30, 23)
         Me.Label97.TabIndex = 190
         Me.Label97.Text = "D:"
         '
@@ -2260,9 +2439,10 @@ Partial Class Quiz_Operator
         '
         Me.A_pub.Enabled = False
         Me.A_pub.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.A_pub.Location = New System.Drawing.Point(116, 136)
+        Me.A_pub.Location = New System.Drawing.Point(155, 167)
+        Me.A_pub.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.A_pub.Name = "A_pub"
-        Me.A_pub.Size = New System.Drawing.Size(73, 24)
+        Me.A_pub.Size = New System.Drawing.Size(96, 29)
         Me.A_pub.TabIndex = 191
         Me.A_pub.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -2270,9 +2450,10 @@ Partial Class Quiz_Operator
         '
         Me.B_pub.Enabled = False
         Me.B_pub.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.B_pub.Location = New System.Drawing.Point(116, 166)
+        Me.B_pub.Location = New System.Drawing.Point(155, 204)
+        Me.B_pub.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.B_pub.Name = "B_pub"
-        Me.B_pub.Size = New System.Drawing.Size(73, 24)
+        Me.B_pub.Size = New System.Drawing.Size(96, 29)
         Me.B_pub.TabIndex = 192
         Me.B_pub.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -2280,9 +2461,10 @@ Partial Class Quiz_Operator
         '
         Me.C_pub.Enabled = False
         Me.C_pub.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.C_pub.Location = New System.Drawing.Point(116, 196)
+        Me.C_pub.Location = New System.Drawing.Point(155, 241)
+        Me.C_pub.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.C_pub.Name = "C_pub"
-        Me.C_pub.Size = New System.Drawing.Size(73, 24)
+        Me.C_pub.Size = New System.Drawing.Size(96, 29)
         Me.C_pub.TabIndex = 193
         Me.C_pub.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -2292,9 +2474,10 @@ Partial Class Quiz_Operator
         Me.ShowHideAudienceGraph_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ShowHideAudienceGraph_Label.Enabled = False
         Me.ShowHideAudienceGraph_Label.Font = New System.Drawing.Font("Arial", 11.5!)
-        Me.ShowHideAudienceGraph_Label.Location = New System.Drawing.Point(207, 168)
+        Me.ShowHideAudienceGraph_Label.Location = New System.Drawing.Point(276, 207)
+        Me.ShowHideAudienceGraph_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.ShowHideAudienceGraph_Label.Name = "ShowHideAudienceGraph_Label"
-        Me.ShowHideAudienceGraph_Label.Size = New System.Drawing.Size(64, 80)
+        Me.ShowHideAudienceGraph_Label.Size = New System.Drawing.Size(85, 98)
         Me.ShowHideAudienceGraph_Label.TabIndex = 259
         Me.ShowHideAudienceGraph_Label.Text = "HIDE/ SHOW GPI Graph"
         Me.ShowHideAudienceGraph_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2303,9 +2486,10 @@ Partial Class Quiz_Operator
         '
         Me.D_pub.Enabled = False
         Me.D_pub.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.D_pub.Location = New System.Drawing.Point(116, 226)
+        Me.D_pub.Location = New System.Drawing.Point(155, 278)
+        Me.D_pub.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.D_pub.Name = "D_pub"
-        Me.D_pub.Size = New System.Drawing.Size(73, 24)
+        Me.D_pub.Size = New System.Drawing.Size(96, 29)
         Me.D_pub.TabIndex = 194
         Me.D_pub.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -2313,9 +2497,10 @@ Partial Class Quiz_Operator
         '
         Me.ataVoteTime_TextBox.Enabled = False
         Me.ataVoteTime_TextBox.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ataVoteTime_TextBox.Location = New System.Drawing.Point(210, 16)
+        Me.ataVoteTime_TextBox.Location = New System.Drawing.Point(280, 20)
+        Me.ataVoteTime_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ataVoteTime_TextBox.Name = "ataVoteTime_TextBox"
-        Me.ataVoteTime_TextBox.Size = New System.Drawing.Size(36, 25)
+        Me.ataVoteTime_TextBox.Size = New System.Drawing.Size(47, 29)
         Me.ataVoteTime_TextBox.TabIndex = 208
         Me.ataVoteTime_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -2325,9 +2510,10 @@ Partial Class Quiz_Operator
         Me.ATAready_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ATAready_Label.Enabled = False
         Me.ATAready_Label.Font = New System.Drawing.Font("Arial", 11.5!)
-        Me.ATAready_Label.Location = New System.Drawing.Point(94, 13)
+        Me.ATAready_Label.Location = New System.Drawing.Point(125, 16)
+        Me.ATAready_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.ATAready_Label.Name = "ATAready_Label"
-        Me.ATAready_Label.Size = New System.Drawing.Size(95, 29)
+        Me.ATAready_Label.Size = New System.Drawing.Size(127, 36)
         Me.ATAready_Label.TabIndex = 249
         Me.ATAready_Label.Text = "ATA  Ready"
         Me.ATAready_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2339,10 +2525,11 @@ Partial Class Quiz_Operator
         Me.SwitchTheQuestionLifeline_TabPage.Controls.Add(Me.STQ_X_Label)
         Me.SwitchTheQuestionLifeline_TabPage.Controls.Add(Me.SwitchTheQuestion_Label)
         Me.SwitchTheQuestionLifeline_TabPage.Controls.Add(Me.SwitchQ_PictureBox)
-        Me.SwitchTheQuestionLifeline_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.SwitchTheQuestionLifeline_TabPage.Location = New System.Drawing.Point(4, 27)
+        Me.SwitchTheQuestionLifeline_TabPage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SwitchTheQuestionLifeline_TabPage.Name = "SwitchTheQuestionLifeline_TabPage"
-        Me.SwitchTheQuestionLifeline_TabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.SwitchTheQuestionLifeline_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.SwitchTheQuestionLifeline_TabPage.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SwitchTheQuestionLifeline_TabPage.Size = New System.Drawing.Size(983, 343)
         Me.SwitchTheQuestionLifeline_TabPage.TabIndex = 3
         Me.SwitchTheQuestionLifeline_TabPage.Text = "Switch The Question"
         Me.SwitchTheQuestionLifeline_TabPage.UseVisualStyleBackColor = True
@@ -2354,9 +2541,10 @@ Partial Class Quiz_Operator
         Me.STQ_0_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.STQ_0_Label.Enabled = False
         Me.STQ_0_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.STQ_0_Label.Location = New System.Drawing.Point(482, 18)
+        Me.STQ_0_Label.Location = New System.Drawing.Point(643, 22)
+        Me.STQ_0_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.STQ_0_Label.Name = "STQ_0_Label"
-        Me.STQ_0_Label.Size = New System.Drawing.Size(66, 18)
+        Me.STQ_0_Label.Size = New System.Drawing.Size(89, 23)
         Me.STQ_0_Label.TabIndex = 193
         Me.STQ_0_Label.Text = "STQ ( / )"
         '
@@ -2367,9 +2555,10 @@ Partial Class Quiz_Operator
         Me.STQ_1_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.STQ_1_Label.Enabled = False
         Me.STQ_1_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.STQ_1_Label.Location = New System.Drawing.Point(554, 18)
+        Me.STQ_1_Label.Location = New System.Drawing.Point(739, 22)
+        Me.STQ_1_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.STQ_1_Label.Name = "STQ_1_Label"
-        Me.STQ_1_Label.Size = New System.Drawing.Size(89, 18)
+        Me.STQ_1_Label.Size = New System.Drawing.Size(113, 23)
         Me.STQ_1_Label.TabIndex = 185
         Me.STQ_1_Label.Text = "STQ BLINK"
         '
@@ -2380,9 +2569,10 @@ Partial Class Quiz_Operator
         Me.STQ_X_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.STQ_X_Label.Enabled = False
         Me.STQ_X_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.STQ_X_Label.Location = New System.Drawing.Point(649, 18)
+        Me.STQ_X_Label.Location = New System.Drawing.Point(865, 22)
+        Me.STQ_X_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.STQ_X_Label.Name = "STQ_X_Label"
-        Me.STQ_X_Label.Size = New System.Drawing.Size(65, 18)
+        Me.STQ_X_Label.Size = New System.Drawing.Size(84, 23)
         Me.STQ_X_Label.TabIndex = 189
         Me.STQ_X_Label.Text = "STQ (Х)"
         '
@@ -2393,9 +2583,10 @@ Partial Class Quiz_Operator
         Me.SwitchTheQuestion_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.SwitchTheQuestion_Label.Enabled = False
         Me.SwitchTheQuestion_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SwitchTheQuestion_Label.Location = New System.Drawing.Point(96, 14)
+        Me.SwitchTheQuestion_Label.Location = New System.Drawing.Point(128, 17)
+        Me.SwitchTheQuestion_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.SwitchTheQuestion_Label.Name = "SwitchTheQuestion_Label"
-        Me.SwitchTheQuestion_Label.Size = New System.Drawing.Size(108, 36)
+        Me.SwitchTheQuestion_Label.Size = New System.Drawing.Size(137, 46)
         Me.SwitchTheQuestion_Label.TabIndex = 162
         Me.SwitchTheQuestion_Label.Text = "SWITCH THE " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "QUESTION"
         '
@@ -2404,9 +2595,10 @@ Partial Class Quiz_Operator
         Me.SwitchQ_PictureBox.BackColor = System.Drawing.Color.Transparent
         Me.SwitchQ_PictureBox.BackgroundImage = CType(resources.GetObject("SwitchQ_PictureBox.BackgroundImage"), System.Drawing.Image)
         Me.SwitchQ_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.SwitchQ_PictureBox.Location = New System.Drawing.Point(13, 13)
+        Me.SwitchQ_PictureBox.Location = New System.Drawing.Point(17, 16)
+        Me.SwitchQ_PictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SwitchQ_PictureBox.Name = "SwitchQ_PictureBox"
-        Me.SwitchQ_PictureBox.Size = New System.Drawing.Size(72, 50)
+        Me.SwitchQ_PictureBox.Size = New System.Drawing.Size(96, 62)
         Me.SwitchQ_PictureBox.TabIndex = 1244
         Me.SwitchQ_PictureBox.TabStop = False
         '
@@ -2422,9 +2614,10 @@ Partial Class Quiz_Operator
         Me.DoubleDipLifeline_TabPage.Controls.Add(Me.DoubleDipFinalD_Button)
         Me.DoubleDipLifeline_TabPage.Controls.Add(Me.DoubleDipCancel_Label)
         Me.DoubleDipLifeline_TabPage.Controls.Add(Me.DoubleDipReady_Label)
-        Me.DoubleDipLifeline_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.DoubleDipLifeline_TabPage.Location = New System.Drawing.Point(4, 27)
+        Me.DoubleDipLifeline_TabPage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DoubleDipLifeline_TabPage.Name = "DoubleDipLifeline_TabPage"
-        Me.DoubleDipLifeline_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.DoubleDipLifeline_TabPage.Size = New System.Drawing.Size(983, 343)
         Me.DoubleDipLifeline_TabPage.TabIndex = 5
         Me.DoubleDipLifeline_TabPage.Text = "DoubleDip"
         Me.DoubleDipLifeline_TabPage.UseVisualStyleBackColor = True
@@ -2436,9 +2629,10 @@ Partial Class Quiz_Operator
         Me.DDIP_1_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DDIP_1_Label.Enabled = False
         Me.DDIP_1_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DDIP_1_Label.Location = New System.Drawing.Point(620, 50)
+        Me.DDIP_1_Label.Location = New System.Drawing.Point(827, 62)
+        Me.DDIP_1_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.DDIP_1_Label.Name = "DDIP_1_Label"
-        Me.DDIP_1_Label.Size = New System.Drawing.Size(95, 18)
+        Me.DDIP_1_Label.Size = New System.Drawing.Size(119, 23)
         Me.DDIP_1_Label.TabIndex = 1317
         Me.DDIP_1_Label.Text = "DDIP BLINK"
         '
@@ -2449,9 +2643,10 @@ Partial Class Quiz_Operator
         Me.DDIP_0_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DDIP_0_Label.Enabled = False
         Me.DDIP_0_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DDIP_0_Label.Location = New System.Drawing.Point(620, 22)
+        Me.DDIP_0_Label.Location = New System.Drawing.Point(827, 27)
+        Me.DDIP_0_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.DDIP_0_Label.Name = "DDIP_0_Label"
-        Me.DDIP_0_Label.Size = New System.Drawing.Size(62, 18)
+        Me.DDIP_0_Label.Size = New System.Drawing.Size(81, 23)
         Me.DDIP_0_Label.TabIndex = 1319
         Me.DDIP_0_Label.Text = "DDIP   /"
         '
@@ -2462,9 +2657,10 @@ Partial Class Quiz_Operator
         Me.DDIP_X_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DDIP_X_Label.Enabled = False
         Me.DDIP_X_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DDIP_X_Label.Location = New System.Drawing.Point(620, 80)
+        Me.DDIP_X_Label.Location = New System.Drawing.Point(827, 98)
+        Me.DDIP_X_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.DDIP_X_Label.Name = "DDIP_X_Label"
-        Me.DDIP_X_Label.Size = New System.Drawing.Size(75, 18)
+        Me.DDIP_X_Label.Size = New System.Drawing.Size(96, 23)
         Me.DDIP_X_Label.TabIndex = 1318
         Me.DDIP_X_Label.Text = "DDIP  (Х)"
         '
@@ -2476,9 +2672,10 @@ Partial Class Quiz_Operator
         Me.DoubleDipRevealCorrect_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.DoubleDipRevealCorrect_Button.Font = New System.Drawing.Font("Arial Narrow", 12.0!)
         Me.DoubleDipRevealCorrect_Button.ForeColor = System.Drawing.Color.White
-        Me.DoubleDipRevealCorrect_Button.Location = New System.Drawing.Point(174, 110)
+        Me.DoubleDipRevealCorrect_Button.Location = New System.Drawing.Point(232, 135)
+        Me.DoubleDipRevealCorrect_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DoubleDipRevealCorrect_Button.Name = "DoubleDipRevealCorrect_Button"
-        Me.DoubleDipRevealCorrect_Button.Size = New System.Drawing.Size(132, 32)
+        Me.DoubleDipRevealCorrect_Button.Size = New System.Drawing.Size(176, 39)
         Me.DoubleDipRevealCorrect_Button.TabIndex = 256
         Me.DoubleDipRevealCorrect_Button.Text = "DoubleDip Correct"
         Me.DoubleDipRevealCorrect_Button.UseVisualStyleBackColor = False
@@ -2491,9 +2688,10 @@ Partial Class Quiz_Operator
         Me.DoubleDipFinalA_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.DoubleDipFinalA_Button.Font = New System.Drawing.Font("Arial", 11.75!)
         Me.DoubleDipFinalA_Button.ForeColor = System.Drawing.Color.Black
-        Me.DoubleDipFinalA_Button.Location = New System.Drawing.Point(174, 25)
+        Me.DoubleDipFinalA_Button.Location = New System.Drawing.Point(232, 31)
+        Me.DoubleDipFinalA_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DoubleDipFinalA_Button.Name = "DoubleDipFinalA_Button"
-        Me.DoubleDipFinalA_Button.Size = New System.Drawing.Size(147, 25)
+        Me.DoubleDipFinalA_Button.Size = New System.Drawing.Size(196, 31)
         Me.DoubleDipFinalA_Button.TabIndex = 252
         Me.DoubleDipFinalA_Button.Text = "DoubleDip Final A"
         Me.DoubleDipFinalA_Button.UseVisualStyleBackColor = False
@@ -2506,9 +2704,10 @@ Partial Class Quiz_Operator
         Me.DoubleDipFinalB_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.DoubleDipFinalB_Button.Font = New System.Drawing.Font("Arial", 11.75!)
         Me.DoubleDipFinalB_Button.ForeColor = System.Drawing.Color.Black
-        Me.DoubleDipFinalB_Button.Location = New System.Drawing.Point(331, 25)
+        Me.DoubleDipFinalB_Button.Location = New System.Drawing.Point(441, 31)
+        Me.DoubleDipFinalB_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DoubleDipFinalB_Button.Name = "DoubleDipFinalB_Button"
-        Me.DoubleDipFinalB_Button.Size = New System.Drawing.Size(147, 25)
+        Me.DoubleDipFinalB_Button.Size = New System.Drawing.Size(196, 31)
         Me.DoubleDipFinalB_Button.TabIndex = 253
         Me.DoubleDipFinalB_Button.Text = "DoubleDip Final B"
         Me.DoubleDipFinalB_Button.UseVisualStyleBackColor = False
@@ -2521,9 +2720,10 @@ Partial Class Quiz_Operator
         Me.DoubleDipFinalC_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.DoubleDipFinalC_Button.Font = New System.Drawing.Font("Arial", 11.75!)
         Me.DoubleDipFinalC_Button.ForeColor = System.Drawing.Color.Black
-        Me.DoubleDipFinalC_Button.Location = New System.Drawing.Point(174, 59)
+        Me.DoubleDipFinalC_Button.Location = New System.Drawing.Point(232, 73)
+        Me.DoubleDipFinalC_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DoubleDipFinalC_Button.Name = "DoubleDipFinalC_Button"
-        Me.DoubleDipFinalC_Button.Size = New System.Drawing.Size(147, 25)
+        Me.DoubleDipFinalC_Button.Size = New System.Drawing.Size(196, 31)
         Me.DoubleDipFinalC_Button.TabIndex = 254
         Me.DoubleDipFinalC_Button.Text = "DoubleDip Final C"
         Me.DoubleDipFinalC_Button.UseVisualStyleBackColor = False
@@ -2536,9 +2736,10 @@ Partial Class Quiz_Operator
         Me.DoubleDipFinalD_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.DoubleDipFinalD_Button.Font = New System.Drawing.Font("Arial", 11.75!)
         Me.DoubleDipFinalD_Button.ForeColor = System.Drawing.Color.Black
-        Me.DoubleDipFinalD_Button.Location = New System.Drawing.Point(331, 60)
+        Me.DoubleDipFinalD_Button.Location = New System.Drawing.Point(441, 74)
+        Me.DoubleDipFinalD_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DoubleDipFinalD_Button.Name = "DoubleDipFinalD_Button"
-        Me.DoubleDipFinalD_Button.Size = New System.Drawing.Size(147, 25)
+        Me.DoubleDipFinalD_Button.Size = New System.Drawing.Size(196, 31)
         Me.DoubleDipFinalD_Button.TabIndex = 255
         Me.DoubleDipFinalD_Button.Text = "DoubleDip Final D"
         Me.DoubleDipFinalD_Button.UseVisualStyleBackColor = False
@@ -2549,9 +2750,10 @@ Partial Class Quiz_Operator
         Me.DoubleDipCancel_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DoubleDipCancel_Label.Enabled = False
         Me.DoubleDipCancel_Label.Font = New System.Drawing.Font("Arial", 11.5!)
-        Me.DoubleDipCancel_Label.Location = New System.Drawing.Point(24, 110)
+        Me.DoubleDipCancel_Label.Location = New System.Drawing.Point(32, 135)
+        Me.DoubleDipCancel_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.DoubleDipCancel_Label.Name = "DoubleDipCancel_Label"
-        Me.DoubleDipCancel_Label.Size = New System.Drawing.Size(126, 47)
+        Me.DoubleDipCancel_Label.Size = New System.Drawing.Size(168, 58)
         Me.DoubleDipCancel_Label.TabIndex = 251
         Me.DoubleDipCancel_Label.Text = "Double Dip  Cancel"
         Me.DoubleDipCancel_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2562,27 +2764,30 @@ Partial Class Quiz_Operator
         Me.DoubleDipReady_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DoubleDipReady_Label.Enabled = False
         Me.DoubleDipReady_Label.Font = New System.Drawing.Font("Arial", 11.5!)
-        Me.DoubleDipReady_Label.Location = New System.Drawing.Point(24, 25)
+        Me.DoubleDipReady_Label.Location = New System.Drawing.Point(32, 31)
+        Me.DoubleDipReady_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.DoubleDipReady_Label.Name = "DoubleDipReady_Label"
-        Me.DoubleDipReady_Label.Size = New System.Drawing.Size(126, 47)
+        Me.DoubleDipReady_Label.Size = New System.Drawing.Size(168, 58)
         Me.DoubleDipReady_Label.TabIndex = 250
         Me.DoubleDipReady_Label.Text = "Double Dip  Ready"
         Me.DoubleDipReady_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'AskTheExpertLifeline_TabPage
         '
-        Me.AskTheExpertLifeline_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.AskTheExpertLifeline_TabPage.Location = New System.Drawing.Point(4, 27)
+        Me.AskTheExpertLifeline_TabPage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.AskTheExpertLifeline_TabPage.Name = "AskTheExpertLifeline_TabPage"
-        Me.AskTheExpertLifeline_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.AskTheExpertLifeline_TabPage.Size = New System.Drawing.Size(983, 343)
         Me.AskTheExpertLifeline_TabPage.TabIndex = 6
         Me.AskTheExpertLifeline_TabPage.Text = "Ask Expert"
         Me.AskTheExpertLifeline_TabPage.UseVisualStyleBackColor = True
         '
         'ThreeAudienceMemberLifeline_TabPage
         '
-        Me.ThreeAudienceMemberLifeline_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.ThreeAudienceMemberLifeline_TabPage.Location = New System.Drawing.Point(4, 27)
+        Me.ThreeAudienceMemberLifeline_TabPage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ThreeAudienceMemberLifeline_TabPage.Name = "ThreeAudienceMemberLifeline_TabPage"
-        Me.ThreeAudienceMemberLifeline_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.ThreeAudienceMemberLifeline_TabPage.Size = New System.Drawing.Size(983, 343)
         Me.ThreeAudienceMemberLifeline_TabPage.TabIndex = 7
         Me.ThreeAudienceMemberLifeline_TabPage.Text = "3 Aud Members"
         Me.ThreeAudienceMemberLifeline_TabPage.UseVisualStyleBackColor = True
@@ -2590,10 +2795,11 @@ Partial Class Quiz_Operator
         'StateOfLifelines_TabPage
         '
         Me.StateOfLifelines_TabPage.Controls.Add(Me.ChangeTheStateOfLifelines_Label)
-        Me.StateOfLifelines_TabPage.Location = New System.Drawing.Point(4, 24)
+        Me.StateOfLifelines_TabPage.Location = New System.Drawing.Point(4, 27)
+        Me.StateOfLifelines_TabPage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.StateOfLifelines_TabPage.Name = "StateOfLifelines_TabPage"
-        Me.StateOfLifelines_TabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.StateOfLifelines_TabPage.Size = New System.Drawing.Size(735, 276)
+        Me.StateOfLifelines_TabPage.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.StateOfLifelines_TabPage.Size = New System.Drawing.Size(983, 343)
         Me.StateOfLifelines_TabPage.TabIndex = 4
         Me.StateOfLifelines_TabPage.Text = "State of Lifelines"
         Me.StateOfLifelines_TabPage.UseVisualStyleBackColor = True
@@ -2603,9 +2809,10 @@ Partial Class Quiz_Operator
         Me.ChangeTheStateOfLifelines_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ChangeTheStateOfLifelines_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ChangeTheStateOfLifelines_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChangeTheStateOfLifelines_Label.Location = New System.Drawing.Point(33, 24)
+        Me.ChangeTheStateOfLifelines_Label.Location = New System.Drawing.Point(44, 30)
+        Me.ChangeTheStateOfLifelines_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.ChangeTheStateOfLifelines_Label.Name = "ChangeTheStateOfLifelines_Label"
-        Me.ChangeTheStateOfLifelines_Label.Size = New System.Drawing.Size(124, 36)
+        Me.ChangeTheStateOfLifelines_Label.Size = New System.Drawing.Size(165, 44)
         Me.ChangeTheStateOfLifelines_Label.TabIndex = 160
         Me.ChangeTheStateOfLifelines_Label.Text = "CHANGE THE STATES"
         Me.ChangeTheStateOfLifelines_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2613,10 +2820,11 @@ Partial Class Quiz_Operator
         'TabPage12
         '
         Me.TabPage12.Controls.Add(Me.FFFStart_Label)
-        Me.TabPage12.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage12.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage12.Name = "TabPage12"
-        Me.TabPage12.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage12.Size = New System.Drawing.Size(1009, 340)
+        Me.TabPage12.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage12.Size = New System.Drawing.Size(1348, 421)
         Me.TabPage12.TabIndex = 1
         Me.TabPage12.Text = "FFF Questions"
         Me.TabPage12.UseVisualStyleBackColor = True
@@ -2626,9 +2834,10 @@ Partial Class Quiz_Operator
         Me.FFFStart_Label.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.FFFStart_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FFFStart_Label.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FFFStart_Label.Location = New System.Drawing.Point(44, 34)
+        Me.FFFStart_Label.Location = New System.Drawing.Point(59, 42)
+        Me.FFFStart_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.FFFStart_Label.Name = "FFFStart_Label"
-        Me.FFFStart_Label.Size = New System.Drawing.Size(141, 37)
+        Me.FFFStart_Label.Size = New System.Drawing.Size(188, 46)
         Me.FFFStart_Label.TabIndex = 1234
         Me.FFFStart_Label.Text = "FFF Start"
         Me.FFFStart_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2640,9 +2849,10 @@ Partial Class Quiz_Operator
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button8.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.ForeColor = System.Drawing.Color.Black
-        Me.Button8.Location = New System.Drawing.Point(39, 657)
+        Me.Button8.Location = New System.Drawing.Point(52, 809)
+        Me.Button8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(179, 29)
+        Me.Button8.Size = New System.Drawing.Size(239, 36)
         Me.Button8.TabIndex = 1292
         Me.Button8.Text = "Configurations"
         Me.Button8.UseVisualStyleBackColor = False
@@ -2652,10 +2862,11 @@ Partial Class Quiz_Operator
         Me.NextStatusCUEorder_TextBox.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.NextStatusCUEorder_TextBox.Enabled = False
         Me.NextStatusCUEorder_TextBox.Font = New System.Drawing.Font("Arial", 14.0!)
-        Me.NextStatusCUEorder_TextBox.Location = New System.Drawing.Point(235, 657)
+        Me.NextStatusCUEorder_TextBox.Location = New System.Drawing.Point(313, 809)
+        Me.NextStatusCUEorder_TextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.NextStatusCUEorder_TextBox.Name = "NextStatusCUEorder_TextBox"
         Me.NextStatusCUEorder_TextBox.ReadOnly = True
-        Me.NextStatusCUEorder_TextBox.Size = New System.Drawing.Size(614, 29)
+        Me.NextStatusCUEorder_TextBox.Size = New System.Drawing.Size(817, 34)
         Me.NextStatusCUEorder_TextBox.TabIndex = 1294
         Me.NextStatusCUEorder_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -2665,9 +2876,10 @@ Partial Class Quiz_Operator
         Me.SoundStop_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SoundStop_Button.Font = New System.Drawing.Font("Arial", 8.0!)
         Me.SoundStop_Button.ForeColor = System.Drawing.Color.Black
-        Me.SoundStop_Button.Location = New System.Drawing.Point(1160, 33)
+        Me.SoundStop_Button.Location = New System.Drawing.Point(1547, 41)
+        Me.SoundStop_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SoundStop_Button.Name = "SoundStop_Button"
-        Me.SoundStop_Button.Size = New System.Drawing.Size(73, 24)
+        Me.SoundStop_Button.Size = New System.Drawing.Size(97, 30)
         Me.SoundStop_Button.TabIndex = 1297
         Me.SoundStop_Button.Text = "STOP"
         Me.SoundStop_Button.UseVisualStyleBackColor = False
@@ -2679,9 +2891,10 @@ Partial Class Quiz_Operator
         Me.RehearselLiveLock_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.RehearselLiveLock_Button.Font = New System.Drawing.Font("Arial Narrow", 10.25!, System.Drawing.FontStyle.Bold)
         Me.RehearselLiveLock_Button.ForeColor = System.Drawing.Color.White
-        Me.RehearselLiveLock_Button.Location = New System.Drawing.Point(1085, 611)
+        Me.RehearselLiveLock_Button.Location = New System.Drawing.Point(1447, 752)
+        Me.RehearselLiveLock_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RehearselLiveLock_Button.Name = "RehearselLiveLock_Button"
-        Me.RehearselLiveLock_Button.Size = New System.Drawing.Size(238, 37)
+        Me.RehearselLiveLock_Button.Size = New System.Drawing.Size(317, 46)
         Me.RehearselLiveLock_Button.TabIndex = 1298
         Me.RehearselLiveLock_Button.Text = "REHEARSEL TIME"
         Me.RehearselLiveLock_Button.UseVisualStyleBackColor = False
@@ -2690,9 +2903,10 @@ Partial Class Quiz_Operator
         '
         Me.MusicList_ComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.MusicList_ComboBox.FormattingEnabled = True
-        Me.MusicList_ComboBox.Location = New System.Drawing.Point(1085, 64)
+        Me.MusicList_ComboBox.Location = New System.Drawing.Point(1447, 79)
+        Me.MusicList_ComboBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MusicList_ComboBox.Name = "MusicList_ComboBox"
-        Me.MusicList_ComboBox.Size = New System.Drawing.Size(239, 24)
+        Me.MusicList_ComboBox.Size = New System.Drawing.Size(317, 28)
         Me.MusicList_ComboBox.TabIndex = 1299
         '
         'SoundPlay_Button
@@ -2701,9 +2915,10 @@ Partial Class Quiz_Operator
         Me.SoundPlay_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SoundPlay_Button.Font = New System.Drawing.Font("Arial", 8.0!)
         Me.SoundPlay_Button.ForeColor = System.Drawing.Color.Black
-        Me.SoundPlay_Button.Location = New System.Drawing.Point(1251, 33)
+        Me.SoundPlay_Button.Location = New System.Drawing.Point(1668, 41)
+        Me.SoundPlay_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SoundPlay_Button.Name = "SoundPlay_Button"
-        Me.SoundPlay_Button.Size = New System.Drawing.Size(73, 25)
+        Me.SoundPlay_Button.Size = New System.Drawing.Size(97, 31)
         Me.SoundPlay_Button.TabIndex = 1300
         Me.SoundPlay_Button.Text = "PLAY"
         Me.SoundPlay_Button.UseVisualStyleBackColor = False
@@ -2714,43 +2929,20 @@ Partial Class Quiz_Operator
         Me.SoundMute_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SoundMute_Button.Font = New System.Drawing.Font("Arial", 6.0!)
         Me.SoundMute_Button.ForeColor = System.Drawing.Color.Black
-        Me.SoundMute_Button.Location = New System.Drawing.Point(1085, 34)
+        Me.SoundMute_Button.Location = New System.Drawing.Point(1447, 42)
+        Me.SoundMute_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SoundMute_Button.Name = "SoundMute_Button"
-        Me.SoundMute_Button.Size = New System.Drawing.Size(55, 24)
+        Me.SoundMute_Button.Size = New System.Drawing.Size(73, 30)
         Me.SoundMute_Button.TabIndex = 1302
         Me.SoundMute_Button.Text = "MUTE"
         Me.SoundMute_Button.UseVisualStyleBackColor = False
         '
-        'MockQuestions_CheckBox
-        '
-        Me.MockQuestions_CheckBox.AutoSize = True
-        Me.MockQuestions_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MockQuestions_CheckBox.Location = New System.Drawing.Point(237, 86)
-        Me.MockQuestions_CheckBox.Name = "MockQuestions_CheckBox"
-        Me.MockQuestions_CheckBox.Size = New System.Drawing.Size(101, 17)
-        Me.MockQuestions_CheckBox.TabIndex = 1302
-        Me.MockQuestions_CheckBox.Text = "Mock questions"
-        Me.MockQuestions_CheckBox.UseVisualStyleBackColor = True
-        '
-        'EnableHostContScreens_CheckBox
-        '
-        Me.EnableHostContScreens_CheckBox.AutoSize = True
-        Me.EnableHostContScreens_CheckBox.Checked = True
-        Me.EnableHostContScreens_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.EnableHostContScreens_CheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EnableHostContScreens_CheckBox.Location = New System.Drawing.Point(237, 106)
-        Me.EnableHostContScreens_CheckBox.Name = "EnableHostContScreens_CheckBox"
-        Me.EnableHostContScreens_CheckBox.Size = New System.Drawing.Size(180, 17)
-        Me.EnableHostContScreens_CheckBox.TabIndex = 1303
-        Me.EnableHostContScreens_CheckBox.Text = "Enable Host Contestant Screens"
-        Me.EnableHostContScreens_CheckBox.UseVisualStyleBackColor = True
-        '
         'Quiz_Operator
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1344, 711)
+        Me.ClientSize = New System.Drawing.Size(1792, 875)
         Me.Controls.Add(Me.SoundMute_Button)
         Me.Controls.Add(Me.SoundPlay_Button)
         Me.Controls.Add(Me.MusicList_ComboBox)
@@ -2777,6 +2969,7 @@ Partial Class Quiz_Operator
         Me.Controls.Add(Me.QSum2_TextBox)
         Me.Controls.Add(Me.QSum1_TextBox)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Quiz_Operator"
         Me.Text = "Quiz Operator"
         Me.GameControl_TabControl.ResumeLayout(False)

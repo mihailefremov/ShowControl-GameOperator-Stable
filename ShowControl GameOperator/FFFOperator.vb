@@ -75,7 +75,7 @@ Public Class FFFOperator
         ResetContestantScores()
         If casparQA.IsConnected Then
             CGQuestionSet()
-            casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "QuestionFlyIN") 'casparQA_.Channels(0).CG.Play(1)
+            casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, GraphicsProcessingUnit.questionCGchannel, "QuestionFlyIN") 'casparQA_.Channels(0).CG.Play(1)
         End If
         FastestFingerManaging.QuestionLoad(QuestionFFF_TextBox.Text, AnswerAFFF_TextBox.Text, AnswerBFFF_TextBox.Text, AnswerCFFF_TextBox.Text, AnswerDFFF_TextBox.Text)
         FastestFingerManaging.QuestionFire()
@@ -88,8 +88,8 @@ Public Class FFFOperator
         ''CASPARCG:    ''QuestionAnswersFlyIN   ''showAnswersABCD
         MomentStatus = "AnswersABCDFFF_Fired"
         If casparQA.IsConnected Then
-            casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "QuestionAnswersFlyIN")
-            casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, "showAnswersABCD")
+            casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, GraphicsProcessingUnit.questionCGchannel, "QuestionAnswersFlyIN")
+            casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, GraphicsProcessingUnit.questionCGchannel, "showAnswersABCD")
         End If
         Dim tFFUnits As Task = Task.Run(Sub()
                                             FastestFingerManaging.FastestFingerFirstFire()

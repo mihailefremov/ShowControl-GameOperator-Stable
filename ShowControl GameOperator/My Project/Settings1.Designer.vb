@@ -15,7 +15,7 @@ Option Explicit On
 Namespace My
     
     <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.1.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.9.0.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
     Partial Friend NotInheritable Class MySettings
         Inherits Global.System.Configuration.ApplicationSettingsBase
@@ -104,7 +104,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("wwtbam/currentWorking/QuestionFireUKp1v1-clock")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("WWTBAM-4K-QA/WWTBAM-4K-QA")>  _
         Public Property questionFlashTempl() As String
             Get
                 Return CType(Me("questionFlashTempl"),String)
@@ -224,7 +224,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("wwtbam/currentWorking/MoneyTreeUIp1")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("WWTBAM-4K-MT/WWTBAM-4K-MT")>  _
         Public Property moneyTreeFlashTempl() As String
             Get
                 Return CType(Me("moneyTreeFlashTempl"),String)
@@ -332,7 +332,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("IDEA-PC\SQLEXPRESS01")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("DESKTOP-4MKSC1R")>  _
         Public Property gameQuestionsServer() As String
             Get
                 Return CType(Me("gameQuestionsServer"),String)
@@ -356,7 +356,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("wwtbam/currentWorking/PhoneAFriendClockUKp1v1")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("WWTBAM-4K-PAF/WWTBAM-4K-PAF")>  _
         Public Property phoneAfriendFlashTempl() As String
             Get
                 Return CType(Me("phoneAfriendFlashTempl"),String)
