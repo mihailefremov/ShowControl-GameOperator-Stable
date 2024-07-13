@@ -123,10 +123,10 @@ Public Class InteractiveWallScreen
                             End If
 
                             If casparWallScreen.IsConnected Then
-                                casparWallScreen.Channels(0).Clear(0)
-                                casparWallScreen.Channels(0).LoadBG(20, selectedVideo.URL, isLoop)
-                                casparWallScreen.Channels(0).SetVolume(20, 0, 8, Easing.EaseInBack)
-                                casparWallScreen.Channels(0).Play(20)
+                                casparWallScreen.Channels(GraphicsProcessingUnit.wallScreenCGchannel).Clear(GraphicsProcessingUnit.wallScreenCGLayer)
+                                casparWallScreen.Channels(GraphicsProcessingUnit.wallScreenCGchannel).LoadBG(GraphicsProcessingUnit.wallScreenCGLayer, selectedVideo.URL, isLoop)
+                                casparWallScreen.Channels(GraphicsProcessingUnit.wallScreenCGchannel).SetVolume(GraphicsProcessingUnit.wallScreenCGLayer, 0, 8, Easing.EaseInBack)
+                                casparWallScreen.Channels(GraphicsProcessingUnit.wallScreenCGchannel).Play(GraphicsProcessingUnit.wallScreenCGLayer)
                             End If
 
                             Exit For

@@ -25,13 +25,15 @@ Public Class GraphicsProcessingUnit
     Public Shared whoAnsweredCorrectlyCGhannel As Int16 = 0
     Public Shared fastestNameStrapCGhannel As Int16 = 0
     Public Shared phoneAfriendCGchannel As Int16 = 0
+    Public Shared wallScreenCGchannel As Int16 = 0
 
     Public Shared questionCGlayer As Int16 = 1
-    Public Shared moneyTreeCGlayer As Int16 = 2
-    Public Shared rightOrderCGLayer As Int16 = 3
-    Public Shared whoAnsweredCorrectlyCGLayer As Int16 = 4
-    Public Shared fastestNameStrapCGLayer As Int16 = 4
-    Public Shared phoneAfriendCGlayer As Int16 = 5
+    Public Shared phoneAfriendCGlayer As Int16 = 2
+    Public Shared moneyTreeCGlayer As Int16 = 3
+    Public Shared rightOrderCGLayer As Int16 = 4
+    Public Shared whoAnsweredCorrectlyCGLayer As Int16 = 5
+    Public Shared fastestNameStrapCGLayer As Int16 = 5
+    Public Shared wallScreenCGLayer As Int16 = 0
 
     Public Shared InteractiveWallScreenObj As New InteractiveWallScreen
 
@@ -255,6 +257,10 @@ Public Class GraphicsProcessingUnit
             Dim lif = String.Format("{0};{1};{2};{3}", Helpers.ConvertLifelineStateToReadable(lifeline1Active), Helpers.ConvertLifelineStateToReadable(lifeline2Active), Helpers.ConvertLifelineStateToReadable(lifeline3Active), Helpers.ConvertLifelineStateToReadable(lifeline4Active))
             cgDataMT.SetData("UsedLifelines_TextField", lif)
             casparMT.Channels(moneyTreeCGchannel).CG.Update(moneyTreeCGlayer, moneyTreeCGchannel, cgDataMT)
+
+            cgDataQA.SetData("UsedLifelines_TextField", lif)
+            casparQA.Channels(questionCGchannel).CG.Update(questionCGlayer, questionCGchannel, cgDataQA)
+
         End If
     End Sub
 
@@ -364,7 +370,10 @@ Public Class GraphicsProcessingUnit
             cgDataMT.SetData("secondMilestoneLevel", Quiz_Operator.VariableMilestone_TextBox.Text)
             cgDataMT.SetData("reachedLevel", Math.Max(Quiz_Operator.LevelQ - 1, 0))
         End If
-
+        If casparQA.IsConnected Then
+            cgDataQA.SetData("UsedLifelines_TextField", Quiz_Operator.LifelinesState)
+            casparQA.Channels(questionCGchannel).CG.Update(questionCGlayer, questionCGchannel, cgDataQA)
+        End If
     End Sub
 
     Public Shared Sub MoneyTreeFlyIn()
@@ -441,7 +450,7 @@ Public Class GraphicsProcessingUnit
                 casparPhoneAFriend.Connect()
             End If
 
-            'InteractiveWallScreenObj.Connect()
+            InteractiveWallScreenObj.Connect()
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
