@@ -305,7 +305,7 @@
                 CorrectAnswerQ10MediaPlayer.Play()
                 ''VARIABLE MILESTONE
             ElseIf VariableMilestone <> "10" And LevelQ = "10" Then
-                My.Computer.Audio.Play("C:\WWTBAM Removable Disc\UK 2007\76.Q10 NoMilestone - Yes.wav")
+                My.Computer.Audio.Play("C:\WWTBAM Removable Disc\76.Q10 NoMilestone - Yes.wav")
 
             ElseIf LevelQ = "6" Then
                 'My.Computer.Audio.Play("C:\WWTBAM Removable Disc\UK 2007\61.Q6 - Yes.wav")

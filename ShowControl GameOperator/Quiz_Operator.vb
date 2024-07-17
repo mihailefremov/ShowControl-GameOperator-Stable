@@ -781,6 +781,19 @@ Public Class Quiz_Operator
         DoubleDipFirstAnswer = ""
 
         TimerQuestionRemove.Stop() ''IZMENA!!! Dodadeno Timer2.Stop() bidejkji ako bese stisnato EmptyQuestion pred vreme, Timer2 pak go gasese posle izminatiot interval
+
+        If GraphicsProcessingUnit.casparQA.IsConnected Then
+            If LevelQ <> "888" Then
+                GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, GraphicsProcessingUnit.questionCGchannel, "flyQuestionAnswersElementsDown")
+            Else
+            End If
+        End If
+
+        TimerQuestionReloadAfterRemove.Start()
+
+    End Sub
+
+    Private Sub TimerQuestionReloadAfterRemove_Tick(sender As Object, e As EventArgs) Handles TimerQuestionReloadAfterRemove.Tick
         MomentStatus = "EmptyQuestion_Fired" ''IZMENA!!
 
         '' ******* CASPARCG ******* CASPARCG *******
@@ -789,8 +802,8 @@ Public Class Quiz_Operator
                 GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Remove(GraphicsProcessingUnit.questionCGlayer, GraphicsProcessingUnit.questionCGchannel)
                 GraphicsProcessingUnit.cgDataQA.Clear()
             Else
-                GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGchannel, GraphicsProcessingUnit.questionCGchannel, "QuestionHide_Label")
-                GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGchannel, GraphicsProcessingUnit.questionCGchannel, "hideSwitchQmark")
+                GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, GraphicsProcessingUnit.questionCGchannel, "QuestionHide_Label")
+                GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, GraphicsProcessingUnit.questionCGchannel, "hideSwitchQmark")
             End If
         End If
         '' ******* CASPARCG ******* CASPARCG *******
@@ -821,7 +834,8 @@ Public Class Quiz_Operator
             QuizShowDataLayer.DisposeATAvoteData()
         End If
 
-
+        TimerQuestionReloadAfterRemove.Interval = 1
+        TimerQuestionReloadAfterRemove.Stop()
     End Sub
 
     Private Sub LoadQuestion()
@@ -845,7 +859,7 @@ Public Class Quiz_Operator
             'od prasanje na prasanje momentalen iznos
         End If
 
-
+        TimerQuestionReloadAfterRemove.Interval = 1100
         MomentStatus = "WonPrize_Fired" ''IZMENA!!
 
 
@@ -1082,7 +1096,7 @@ Public Class Quiz_Operator
         LevelQ = "666"
 
         If GraphicsProcessingUnit.casparQA.IsConnected Then
-            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, GraphicsProcessingUnit.questionCGchannel, "QuestionAnswersFlyOUT")
+            GraphicsProcessingUnit.casparQA.Channels(GraphicsProcessingUnit.questionCGchannel).CG.Invoke(GraphicsProcessingUnit.questionCGlayer, GraphicsProcessingUnit.questionCGchannel, "flyQuestionAnswersElementsDown")
         End If
 
         PlayLXsound()
@@ -2468,4 +2482,5 @@ Public Class Quiz_Operator
         End If
 
     End Sub
+
 End Class
